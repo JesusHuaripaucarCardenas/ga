@@ -1,0 +1,245 @@
+CREATE DATABASE fundosmart;
+
+USE fundosmart;
+
+
+-- Tabla: seller
+CREATE TABLE seller (
+    id INT IDENTITY(1,1) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    dni CHAR(8) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    phone CHAR(9) NOT NULL,
+    state CHAR(1) NOT NULL DEFAULT 'A',
+    CONSTRAINT pk_seller PRIMARY KEY (id),
+
+    -- El DNI, CORREO y TELEFONO deben ser único
+    CONSTRAINT uq_seller_dni UNIQUE (dni),
+    CONSTRAINT uq_seller_email UNIQUE (email),
+    CONSTRAINT uq_seller_phone UNIQUE (phone),
+
+    -- DNI y TELEFONO solo deben contener números
+    CONSTRAINT chk_dni_numeric CHECK (dni NOT LIKE '%[^0-9]%'),
+    CONSTRAINT chk_phone_valid CHECK (phone NOT LIKE '%[^0-9]%' AND LEN(phone) = 9),
+
+    -- El correo electrónico no debe contener espacios
+    CONSTRAINT chk_email_format CHECK (
+        email LIKE '_%@_%._%' AND
+        CHARINDEX(' ', email) = 0
+    ),
+);
+
+
+CREATE TABLE market_customer (
+    id INT IDENTITY(1,1),
+    city VARCHAR(50) NOT NULL,
+    district VARCHAR(50) NOT NULL,
+    market_name VARCHAR(50) NOT NULL,
+    position_number VARCHAR(10) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    document_type VARCHAR(3) NOT NULL,
+    document_number VARCHAR(20) NOT NULL,
+    phone VARCHAR(9) NOT NULL,
+    state CHAR(1) DEFAULT 'A',
+
+    CONSTRAINT pk_market_customer PRIMARY KEY (id),
+
+    -- Restricciones de unicidad
+    CONSTRAINT uq_market_position UNIQUE (market_name, position_number),
+    CONSTRAINT uq_document_number UNIQUE (document_number),
+    CONSTRAINT uq_phone UNIQUE (phone),
+
+    -- Validación del documento
+    CONSTRAINT chk_document_number_numeric CHECK (TRY_CAST(document_number AS BIGINT) IS NOT NULL),
+    CONSTRAINT chk_document_length_by_type CHECK (
+        (document_type = 'DNI' AND LEN(document_number) = 8) OR
+        (document_type = 'PAS' AND LEN(document_number) = 9) OR
+        (document_type = 'CE'  AND LEN(document_number) = 9)
+    )
+);
+
+ALTER TABLE market_customer DROP CONSTRAINT chk_document_length_by_type;
+
+
+ALTER TABLE market_customer
+ALTER COLUMN document_type VARCHAR(25);
+
+ALTER TABLE market_customer ADD CONSTRAINT chk_document_length_by_type CHECK (
+    (document_type = 'DNI' AND LEN(document_number) = 8) OR
+    (document_type = 'PAS' AND LEN(document_number) = 9) OR
+    (document_type = 'CE'  AND LEN(document_number) = 9)
+);
+
+ALTER TABLE market_customer DROP CONSTRAINT chk_document_length_by_type;
+
+
+
+-- Tabla: supermarket_customer
+CREATE TABLE supermarket_customer (
+    id INT IDENTITY(1,1) NOT NULL,
+    supermarket_name VARCHAR(100) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    district VARCHAR(50) NOT NULL,
+    ruc CHAR(11) NOT NULL,
+    array_address VARCHAR(100) NOT NULL,
+    phone CHAR(9) NOT NULL,
+    state CHAR(1) NOT NULL DEFAULT 'A',
+    CONSTRAINT pk_supermarket_customer PRIMARY KEY (id),
+
+    -- El RUC y el telefono son unicos
+    CONSTRAINT uq_supermarket_customer_ruc UNIQUE (ruc),
+    CONSTRAINT uq_supermarket_customer_phone UNIQUE (phone),
+
+    -- El RUC y el telefono solo deben tener numeros
+    CONSTRAINT chk_ruc_valid CHECK (ruc NOT LIKE '%[^0-9]%' AND LEN(ruc) = 11)
+);
+
+CREATE TABLE product_sale (
+   id INT IDENTITY(1,1) PRIMARY KEY,
+   name VARCHAR(100) NOT NULL,
+   categoria VARCHAR(50) NOT NULL,
+   first_selection INT NOT NULL,
+   third_selection INT NOT NULL,
+   fifth_selection INT NOT NULL,
+   mature_selection INT NOT NULL,
+);
+
+CREATE TABLE fruit_selections (
+  id INT PRIMARY KEY IDENTITY(1,1),
+  name VARCHAR(100),
+  first_selection INT,
+  third_selection INT,
+  fifth_selection INT,
+  ripe_selection INT,
+  total INT,
+  client VARCHAR(100),
+  exit_date DATE
+);
+
+CREATE TABLE frutas (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    nom_frut NVARCHAR(100),
+    kil_pri DECIMAL(10,2),
+    kil_ter DECIMAL(10,2),
+    kil_qui DECIMAL(10,2),
+    kil_mad DECIMAL(10,2),
+    can_pri INT,
+    can_ter INT,
+    can_qui INT,
+    can_mad INT,
+    pre_pri DECIMAL(10,2),
+    pre_ter DECIMAL(10,2),
+    pre_qui DECIMAL(10,2),
+    pre_mad DECIMAL(10,2),
+    fecha DATE
+);
+
+DROP TABLE FruitSelections;
+
+select * from frutas;
+
+INSERT INTO product_sale ( name, categoria, first_selection, third_selection, fifth_selection, mature_selection)
+VALUES
+('Café Supremo', 'Bebidas', 150, 120, 100, 80),
+('Chocolate Amargo', 'Dulces', 200, 180, 160, 140),
+('Té Verde', 'Bebidas', 180, 160, 140, 130),
+('Galletas Integrales', 'Snacks', 220, 190, 170, 150),
+('Mermelada de Fresa', 'Conservas', 130, 110, 90, 70);
+
+
+drop table product_sale;
+select * from product_sale;
+
+CREATE TABLE products_detail (
+    id INT IDENTITY(1,1) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    first_selection INT NOT NULL,
+    kl_first INT NOT NULL,
+    third_selection INT NOT NULL,
+    kl_third INT NOT NULL,
+    fifth_selection INT NOT NULL,
+    kl_fifth INT NOT NULL,
+    mature_selection INT NOT NULL,
+    kl_mature INT NOT NULL,
+    confirmed BIT NOT NULL DEFAULT 0,  -- Columna nueva
+    CONSTRAINT pk_products_detail PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS product_sale;
+
+-- Tabla: products
+CREATE TABLE products (
+    id INT IDENTITY(1,1) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    selection_quantity INT NOT NULL,
+    kl_quantity INT NOT NULL,
+    output_log DATETIME NOT NULL,
+    products_detail_id INT NOT NULL,
+    CONSTRAINT pk_products PRIMARY KEY (id)
+);
+
+
+
+-- Tabla: sale
+CREATE TABLE sale (
+    id INT IDENTITY(1,1) NOT NULL,
+    seller_id INT NOT NULL,
+    date_sale DATE NOT NULL,
+    customer INT NOT NULL,
+    payment INT NOT NULL,
+    CONSTRAINT pk_sale PRIMARY KEY (id)
+);
+
+
+-- Tabla: sale_detail
+CREATE TABLE sale_detail (
+    id INT IDENTITY(1,1) NOT NULL,
+    method_payment CHAR(2) NOT NULL CHECK (method_payment IN ('EF', 'TJ', 'YP')),
+    city VARCHAR(100) NOT NULL,
+    district VARCHAR(100) NOT NULL,
+    client INT NOT NULL,
+    products INT NOT NULL,
+    CONSTRAINT pk_sale_detail PRIMARY KEY (id)
+);
+
+drop table sale_detail;
+
+CREATE OR ALTER TRIGGER trg_after_insert_products_detail
+ON products_detail
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO products (
+        name,
+        selection_quantity,
+        kl_quantity,
+        output_log,
+        products_detail_id
+    )
+    SELECT
+        i.name,
+        + i.first_selection + i.third_selection + i.fifth_selection + i.mature_selection,
+         + i.kl_first + i.kl_third + i.kl_fifth + i.kl_mature,
+        GETDATE(),
+        i.id
+    FROM inserted i;
+END;
+
+CREATE OR ALTER TRIGGER trg_after_update_products_detail
+ON products_detail
+AFTER UPDATE
+AS
+BEGIN
+    UPDATE p
+    SET
+        p.name = i.name,
+        p.selection_quantity = i.first_selection + i.third_selection + i.fifth_selection + i.mature_selection,
+        p.kl_quantity =  + i.kl_first + i.kl_third + i.kl_fifth + i.kl_mature,
+        p.output_log = GETDATE()
+    FROM products p
+    INNER JOIN inserted i ON p.products_detail_id = i.id
+END;
+
+select * from seller;
