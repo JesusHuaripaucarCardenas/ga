@@ -1,0 +1,335 @@
+.gaaa {
+  background-color: #e7e3e0;
+  min-height: 100vh;
+  padding-top: 520px;
+}
+.contacts-main-wrapper {
+  background-color: #e7e3e0;
+}
+
+/* ---------- TÍTULO GENERAL ---------- */
+.contacts-title-wrapper {
+  background-color: #e7e3e0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+/* ---------- CONTACTS LIST AS CARDS ---------- */
+.contacts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.contact-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.contact-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ---------- FORMULARIOS EN PANEL FIJO DERECHO ---------- */
+.contacts-container {
+  background-color: #e7e3e0;
+  width: 100%;
+}
+
+.contacts-forms-overlap {
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contacts-forms-title {
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 45px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Botones */
+.contacts-btn-add-market,
+.contacts-btn-add-supermarket,
+.contacts-btn-prepare-guide {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.contacts-btn-add-market-group,
+.contacts-btn-add-supermarket-group,
+.contacts-btn-prepare-guide-group {
+  position: relative;
+  background: #fff;
+  border-radius: 90px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-btn-add-market-text,
+.contacts-btn-add-supermarket-text,
+.contacts-btn-prepare-guide-text {
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 30px;
+  color: #000;
+}
+
+.contacts-btn-add-market-icon,
+.contacts-btn-add-supermarket-icon {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  right: 10px;
+}
+
+/* ---------- MODALES ---------- */
+.contacts-modal-market-dark,
+.contacts-modal-super-dark {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+
+.contacts-modal-market-form,
+.contacts-modal-super-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.contacts-modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.contact-card.activo {
+  border-left: 6px solid green;
+}
+
+.contact-card.inactivo {
+  border-left: 6px solid red;
+}
+.contact-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-edit {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #d32f2f;
+  color: white;
+}
+.market-customer-list-container {
+  padding: 1rem;
+}
+
+.lista-clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.tarjeta-cliente {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tarjeta-cliente:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.datos-cliente p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #383737;
+}
+
+.acciones {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.acciones button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* supermarket-customer-list.component.scss */
+.supermarket-list-container {
+  padding: 1rem;
+}
+
+.supermarket-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.supermarket-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+
+    &:nth-child(2) {
+      background-color: #dc3545;
+    }
+
+    &:nth-child(3) {
+      background-color: #28a745;
+    }
+  }
+}
+
+
+.customers-section {
+   background-color: #e7e3e0;
+  flex: 1;
+  margin-right: 492px; /* deja espacio para el panel lateral */
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+
+.contacts-forms {
+  background-color: #e7e3e0;
+  position: fixed;
+  top: 150px;
+  right: 0;
+  width: 492px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #229935;
+  z-index: 1000;
+}
+
+/* Unificación visual */
+.unified-customer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 300px;
+}
+
+.unified-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease-in-out;
+}
+
+.unified-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.unified-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #383737;
+}
+
+.acciones {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.acciones button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.acciones button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.acciones button:nth-child(3) {
+  background-color: #28a745;
+}
+
+/* Título */
+.contacts-title {
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 45px;
+  color: #000;
+  margin: 1rem 0;
+  padding-top: 200px;
+}

@@ -1,0 +1,310 @@
+/* —–––– Contenedor general ––––– */
+:host {
+  display: block;
+  background: #EFEEE9;
+  padding: 40px 16px;
+}
+
+.biblioteca {
+  background: #FFF;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* —–––– Cabecera de fecha ––––– */
+.fechauno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.fechauno .line,
+.fechauno .img {
+  flex: 1;
+  height: 1px;
+  background: #000;
+}
+
+.fechauno .element-actual {
+  margin: 0 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* —–––– Grid principal ––––– */
+.regiistro {
+  display: grid;
+  /* 4 columnas: selección / nombre / cantidad / peso */
+  grid-template-columns: 160px 1fr 140px 140px;
+  /* 9 filas:
+     1) Nombre
+     2) Cabeceras
+     3) 1ª
+     4) 3ª
+     5) 5ª
+     6) Madura
+     7) Total
+     8) Cliente
+     9) Fecha de salida
+  */
+  grid-template-rows:
+    48px
+    /* Nombre */
+    48px
+    /* Selección/Cantidad/Peso */
+    48px
+    /* 1ª */
+    48px
+    /* 3ª */
+    48px
+    /* 5ª */
+    48px
+    /* Madura */
+    48px
+    /* Total */
+    48px
+    /* Cliente */
+    48px;
+  /* Fecha */
+  column-gap: 16px;
+  row-gap: 16px;
+  position: relative;
+}
+
+/* —–––– “Nombre” arriba ––––– */
+.text-wrapper-12 {
+  grid-column: 1;
+  grid-row: 1;
+  background: #7FC28A;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  align-self: center;
+  justify-self: start;
+}
+
+.name {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  width: 100%;
+  align-self: center;
+}
+
+/* —–––– Cabeceras de tabla ––––– */
+.text-wrapper-11 {
+  /* “Seleccion” */
+  grid-column: 1;
+  grid-row: 2;
+  background: #7FC28A;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 9999px;
+}
+
+.text-wrapper-3 {
+  position: relative;
+  left: -20px;
+  grid-column: 3;
+  grid-row: 2;
+  font-weight: 500;
+  align-self: center;
+  justify-self: start;
+  margin-left: -300px;
+}
+
+.text-wrapper-4 {
+  position: relative;
+  left: -200px;
+  grid-column: 4;
+  grid-row: 2;
+  font-weight: 500;
+  align-self: center;
+  justify-self: start;
+}
+
+/* —–––– Filas de selecciones ––––– */
+/* 1ª */
+.text-wrapper-8 {
+  /* etiqueta 1ª */
+  grid-column: 1;
+  grid-row: 3;
+  background: #7FC28A;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 9999px;
+}
+
+.prmra {
+  position: relative;
+  left: -350px;
+  grid-column: 3;
+  grid-row: 3;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+/* 3ª */
+.text-wrapper-9 {
+  grid-column: 1;
+  grid-row: 4;
+  background: #7FC28A;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 9999px;
+}
+
+.trcera {
+  position: relative;
+  left: -350px;
+  grid-column: 3;
+  grid-row: 4;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+/* 5ª */
+.text-wrapper-10 {
+  /* etiqueta 5ª */
+  grid-column: 1;
+  grid-row: 6;
+  background: #7FC28A;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 9999px;
+}
+.text-wrapper {
+  grid-column: 1;
+  grid-row: 5;
+  background: #7FC28A;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 9999px;
+
+}
+.qinta {
+  position: relative;
+  left: -350px;
+  grid-column: 3;
+  grid-row: 5;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+/* Madura */
+.text-wrapper-6 {
+  /* etiqueta Madura */
+  grid-column: 1;
+  grid-row: 6;
+  background: #7FC28A;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 9999px;
+}
+
+.mdura {
+  position: relative;
+  left: -350px;
+  grid-column: 3;
+  grid-row: 6;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+/* línea separadora antes de “Total” */
+.regiistro::before {
+  content: "";
+  position: absolute;
+  top: calc((48px + 16px) * 6 - 16px/2);
+  /*fila 7*/
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+/* —–––– Fila Total ––––– */
+.text-wrapper-5 {
+  /* “Total” */
+  grid-column: 1;
+  grid-row: 7;
+  font-weight: 500;
+}
+
+.cantidadtotal {
+  grid-column: 3;
+  grid-row: 7;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+.pesototal {
+  position: relative;
+  left: -510px;
+  grid-column: 4;
+  grid-row: 7;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+/* —–––– Cliente y Fecha de salida ––––– */
+/* Cliente */
+.text-wrapper-6 {
+  /* si usas otra clase para “Cliente”, me dices */
+  grid-column: 1;
+  grid-row: 8;
+}
+
+.rsptanombre {
+  grid-column: 2 / span 3;
+  grid-row: 8;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+/* Fecha de salida */
+.text-wrapper-7 {
+  grid-column: 1;
+  grid-row: 9;
+}
+
+.salida {
+  grid-column: 2 / span 3;
+  grid-row: 9;
+  border: 2px solid #7FC28A;
+  border-radius: 9999px;
+  padding: 12px 24px;
+}
+
+.overlap-2 {
+  margin-bottom: 40px;
+  /* espacio entre registros */
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  background: #F9F9F9;
+  /* opcional: fondo ligeramente distinto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* sombra sutil */
+}
+
+.overlap-2:not(:first-child)::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #D8D8D8;
+  margin-bottom: 24px;
+  border-radius: 1px;
+}

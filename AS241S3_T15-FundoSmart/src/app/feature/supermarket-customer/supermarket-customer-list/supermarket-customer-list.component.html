@@ -1,0 +1,32 @@
+<div class="supermarket-list-container">
+  <h2>Clientes de Supermercado</h2>
+
+  <div *ngIf="loading">Cargando...</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <div class="supermarket-card-grid">
+    <div *ngFor="let customer of customers" class="supermarket-card">
+      <h3>{{ customer.supermarketName }}</h3>
+      <p><strong>Ciudad:</strong> {{ customer.city }}</p>
+      <p><strong>Distrito:</strong> {{ customer.district }}</p>
+      <p><strong>RUC:</strong> {{ customer.ruc }}</p>
+      <p><strong>Dirección:</strong> {{ customer.arrayAddress }}</p>
+      <p><strong>Teléfono:</strong> {{ customer.phone }}</p>
+      <p><strong>Estado:</strong> {{ customer.state === 'I' ? 'Inactivo' : 'Activo' }}</p>
+
+      <div class="actions">
+        <button *ngIf="customer.state !== 'I'" (click)="onEdit(customer)">Editar</button>
+        <button *ngIf="customer.state !== 'I'" (click)="onDelete(customer)">Eliminar</button>
+        <button *ngIf="customer.state === 'I'" (click)="onRestore(customer)">Restaurar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- el modal sólo se crea cuando hay un selectedCustomer válido -->
+  <app-edit-supermarket-customer-modal
+    *ngIf="selectedCustomer"
+    [supermarketData]="selectedCustomer"
+    (close)="onCloseModal()"
+    (save)="onCustomerUpdated($event)">
+  </app-edit-supermarket-customer-modal>
+</div>

@@ -1,0 +1,45 @@
+<div class="market-container">
+  <div class="market-logo">
+    <img src="assets/logo.png" alt="Logo Fundo Cárdenas" />
+  </div>
+  <div class="market-content">
+    <button class="market-title">Mercado</button>
+    <form (ngSubmit)="submitForm()" #form="ngForm" class="market-form">
+      <div class="market__row">
+        <label>Ciudad:</label>
+        <input type="text" [(ngModel)]="marketCustomer.city" name="city" required />
+        <label>Distrito:</label>
+        <input type="text" [(ngModel)]="marketCustomer.district" name="district" required />
+      </div>
+      <div class="market__row">
+        <label>Nombre del mercado:</label>
+        <input type="text" [(ngModel)]="marketCustomer.marketName" name="marketName" class="input-large" required />
+      </div>
+      <div class="market__row">
+        <label>N° del puesto:</label>
+        <input type="text" [(ngModel)]="marketCustomer.positionNumber" name="positionNumber" class="input-small" required />
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="marketCustomer.name" name="name" class="input-medium" required />
+      </div>
+      <div class="market__row">
+        <label>Apellido:</label>
+        <input type="text" [(ngModel)]="marketCustomer.lastname" name="lastname" class="input-medium" required />
+        <label>Tipo de documento:</label>
+        <select [(ngModel)]="marketCustomer.documentType" name="documentType" class="input-medium" required>
+          <option value="DNI">DNI</option>
+          <option value="CE">CE</option>
+          <option value="PAS">PAS</option>
+        </select>
+      </div>
+      <div class="market__row">
+        <label>N° de documento:</label>
+        <input type="text" [(ngModel)]="marketCustomer.documentNumber" name="documentNumber" class="input-medium" required />
+        <label>N° de celular:</label>
+        <input type="text" [(ngModel)]="marketCustomer.phone" name="phone" class="input-medium" required />
+      </div>
+      <div class="market__actions">
+        <button type="submit" class="market__button">CONTINUAR</button>
+      </div>
+    </form>
+  </div>
+</div>

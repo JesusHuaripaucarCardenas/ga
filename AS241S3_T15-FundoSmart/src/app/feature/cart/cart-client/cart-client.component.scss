@@ -1,0 +1,166 @@
+.cart-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  color: #1a1a1a;
+  padding-top: 100px;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #f0ecea;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+.cart-main {
+  flex: 2;
+  background: white;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.cart-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 2rem;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: auto;
+  margin-right: 1.5rem;
+}
+
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.cart-item-weight,
+.cart-item-grade {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.delete-btn {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.qty-btn {
+  background-color: #2f80ed;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-summary {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.summary-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.summary-header,
+.summary-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.summary-products,
+.summary-total,
+.summary-boxes {
+  font-size: 1.5rem;
+}
+
+.summary-continue-btn {
+  background-color: #219b36;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e8e4e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-contenedor {
+  background-color: white;
+  border-radius: 20px;
+  padding: 60px 80px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.icono-imagen {
+  width: 120px;
+  height: auto;
+}
+
+.mensaje-texto {
+  font-size: 22px;
+  color: #111;
+  font-weight: 600;
+}

@@ -1,0 +1,71 @@
+<div class="supermarket-form-container">
+  <h2 class="supermarket-form-title">Supermercado</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="supermarket-form">
+
+    <!-- Fila 1 -->
+    <div class="supermarket-form-row">
+      <div class="supermarket-field">
+        <label for="ciudad">Ciudad:</label>
+        <input id="ciudad" type="text" formControlName="ciudad" />
+        <div class="supermarket-error" *ngIf="form.get('ciudad')?.touched && form.get('ciudad')?.hasError('required')">
+          Obligatorio.
+        </div>
+      </div>
+
+      <div class="supermarket-field">
+        <label for="distrito">Distrito:</label>
+        <input id="distrito" type="text" formControlName="distrito" />
+        <div class="supermarket-error" *ngIf="form.get('distrito')?.touched && form.get('distrito')?.hasError('required')">
+          Obligatorio.
+        </div>
+      </div>
+
+      <div class="supermarket-field-large">
+        <label for="supermarketName">Nombre de la tienda:</label>
+        <input id="supermarketName" type="text" formControlName="supermarketName" />
+        <div class="supermarket-error" *ngIf="form.get('supermarketName')?.touched && form.get('supermarketName')?.hasError('required')">
+          Obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="supermarket-form-row">
+      <div class="supermarket-field">
+        <label for="ruc">RUC:</label>
+        <input id="ruc" type="text" formControlName="ruc" maxlength="11" />
+        <div class="supermarket-error" *ngIf="form.get('ruc')?.touched">
+          <span *ngIf="form.get('ruc')?.hasError('required')">Obligatorio.</span>
+          <span *ngIf="form.get('ruc')?.hasError('pattern')">11 dígitos.</span>
+        </div>
+      </div>
+
+      <div class="supermarket-field-large">
+        <label for="arrayAddress">Dirección matriz:</label>
+        <input id="arrayAddress" type="text" formControlName="arrayAddress" />
+        <div class="supermarket-error" *ngIf="form.get('arrayAddress')?.touched && form.get('arrayAddress')?.hasError('required')">
+          Obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 3 -->
+    <div class="supermarket-form-row">
+      <div class="supermarket-field">
+        <label for="phone">N° de celular:</label>
+        <input id="phone" type="text" formControlName="phone" maxlength="15" />
+        <div class="supermarket-error" *ngIf="form.get('phone')?.touched">
+          <span *ngIf="form.get('phone')?.hasError('required')">Obligatorio.</span>
+          <span *ngIf="form.get('phone')?.hasError('pattern')">Número inválido.</span>
+        </div>
+      </div>
+
+      <button type="submit" class="supermarket-submit-btn" [disabled]="form.invalid || loading">
+        {{ loading ? 'Guardando...' : 'Agregar' }}
+      </button>
+    </div>
+
+    <p class="supermarket-backend-error" *ngIf="errorMsg">{{ errorMsg }}</p>
+  </form>
+</div>

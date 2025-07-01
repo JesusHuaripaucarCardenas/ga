@@ -1,0 +1,277 @@
+.catego {
+  position: absolute;
+  top: 174px; /* justo debajo del header */
+  left: 0;
+  z-index: 998;
+}
+
+.header {
+  position: fixed; /* <- CAMBIO AQUÍ */
+  width: 1728px;
+  height: 174px;
+  top: 0;
+  left: 0;
+  background-color: #229935;
+  z-index: 999; /* Se asegura que esté por encima */
+}
+
+/* Logo */
+.logo-header {
+  position: absolute;
+  top: 1px;
+  left: 13px;
+  width: 173px;
+  height: 173px;
+}
+
+/* Icono carrito */
+.cart-icon {
+  position: absolute;
+  top: 24px;
+  left: 1381px;
+  width: 130px;
+  height: 130px;
+}
+
+/* Icono perfil */
+.header-profile-icon {
+  position: absolute;
+  top: 19px;
+  left: 1559px;
+  width: 136px;
+  height: 136px;
+}
+
+/* Contenedor de pedidos */
+.header-orders-wrapper {
+  position: absolute;
+  top: 11px;
+  left: 1146px;
+  width: 189px;
+  height: 151px;
+}
+
+.header-orders-inner {
+  position: relative;
+  width: 187px;
+  height: 151px;
+}
+
+.header-orders-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 115px;
+  height: 115px;
+}
+
+.header-orders-text {
+  position: absolute;
+  top: 107px;
+  left: 43px;
+  font-family: "Itim-Regular", Helvetica;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  position: absolute;
+  width: 611px;
+  height: 68px;
+  top: 61px;
+  left: 507px;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 9px;
+  left: 544px;
+  width: 49px;
+  height: 49px;
+}
+
+/* Categorías */
+.categories-wrapper {
+  position: absolute;
+  width: 223px;
+  height: 83px;
+  top: 46px;
+  left: 218px;
+}
+
+.categories-inner {
+  position: relative;
+  width: 221px;
+  height: 83px;
+  background-color: #229935;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+}
+
+.categories-text-header {
+  position: absolute;
+  top: 17px;
+  left: 21px;
+  font-family: "Itim-Regular", Helvetica;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+/* Para que el contenido no se oculte debajo del header */
+.main-content {
+  margin-top: 174px; /* Igual que la altura del header */
+}
+
+.catego {
+  position: absolute;
+  top: 150px; /* justo debajo del header */
+  left: -235px;
+  z-index: 998;
+}
+
+.catego.show {
+  display: flex;        /* se aplicará al mostrarlo */
+}
+
+
+.contenedor-catego{
+  background-color: #ffffff;
+  width: 1728px;
+  height: 797px;
+  position: relative;
+
+}
+
+.panel-lateral {
+  position: absolute;
+  width: 579px;
+  height: 797px;
+  top: 0;
+  left: 0;
+  background-color: #e7e3e0;
+  border-bottom: 1px solid #229935;
+}
+
+.panel-derecho {
+  position: absolute;
+  width: 1149px;
+  height: 797px;
+  top: 0;
+  left: 579px;
+  background-color: #e7e3e0;
+  border-bottom: 1px solid #229935;
+}
+
+/* Botones laterales únicos */
+.btn-todo, .btn-citricos, .btn-semillas-pequenas, .btn-semillas-grandes,
+.btn-frutillas, .btn-tropicales, .btn-refrescantes {
+  position: absolute;
+  width: 527px;
+  height: 76px;
+  left: 19px;
+}
+
+.btn-todo { top: 36px; }
+.btn-citricos { top: 124px; }
+.btn-semillas-pequenas { top: 212px; }
+.btn-semillas-grandes { top: 300px; }
+.btn-frutillas { top: 388px; }
+.btn-tropicales { top: 476px; }
+.btn-refrescantes { top: 564px; }
+
+/* Grupos únicos */
+.grupo-todo, .grupo-citricos, .grupo-semillas-pequenas, .grupo-semillas-grandes,
+.grupo-frutillas, .grupo-tropicales, .grupo-refrescantes {
+  position: relative;
+  width: 525px;
+  height: 76px;
+  background-color: #e7e3e0;
+  border-radius: 50px;
+}
+
+/* Textos únicos */
+.texto-todo, .texto-citricos, .texto-semillas-pequenas, .texto-semillas-grandes,
+.texto-frutillas, .texto-tropicales, .texto-refrescantes {
+  position: absolute;
+  top: 15px;
+  left: 42px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 36px;
+  color: #000000;
+  white-space: nowrap;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+/* Iconos únicos */
+.icono-todo, .icono-citricos, .icono-semillas-pequenas, .icono-semillas-grandes,
+.icono-frutillas, .icono-tropicales, .icono-refrescantes {
+  position: absolute;
+  top: 4px;
+  left: 398px;
+  width: 68px;
+  height: 68px;
+  object-fit: cover;
+}
+
+/* Textos de categorías en panel derecho */
+.titulo-citricos, .titulo-frutillas, .titulo-tropicales,
+.titulo-refrescantes, .titulo-semillas-pequenas, .titulo-semillas-grandes {
+  position: absolute;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 32px;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.titulo-citricos { top: 42px; left: 91px; width: 142px; }
+.titulo-frutillas { top: 42px; left: 570px; width: 136px; }
+.titulo-tropicales { top: 246px; left: 570px; width: 174px; }
+.titulo-refrescantes { top: 450px; left: 570px; width: 220px; }
+.titulo-semillas-pequenas { top: 246px; left: 91px; width: 285px; }
+.titulo-semillas-grandes { top: 450px; left: 91px; width: 275px; }
+
+/* Subitems */
+.item-naranja, .item-mandarina, .item-lima,
+.item-fresa, .item-mora, .item-arandano,
+.item-pina, .item-platano, .item-papaya,
+.item-sandia, .item-melon,
+.item-manzana, .item-pera, .item-membrillo,
+.item-durazno, .item-mango, .item-palta {
+  position: absolute;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  font-size: 20px;
+  color: #000000;
+  white-space: nowrap;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+.item-naranja { top: 108px; left: 95px; width: 117px; }
+.item-mandarina { top: 134px; left: 95px; width: 100px; }
+.item-lima { top: 159px; left: 95px; width: 47px; }
+
+.item-fresa { top: 108px; left: 574px; width: 117px; }
+.item-mora { top: 134px; left: 574px; width: 100px; }
+.item-arandano { top: 159px; left: 574px; width: 116px; }
+
+.item-pina { top: 312px; left: 574px; width: 117px; }
+.item-platano { top: 338px; left: 574px; width: 100px; }
+.item-papaya { top: 363px; left: 574px; width: 116px; }
+
+.item-sandia { top: 516px; left: 574px; width: 117px; }
+.item-melon { top: 542px; left: 574px; width: 100px; }
+
+.item-manzana { top: 312px; left: 95px; width: 117px; }
+.item-pera { top: 338px; left: 95px; width: 100px; }
+.item-membrillo { top: 363px; left: 95px; width: 119px; }
+
+.item-durazno { top: 516px; left: 95px; width: 117px; }
+.item-mango { top: 542px; left: 95px; width: 100px; }
+.item-palta { top: 567px; left: 95px; width: 119px; }

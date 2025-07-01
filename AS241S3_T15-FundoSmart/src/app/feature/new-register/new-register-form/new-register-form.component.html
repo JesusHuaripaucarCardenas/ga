@@ -1,0 +1,225 @@
+<div class="registro-contenedor">
+
+    <div class="registro-principal">
+        <app-navbar></app-navbar>
+        <div class="registro-titulo">Nuevo Registro</div>
+
+        <div class="registro-formulario">
+            <div class="registro-formulario-bloque">
+                <p class="registro-formulario-subtitulo">Registra tu nueva cosecha del día de hoy</p>
+                <p class="registro-formulario-pregunta">¿Qué fruta has cosechado hoy? 🤔</p>
+                <div class="registro-formulario-input-bg">
+                    <p class="registro-formulario-input-label">Escribe el nombre de la fruta</p>
+                </div>
+                <div class="registro-formulario-placeholder-bg">
+                    <input type="text" class="registro-formulario-input" list="frutas-list"
+                        placeholder="ejem: Manzana Golden" [(ngModel)]="frutaSeleccionada" (blur)="onBlurInput()"
+                        (keyup)="onEnter($event)" />
+                    <datalist id="frutas-list">
+                        <option *ngFor="let f of frutasVariedades" [value]="f"></option>
+                    </datalist>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="registro-contabilidad">
+            <div class="contabilidad-bloque">
+                <div class="contabilidad-titulo">Ahora contabilizaremos tu cosecha</div>
+                <div class="contabilidad-label-seleccion">Selección</div>
+                <div class="contabilidad-label-cantidad">Cantidad</div>
+
+                <div class="contabilidad-instruccion-bg">
+                    <p class="contabilidad-instruccion-texto">En cada selección coloca la cantidad correspondiente</p>
+                </div>
+
+                <!-- CATEGORÍAS (estáticos a la izquierda) -->
+                <div class="contabilidad-columna-categorias">
+                    <input class="categoria-input-uno" [(ngModel)]="categorias[0]" (input)="calcularTotales()" />
+                    <input class="categoria-input-dos" [(ngModel)]="categorias[1]" (input)="calcularTotales()" />
+                    <input class="categoria-input-tres" [(ngModel)]="categorias[2]" (input)="calcularTotales()" />
+                    <input class="categoria-input-cuatro" [(ngModel)]="categorias[3]" (input)="calcularTotales()" />
+                </div>
+
+
+
+
+                <!-- Contenedor horizontal que crece dinámicamente -->
+                <div class="contabilidad-columna-resultados">
+                    <!-- Columnas dinámicas -->
+                    <!-- COLUMNAS DINÁMICAS -->
+                    <div *ngFor="let columna of columnas; let i = index" class="columna-estatica">
+                        <input class="resultado-input-uno" [(ngModel)]="resultados[0][i]" (input)="calcularTotales()" />
+                        <input class="resultado-input-dos" [(ngModel)]="resultados[1][i]" (input)="calcularTotales()" />
+                        <input class="resultado-input-tres" [(ngModel)]="resultados[2][i]"
+                            (input)="calcularTotales()" />
+                        <input class="resultado-input-cuatro" [(ngModel)]="resultados[3][i]"
+                            (input)="calcularTotales()" />
+                    </div>
+
+
+                    <!-- Última columna: Totales -->
+                    <!-- Última columna: Totales -->
+                    <div class="columna-total">
+                        <div *ngFor="let total of totales" class="contabilidad-total-celda">
+                            {{ total }}
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Etiqueta "Total" que se debe mover -->
+                <div class="contabilidad-label-total" [style.left.px]="620 + columnas.length * 134">Total</div>
+
+                <!-- Bloque verde "Totgal" -->
+                <div class="contabilidad-total" [style.left.px]="488 + columnas.length * 134">
+                    <div class="contabilidad-total-bg">
+                        <div class="contabilidad-total-texto">Total</div>
+                    </div>
+                </div>
+
+
+                <div class="contabilidad-etiqueta-primera">
+                    <div class="contabilidad-etiqueta-bg">
+                        <div class="contabilidad-etiqueta-texto">1º ra</div>
+                    </div>
+                </div>
+
+                <div class="contabilidad-etiqueta-tercera">
+                    <div class="contabilidad-etiqueta-bg">
+                        <div class="contabilidad-etiqueta-texto">3º ra</div>
+                    </div>
+                </div>
+
+                <div class="contabilidad-etiqueta-quinta">
+                    <div class="contabilidad-etiqueta-bg">
+                        <div class="contabilidad-etiqueta-texto">5º ta</div>
+                    </div>
+                </div>
+
+                <div class="contabilidad-etiqueta-madura">
+                    <div class="contabilidad-etiqueta-bg">
+                        <div class="contabilidad-etiqueta-texto-madura">Madura</div>
+                    </div>
+                </div>
+
+
+                <div class="contabilidad-boton-agregar" (click)="agregarColumna()">
+                    <div class="contabilidad-boton-agregar-bg">
+                        <div class="contabilidad-boton-agregar-texto">Agregar</div>
+                    </div>
+                </div>
+
+
+                <div class="contabilidad-boton-eliminar" (click)="eliminarUltimaColumna()">
+                    <div class="contabilidad-boton-eliminar-bg">
+                        <div class="contabilidad-boton-eliminar-texto">Eliminar</div>
+                    </div>
+                </div>
+
+
+
+                <p class="contabilidad-nota-editar">Si deseas puedes agregar una nueva columna o eliminarlas</p>
+            </div>
+        </div>
+
+        <!-- Pesa -->
+        <div class="registro-pesado">
+            <div class="pesado-bloque">
+                <p class="pesado-nota-editar">Si deseas puedes agregar una nueva columna de peso o eliminarlas</p>
+                <div class="pesado-titulo">Ahora toca pesar</div>
+                <div class="pesado-instruccion-bg">
+                    <p class="pesado-instruccion-texto">En cada selección coloca el peso correspondiente</p>
+                </div>
+                <div class="pesado-boton-agregar" (click)="agregarColumnaPesado()">
+                    <div class="pesado-boton-agregar-bg">
+                        <div class="pesado-boton-agregar-texto">Agregar</div>
+                    </div>
+                </div>
+                <div class="pesado-boton-eliminar" (click)="eliminarColumnaPesado()">
+                    <div class="pesado-boton-eliminar-bg">
+                        <div class="pesado-boton-eliminar-texto">Eliminar</div>
+                    </div>
+                </div>
+                <!-- … dentro de registro-pesado … -->
+                <div class="pesado-boton-guardar" (click)="onGuardar()">
+                    <div class="pesado-boton-guardar-bg">
+                        <div class="pesado-boton-guardar-texto">Guardar</div>
+                    </div>
+                </div>
+
+
+
+                <!-- ETIQUETAS ESTÁTICAS -->
+                <div class="pesado-label-seleccion">Selección</div>
+                <div class="pesado-label-cantidad">Cantidad</div>
+                <div class="pesado-label-total" [style.left.px]="660 + pesadoResultados[0].length * 134">
+                    Total
+                </div>
+
+                <div class="pesado-columna-categorias">
+                    <input class="pesado-input-uno" [(ngModel)]="pesadoCategorias[0]"
+                        (input)="calcularPesadoTotales()" />
+                    <input class="pesado-input-dos" [(ngModel)]="pesadoCategorias[1]"
+                        (input)="calcularPesadoTotales()" />
+                    <input class="pesado-input-tres" [(ngModel)]="pesadoCategorias[2]"
+                        (input)="calcularPesadoTotales()" />
+                    <input class="pesado-input-cuatro" [(ngModel)]="pesadoCategorias[3]"
+                        (input)="calcularPesadoTotales()" />
+                </div>
+
+                <div class="pesado-total" [style.left.px]="486 + pesadoResultados[0].length * 134">
+                    <div class="pesado-total-bg">
+                        <div class="pesado-total-texto">Total</div>
+                    </div>
+                </div>
+
+                <div class="pesado-columna-resultados">
+                    <!-- columnas de valores -->
+                    <div *ngFor="let _ of pesadoResultados[0]; let colIndex = index" class="columna-estatica">
+                        <input class="pesado-resultado-uno" [(ngModel)]="pesadoResultados[0][colIndex]"
+                            (input)="calcularPesadoTotales()" />
+                        <input class="pesado-resultado-dos" [(ngModel)]="pesadoResultados[1][colIndex]"
+                            (input)="calcularPesadoTotales()" />
+                        <input class="pesado-resultado-tres" [(ngModel)]="pesadoResultados[2][colIndex]"
+                            (input)="calcularPesadoTotales()" />
+                        <input class="pesado-resultado-cuatro" [(ngModel)]="pesadoResultados[3][colIndex]"
+                            (input)="calcularPesadoTotales()" />
+                    </div>
+
+
+                    <!-- última columna de totales -->
+                    <div class="pesado-columna-totales">
+                        <div *ngFor="let total of pesadoTotales" class="pesado-total-celda">
+                            {{ total }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pesado-etiqueta-primera">
+                    <div class="pesado-etiqueta-primera-bg">
+                        <div class="pesado-etiqueta-primera-texto">1º ra</div>
+                    </div>
+                </div>
+
+                <div class="pesado-etiqueta-tercera">
+                    <div class="pesado-etiqueta-tercera-bg">
+                        <div class="pesado-etiqueta-tercera-texto">3º ra</div>
+                    </div>
+                </div>
+
+                <div class="pesado-etiqueta-quinta">
+                    <div class="pesado-etiqueta-quinta-bg">
+                        <div class="pesado-etiqueta-quinta-texto">5º ta</div>
+                    </div>
+                </div>
+
+                <div class="pesado-etiqueta-madura">
+                    <div class="pesado-etiqueta-madura-bg">
+                        <div class="pesado-etiqueta-madura-texto">Madura</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

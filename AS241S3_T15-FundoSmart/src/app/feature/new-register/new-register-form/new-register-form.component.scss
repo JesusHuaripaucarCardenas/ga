@@ -1,0 +1,1185 @@
+/* CONTENEDOR PRINCIPAL */
+.registro-contenedor {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.registro-principal {
+  background-color: #e7e3e0;
+  width: 1728px;
+  height: 2663px;
+  position: relative;
+}
+
+.registro-titulo {
+  position: absolute;
+  width: 275px;
+  top: 235px;
+  left: 746px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+/* FORMULARIO REGISTRO */
+.registro-formulario {
+  position: absolute;
+  width: 1668px;
+  height: 387px;
+  top: 329px;
+  left: 34px;
+}
+
+.registro-formulario-bloque {
+  position: relative;
+  width: 1660px;
+  height: 387px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.registro-formulario-subtitulo {
+  position: absolute;
+  width: 596px;
+  top: 52px;
+  left: 35px;
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 30px;
+  color: #000;
+}
+
+.registro-formulario-pregunta {
+  position: absolute;
+  width: 422px;
+  top: 123px;
+  left: 35px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+}
+
+.registro-formulario-input-bg {
+  position: absolute;
+  width: 449px;
+  height: 54px;
+  top: 182px;
+  left: 35px;
+  background-color: #229935;
+  border-radius: 40px;
+}
+
+.registro-formulario-input-label {
+  position: absolute;
+  width: 361px;
+  top: -10px;
+  left: 55px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.registro-formulario-placeholder-bg {
+  position: absolute;
+  width: 1010px;
+  height: 55px;
+  top: 280px;
+  left: 35px;
+  background-color: #2299354c;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.registro-formulario-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding-left: 74px;
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 20px;
+  color: #000;
+
+  /* Texto ingresado */
+  ::placeholder {
+    color: #00000080;
+  }
+}
+
+
+/* CONTABILIDAD */
+.registro-contabilidad {
+  position: absolute;
+  width: 1670px;
+  height: 844px;
+  top: 730px;
+  left: 34px;
+}
+
+.contabilidad-bloque {
+  position: relative;
+  width: 1660px;
+  height: 844px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.contabilidad-titulo {
+  position: absolute;
+  width: 515px;
+  top: 40px;
+  left: 47px;
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 30px;
+  color: #000;
+}
+
+.contabilidad-label-seleccion,
+.contabilidad-label-cantidad,
+.contabilidad-label-total {
+  position: absolute;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000;
+  font-size: 25px;
+  white-space: nowrap;
+}
+
+.contabilidad-label-seleccion {
+  top: 228px;
+  left: 328px;
+}
+
+.contabilidad-label-cantidad {
+  top: 228px;
+  left: 497px;
+}
+
+.contabilidad-label-total {
+  top: 228px;
+  left: 806px;
+}
+
+.contabilidad-instruccion-bg {
+  position: absolute;
+  width: 725px;
+  height: 54px;
+  top: 87px;
+  left: 35px;
+  background-color: #229935;
+  border-radius: 40px;
+}
+
+.contabilidad-instruccion-texto {
+  position: absolute;
+  width: 613px;
+  top: -10px;
+  left: 55px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.contabilidad-columna-categorias,
+.contabilidad-columna-resultados,
+.contabilidad-columna-totales {
+  position: absolute;
+  width: 124px;
+  height: 299px;
+  top: 277px;
+}
+
+.contabilidad-columna-categorias {
+  left: 484px;
+}
+
+.contabilidad-columna-resultados {
+  left: 620px;
+}
+
+.contabilidad-columna-totales {
+  left: 787px;
+}
+
+
+.contabilidad-total-celda {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+
+  /* 👉 añade estas tres líneas: */
+  display: flex;            /* convierte la celda en contenedor flex */
+  justify-content: center;  /* centra el contenido horizontalmente */
+  align-items: center;      /* centra el contenido verticalmente */
+
+  /* opcional: si aún ves que el texto no queda exacto, */
+  text-align: center;       /* refuerza el centrado de texto */
+}
+
+.categoria-input-uno {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.categoria-input-uno::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.categoria-input-dos {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.categoria-input-dos::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.categoria-input-tres {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.categoria-input-tres::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.categoria-input-cuatro {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.categoria-input-cuatro::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.resultado-input-uno {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.resultado-input-uno::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.resultado-input-dos {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  top: 100px;
+}
+
+.resultado-input-dos::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.resultado-input-tres {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.resultado-input-tres::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.resultado-input-cuatro {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.resultado-input-cuatro::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+.contabilidad-total {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 588px;
+  left: 620px;
+}
+
+.contabilidad-total-bg {
+  width: 124px;
+  height: 74px;
+  background-color: #22993580;
+  border-radius: 40px;
+  position: relative;
+}
+
+.contabilidad-total-texto {
+  position: absolute;
+  top: 25px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  color: #000;
+}
+
+.contabilidad-etiqueta-primera {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  left: 322px;
+}
+
+.contabilidad-etiqueta-tercera,
+.contabilidad-etiqueta-quinta,
+.contabilidad-etiqueta-madura {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  left: 322px;
+}
+
+.contabilidad-etiqueta-primera {
+  top: 277px;
+}
+
+.contabilidad-etiqueta-tercera {
+  top: 352px;
+}
+
+.contabilidad-etiqueta-quinta {
+  top: 427px;
+}
+
+.contabilidad-etiqueta-madura {
+  top: 502px;
+}
+
+.contabilidad-etiqueta-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.contabilidad-etiqueta-texto,
+.contabilidad-etiqueta-texto-madura {
+  position: absolute;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.contabilidad-etiqueta-texto-madura {
+  left: 21px;
+}
+
+.contabilidad-etiqueta-primera-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.contabilidad-etiqueta-primera-texto {
+  position: absolute;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.contabilidad-etiqueta-tercera-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.contabilidad-etiqueta-tercera-texto {
+  position: absolute;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.contabilidad-etiqueta-quinta-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.contabilidad-etiqueta-quinta-texto {
+  position: absolute;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.contabilidad-etiqueta-madura-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.contabilidad-etiqueta-madura-texto {
+  position: absolute;
+  top: 26px;
+  left: 25px;
+  /* Ajuste visual para centrar mejor la palabra “Madura” */
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+
+.contabilidad-nota-editar {
+  position: absolute;
+  top: 160px;
+  left: 84px;
+  width: 799px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  color: #000;
+}
+
+/* PESA */
+.registro-pesado {
+  position: absolute;
+  width: 1670px;
+  height: 1026px;
+  top: 1588px;
+  left: 34px;
+}
+
+.pesado-bloque {
+  position: relative;
+  width: 1660px;
+  height: 1026px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.pesado-nota-editar {
+  position: absolute;
+  top: 183px;
+  left: 84px;
+  width: 799px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  color: #000;
+}
+
+.pesado-titulo {
+  position: absolute;
+  top: 46px;
+  left: 47px;
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 30px;
+  color: #000;
+}
+
+.pesado-instruccion-bg {
+  position: absolute;
+  width: 882px;
+  height: 54px;
+  top: 112px;
+  left: 47px;
+  background-color: #229935;
+  border-radius: 40px;
+}
+
+.pesado-instruccion-texto {
+  position: absolute;
+  top: -10px;
+  left: 42px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.pesado-boton-agregar,
+.pesado-boton-eliminar,
+.pesado-boton-guardar {
+  position: absolute;
+  height: 47px;
+}
+
+.pesado-boton-agregar {
+  width: 291px;
+  top: 814px;
+  left: 303px;
+}
+
+.pesado-boton-eliminar {
+  width: 291px;
+  top: 814px;
+  left: 664px;
+}
+
+.pesado-boton-guardar {
+  width: 652px;
+  top: 920px;
+  left: 303px;
+  
+}
+
+.boton-guardar-bg {
+  width: 650px;
+  height: 47px;
+  background-color: #229935b2;
+  border-radius: 40px;
+  position: relative;
+}
+
+.boton-guardar-texto {
+  position: absolute;
+  top: 13px;
+  left: 267px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  color: #fff;
+}
+
+.pesado-label-seleccion,
+.pesado-label-cantidad {
+  position: absolute;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 25px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.pesado-label-seleccion {
+  top: 280px;
+  left: 330px;
+}
+
+.pesado-label-cantidad {
+  top: 280px;
+  left: 499px;
+}
+
+.pesado-label-total {
+  top: 280px;
+  left: 140px;
+  position: absolute;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 25px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.pesado-columna-categorias,
+.pesado-columna-resultados {
+  position: absolute;
+  width: 124px;
+  height: 299px;
+  top: 329px;
+}
+
+.pesado-columna-categorias {
+  left: 486px;
+}
+
+.pesado-columna-resultados {
+  left: 622px;
+}
+
+.pesado-columna-totales {
+  left: 789px;
+}
+
+.pesado-total-celda {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+}
+
+.pesado-resultado-uno {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-resultado-uno::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pesado-resultado-dos {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-resultado-dos::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pesado-resultado-tres {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-resultado-tres::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pesado-resultado-cuatro {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-resultado-cuatro::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pesado-input-uno {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-input-uno::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pesado-input-dos {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-input-dos::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pesado-input-tres {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-input-tres::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pesado-input-cuatro {
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+  margin-bottom: 1px;
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Kurale-Regular", Helvetica;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pesado-input-cuatro::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+.pesado-total {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 640px;
+  left: 622px;
+}
+
+.pesado-total-bg {
+  width: 124px;
+  height: 74px;
+  background-color: #22993580;
+  border-radius: 40px;
+  position: relative;
+}
+
+.pesado-total-texto {
+  position: absolute;
+  top: 25px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 25px;
+  color: #000;
+}
+
+.pesado-etiqueta-primera,
+.pesado-etiqueta-tercera,
+.pesado-etiqueta-quinta,
+.pesado-etiqueta-madura {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  left: 324px;
+}
+
+.pesado-etiqueta-primera {
+  top: 329px;
+}
+
+.pesado-etiqueta-tercera {
+  top: 404px;
+}
+
+.pesado-etiqueta-quinta {
+  top: 479px;
+}
+
+.pesado-etiqueta-madura {
+  top: 554px;
+}
+
+.pesado-etiqueta-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.pesado-etiqueta-primera-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.pesado-etiqueta-primera-texto {
+  position: absolute;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.pesado-etiqueta-tercera-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.pesado-etiqueta-tercera-texto {
+  position: absolute;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.pesado-etiqueta-quinta-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.pesado-etiqueta-quinta-texto {
+  position: absolute;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.pesado-etiqueta-madura-bg {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.pesado-etiqueta-madura-texto {
+  position: absolute;
+  top: 26px;
+  left: 25px;
+  /* ajustado para centrado visual si es necesario */
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+
+.contabilidad-boton-agregar,
+.contabilidad-boton-eliminar {
+  position: absolute;
+  width: 291px;
+  height: 47px;
+  top: 710px;
+}
+
+.contabilidad-boton-agregar {
+  left: 303px;
+}
+
+.contabilidad-boton-eliminar {
+  left: 664px;
+}
+
+.contabilidad-boton-agregar-bg {
+  width: 289px;
+  height: 47px;
+  background-color: #298ce9;
+  border-radius: 40px;
+  position: relative;
+}
+
+.contabilidad-boton-agregar-texto {
+  position: absolute;
+  top: 9px;
+  left: 104px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  color: #fff;
+}
+
+.contabilidad-boton-eliminar-bg {
+  width: 289px;
+  height: 47px;
+  background-color: #ff0000;
+  border-radius: 40px;
+  position: relative;
+}
+
+.contabilidad-boton-eliminar-texto {
+  position: absolute;
+  top: 11px;
+  left: 104px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  color: #fff;
+}
+
+.pesado-boton-agregar-bg {
+  width: 289px;
+  height: 47px;
+  background-color: #298ce9;
+  border-radius: 40px;
+  position: relative;
+}
+
+.pesado-boton-agregar-texto {
+  position: absolute;
+  top: 9px;
+  left: 104px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  color: #fff;
+}
+
+.pesado-boton-eliminar-bg {
+  width: 289px;
+  height: 47px;
+  background-color: #ff0000;
+  border-radius: 40px;
+  position: relative;
+}
+
+.pesado-boton-eliminar-texto {
+  position: absolute;
+  top: 11px;
+  left: 104px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  color: #fff;
+}
+
+.pesado-boton-guardar-bg {
+  width: 289px;
+  height: 47px;
+  background-color: #229935;
+  border-radius: 40px;
+  position: relative;
+}
+
+.pesado-boton-guardar-texto {
+  position: absolute;
+  top: 11px;
+  left: 104px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+.contabilidad-columna-resultados {
+  position: absolute;
+  left: 620px; /* posición original */
+  top: 277px; /* posición original */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 299px;
+    overflow-x: auto;
+}
+.contabilidad-columna-resultados {
+  position: absolute;
+  left: 620px;
+  top: 277px;
+  display: flex;
+  flex-direction: row; /* Para que cada columna esté en fila */
+  gap: 10px;
+  height: 299px;
+  overflow-x: auto;
+}
+
+.columna-estatica {
+  display: flex;
+  flex-direction: column; /* 👈 Esto pone los inputs en columna */
+  gap: 1px;
+}
+
+
+.pesado-columna-resultados {
+  position: absolute;
+  left: 622px;
+  top: 329px;
+  display: flex;
+  flex-direction: row;    /* filas de columnas */
+  gap: 10px;              /* separación entre columnas */
+  width: max-content;     /* que crezca según el número de columnas */
+  height: auto;           /* que se ajuste al contenido */
+  overflow-x: visible;    /* que no oculte nada ni genere scroll */
+  flex-wrap: wrap;        /* opcional: que al pasar cierto ancho haga wrap */
+}
+
+
+.contabilidad-columna-resultados {
+  position: absolute;
+  left: 620px;
+  top: 277px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 299px;
+  /* ✅ Quitamos el scroll */
+  overflow-x: visible; 
+  /* ✅ Dejamos que el ancho crezca dinámicamente */
+  width: auto;
+}
+
+
+.columna-estatica,
+.columna-total {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pesado-columna-totales {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  left: 140px;
+   top: 3px;
+}
+
+.pesado-total-celda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+

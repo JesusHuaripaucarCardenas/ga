@@ -1,0 +1,145 @@
+.pago-correo {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.pago-correo .div {
+  background-color: #e7e3e0;
+  width: 1728px;
+  height: 1117px;
+  position: relative;
+}
+
+.pago-correo .logo {
+  position: absolute;
+  width: 289px;
+  height: 289px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.pago-correo .correo {
+  position: absolute;
+  width: 1009px;
+  height: 516px;
+  top: 289px;
+  left: 362px;
+}
+
+.pago-correo .overlap {
+  position: relative;
+  width: 1003px;
+  height: 516px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.pago-correo .ingresa {
+  position: absolute;
+  width: 710px;
+  top: 49px;
+  left: 147px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pago-correo .recibo {
+  position: absolute;
+  width: 350px;
+  top: 133px;
+  left: 327px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pago-correo .text-wrapper {
+  position: absolute;
+  width: 183px;
+  top: 276px;
+  left: 49px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pago-correo .btncontinuar {
+  position: absolute;
+  width: 379px;
+  height: 54px;
+  top: 430px;
+  left: 313px;
+}
+
+.pago-correo .overlap-group {
+  position: relative;
+  width: 377px;
+  height: 54px;
+  background-color: #e7e3e0;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.pago-correo .continuar {
+  position: absolute;
+  width: 119px;
+  top: 14px;
+  left: 128px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pago-correo .escricorreo {
+  position: absolute;
+  width: 643px;
+  height: 37px;
+  top: 314px;
+  left: 49px;
+}
+
+.pago-correo .remingresa-wrapper {
+  position: relative;
+  width: 641px;
+  height: 37px;
+  background-color: #ffffff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #000000;
+}
+
+.pago-correo .remingresa {
+  position: absolute;
+  width: 301px;
+  top: 7px;
+  left: 6px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #d9d9d9;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

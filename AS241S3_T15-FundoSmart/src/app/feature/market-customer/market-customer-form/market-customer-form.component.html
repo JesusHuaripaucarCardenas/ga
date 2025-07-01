@@ -1,0 +1,99 @@
+<div class="market-form-wrapper">
+  <h2 class="market-form-title">Mercado</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onAgregar()" class="market-form">
+
+    <!-- Fila 1 -->
+    <div class="market-form-row">
+      <div class="market-field">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" formControlName="ciudad" (keypress)="soloLetras($event)" />
+        <div class="market-error" *ngIf="form.get('ciudad')?.touched && form.get('ciudad')?.hasError('required')">
+          Campo obligatorio
+        </div>
+      </div>
+
+      <div class="market-field">
+        <label for="distrito">Distrito:</label>
+        <input type="text" id="distrito" formControlName="distrito" (keypress)="soloLetras($event)" />
+        <div class="market-error" *ngIf="form.get('distrito')?.touched && form.get('distrito')?.hasError('required')">
+          Campo obligatorio
+        </div>
+      </div>
+
+      <div class="market-field-wide">
+        <label for="nombreMercado">Nombre del mercado:</label>
+        <input type="text" id="nombreMercado" formControlName="nombreMercado" (keypress)="soloLetras($event)" />
+        <div class="market-error" *ngIf="form.get('nombreMercado')?.touched && form.get('nombreMercado')?.hasError('required')">
+          Campo obligatorio
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="market-form-row">
+      <div class="market-field">
+        <label for="puesto">N° de puesto:</label>
+        <input type="text" id="puesto" formControlName="puesto" (keypress)="soloNumeros($event)" (paste)="bloquearPegado($event)" />
+        <div class="market-error" *ngIf="form.get('puesto')?.touched">
+          <span *ngIf="form.get('puesto')?.hasError('required')">Campo obligatorio</span>
+          <span *ngIf="form.get('puesto')?.hasError('pattern')">Solo números</span>
+        </div>
+      </div>
+
+      <div class="market-field">
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" formControlName="celular" maxlength="9" (keypress)="soloNumeros($event)" (paste)="bloquearPegado($event)" />
+        <div class="market-error" *ngIf="form.get('celular')?.touched">
+          <span *ngIf="form.get('celular')?.hasError('required')">Campo obligatorio</span>
+          <span *ngIf="form.get('celular')?.hasError('pattern')">Debe tener 9 dígitos</span>
+        </div>
+      </div>
+
+      <div class="market-field-wide">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" formControlName="nombre" (keypress)="soloLetras($event)" />
+        <div class="market-error" *ngIf="form.get('nombre')?.touched">
+          <span *ngIf="form.get('nombre')?.hasError('required')">Campo obligatorio</span>
+          <span *ngIf="form.get('nombre')?.hasError('pattern')">Solo letras</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 3 -->
+    <div class="market-form-row">
+      <div class="market-field-wide">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" formControlName="apellido" (keypress)="soloLetras($event)" />
+        <div class="market-error" *ngIf="form.get('apellido')?.touched">
+          <span *ngIf="form.get('apellido')?.hasError('required')">Campo obligatorio</span>
+          <span *ngIf="form.get('apellido')?.hasError('pattern')">Solo letras</span>
+        </div>
+      </div>
+
+      <div class="market-field">
+        <label for="documento">N° de documento:</label>
+        <input type="text" id="documento" formControlName="documento" (keypress)="soloNumeros($event)" (paste)="bloquearPegado($event)" />
+        <div class="market-error" *ngIf="form.get('documento')?.touched">
+          <span *ngIf="form.get('documento')?.hasError('required')">Campo obligatorio</span>
+          <span *ngIf="form.get('documento')?.hasError('pattern')">Solo números</span>
+        </div>
+      </div>
+
+      <div class="market-field">
+        <label for="tipoDocumento">Tipo de documento:</label>
+        <select id="tipoDocumento" formControlName="tipoDocumento">
+          <option value="">Seleccione...</option>
+          <option value="DNI">D.N.I</option>
+          <option value="CE">Carnet de Extranjería</option>
+          <option value="PAS">Pasaporte</option>
+        </select>
+        <div class="market-error" *ngIf="form.get('tipoDocumento')?.touched && form.get('tipoDocumento')?.hasError('required')">
+          Seleccione un tipo
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="market-submit-btn" [disabled]="form.invalid">Agregar</button>
+  </form>
+</div>

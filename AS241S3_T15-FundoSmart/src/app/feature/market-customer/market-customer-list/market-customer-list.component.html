@@ -1,0 +1,144 @@
+<div class="clientes">
+  <div class="div">
+    <div class="gapellido">
+      <div class="overlap-group">
+        <div class="apellido">Apellido</div>
+      </div>
+    </div>
+    <div class="gnombre">
+      <div class="overlap">
+        <div class="nombre">Nombre</div>
+      </div>
+    </div>
+    <div class="gciudad">
+      <div class="puesto-wrapper">
+        <div class="puesto">Puesto</div>
+      </div>
+    </div>
+    <div class="gestado">
+      <div class="estado-wrapper">
+        <div class="estado">Estado</div>
+      </div>
+    </div>
+    <div class="gtelefono">
+      <div class="telefono-wrapper">
+        <div class="telefono">Telefono</div>
+      </div>
+    </div>
+    <div class="gtipdocumento">
+      <div class="overlap-group">
+        <div class="tipodedocumento">T. Documento</div>
+      </div>
+    </div>
+    <div class="gdistrito">
+      <div class="distrito-wrapper">
+        <div class="distrito">Distrito</div>
+      </div>
+    </div>
+    <div class="overlap-wrapper">
+      <div class="ciudad-wrapper">
+        <div class="ciudad">Ciudad</div>
+      </div>
+    </div>
+    <div class="idd">
+      <div class="id-wrapper">
+        <div class="id">Id</div>
+      </div>
+    </div>
+    <div class="listado">Listado de Clientes Mercado</div>
+    <div class="busqueda">
+      <div class="buscar-wrapper">
+        <div class="buscar">Buscar</div>
+      </div>
+    </div>
+  
+    <div class="overlap-group-wrapper">
+      <div class="numerodedocumento-wrapper">
+        <div class="numerodedocumento">N. de Documento</div>
+      </div>
+    </div>
+    <!-- Contenedor para todos los registros -->
+    <div class="lista-clientes">
+      <div class="ejemplo" *ngFor="let customer of customers">
+        <div class="navbar">
+          <div class="ejmtipdocumento">{{ customer.documentType }}</div>
+          <div class="ejmnumdocumento">{{ customer.documentNumber }}</div>
+          <div class="ejmtelefono">{{ customer.phone }}</div>
+          <div class="ejmapellido">{{ customer.lastname }}</div>
+          <div class="ejmnombre">{{ customer.name }}</div>
+          <div class="ejmdistrito">{{ customer.district }}</div>
+          <div class="ejmciudad">{{ customer.city }}</div>
+          <div class="ejmid">{{ customer.id }}</div>
+          <div class="ejmpuesto">{{ customer.positionNumber }}</div>
+          <div class="ejmestado">{{ customer.state }}</div>
+
+          <!-- 🔁 Aquí sí tienes acceso a customer -->
+          <div class="acciones">
+            <button *ngIf="customer.state === 'A'" class="btn" (click)="editar(customer)">Editar</button>
+            <button *ngIf="customer.state === 'A'" class="btn" (click)="eliminar(customer)">Eliminar</button>
+            <button *ngIf="customer.state === 'I'" class="btn" (click)="recuperar(customer)">Recuperar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Botón de filtro -->
+    <!-- Contenedor del botón + panel -->
+    <div style="position: relative;">
+      <!-- Botón de filtro -->
+      <div class="filtro" (click)="toggleFiltros()">
+        <div class="overlap-3">
+          <div class="filtrarr"></div>
+          <div class="filter">Filtrar</div>
+          <img class="menu-filter" src="img/menu-filter-1.png" />
+        </div>
+      </div>
+
+      <!-- Panel desplegable justo debajo -->
+      <div class="ffilltro" *ngIf="mostrarFiltros" style="position: absolute; top: 40px; right: 0;">
+        <div class="filternombreaz">
+          <div class="nombreaz-wrapper">
+            <div class="text-wrapper-2">Nombre: A - Z</div>
+          </div>
+        </div>
+        <div class="filternombreza">
+          <div class="overlap-4">
+            <div class="text-wrapper-2">Nombre: Z - A</div>
+          </div>
+        </div>
+        <div class="filterapellidoaz">
+          <div class="overlap-4">
+            <div class="apellidoaz">Apellido: A - Z</div>
+          </div>
+        </div>
+        <div class="filterapellidoaza">
+          <div class="overlap-4">
+            <div class="apellidoza">Apellido: Z - A</div>
+          </div>
+        </div>
+        <div class="filterdni">
+          <div class="overlap-4">
+            <div class="dni">DNI</div>
+          </div>
+        </div>
+        <div class="filtercarnet">
+          <div class="overlap-4">
+            <div class="carnetdeextranjeria">Carnet de extranjeria</div>
+          </div>
+        </div>
+        <div class="filterpasaporte">
+          <div class="pasaporte-wrapper">
+            <div class="pasaporte">Pasaporte</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-edit-market-customer-modal *ngIf="mostrarModal && clienteSeleccionado" [cliente]="clienteSeleccionado"
+      (actualizar)="actualizarCliente($event)" (cerrarModal)="cerrarModal()">
+    </app-edit-market-customer-modal>
+
+
+
+  </div>
+</div>

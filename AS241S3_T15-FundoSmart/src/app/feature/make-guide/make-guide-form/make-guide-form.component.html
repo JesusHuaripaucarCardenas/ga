@@ -1,0 +1,65 @@
+<div class="form-container">
+  <app-navbar></app-navbar>
+  <div class="name-row">
+    <label class="label title">Nombre</label>
+    <input type="text" id="nameInput" class="input-name" list="names" [(ngModel)]="selectedName"
+      (ngModelChange)="onNameChange()" placeholder="Selecciona nombre" />
+    <datalist id="names">
+      <option *ngFor="let rec of records" [value]="rec.nombre"></option>
+    </datalist>
+  </div>
+
+  <!-- Tabla -->
+  <div class="table-layout">
+    <!-- Columna Selección -->
+    <div class="column-left">
+      <div class="cell label">Selección</div>
+      <div class="cell selection">1° ra</div>
+      <div class="cell selection">3° ra</div>
+      <div class="cell selection">5° ta</div>
+      <div class="cell selection">Madura</div>
+      <div class="cell selection total">Total</div>
+    </div>
+
+    <!-- Columna Cantidad -->
+    <div class="column-center">
+      <div class="cell label">Cantidad</div>
+      <div *ngFor="let quantity of quantities; let i = index" class="cell">
+        <input type="number" [(ngModel)]="quantities[i]" (ngModelChange)="onQuantityChange(i)"
+          [disabled]="!selectedRecord" class="input-box" placeholder="" />
+        <div class="error" *ngIf="errorMessages[i]">{{ errorMessages[i] }}</div>
+      </div>
+      <div class="cell total-input">
+        <input type="number" [value]="totalQuantity" class="input-box" disabled />
+      </div>
+    </div>
+
+    <!-- Columna Peso -->
+    <div class="column-right">
+      <div class="cell label">Peso</div>
+      <div *ngFor="let w of weights; let i = index" class="cell">
+        <input type="number" [value]="w" disabled class="input-box" placeholder="" />
+      </div>
+      <div class="cell total-input">
+        <input type="number" [value]="totalWeight" class="input-box" disabled />
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón -->
+  <div class="button-container">
+    <button class="select-button" (click)="openModal()">
+      <img src="assets/icons/person-icon.svg" alt="Icono contacto" />
+      Elegir contacto
+    </button>
+  </div>
+  <!-- Modal: Selector de Contactos -->
+  <div class="modal-overlay" *ngIf="showModal">
+    <div class="modal-container">
+      <button class="modal-close" (click)="closeModal()">✖</button>
+      <app-make-guide-list (contactSelected)="onCustomerSelected($event)"></app-make-guide-list>
+
+    </div>
+  </div>
+
+</div>

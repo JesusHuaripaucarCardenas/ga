@@ -1,0 +1,325 @@
+.mercado-container {
+  background-color: #e7e3e0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.mercado-wrapper {
+  background-color: #e7e3e0;
+  width: 1728px; height: 1117px;
+  position: relative;
+}
+.mercado-header {
+  position: absolute;
+  width: 1728px; height: 182px;
+  top: -4px; left: 0;
+}
+.mercado-header-overlap {
+  position: relative;
+  height: 178px; top: 4px;
+}
+.mercado-header-bg {
+  position: absolute;
+  width: 1728px; height: 174px;
+  top: 0; left: 0;
+  background-color: #229935;
+}
+.mercado-noti-img {
+  position: absolute;
+  width: 130px; height: 130px;
+  top: 22px; left: 1213px;
+  object-fit: cover;
+}
+.mercado-logo-img {
+  position: absolute;
+  width: 173px; height: 173px;
+  top: 1px; left: 13px;
+  object-fit: cover;
+}
+.mercado-search-box {
+  position: absolute;
+  width: 611px; height: 68px;
+  top: 61px; left: 507px;
+  background-color: #fff;
+  border-radius: 100px;
+}
+.mercado-search-icon {
+  position: absolute;
+  width: 49px; height: 49px;
+  top: 9px; left: 544px;
+  object-fit: cover;
+}
+.mercado-category {
+  position: absolute;
+  width: 223px; height: 83px;
+  top: 46px; left: 218px;
+}
+.mercado-category-btn {
+  position: relative;
+  width: 221px; height: 83px;
+  background-color: #229935;
+  border-radius: 50px;
+  border: 2px solid #fff;
+}
+.mercado-category-text {
+  position: absolute;
+  top: 20px; left: 35px;
+  font-family: "Itim-Regular", Helvetica;
+  font-size: 36px; color: #fff;
+  white-space: nowrap;
+}
+.mercado-profile-img {
+  position: absolute;
+  width: 160px; height: 160px;
+  top: 7px; left: 1357px;
+  object-fit: cover;
+}
+.mercado-menu-img {
+  position: absolute;
+  width: 182px; height: 178px;
+  top: 0; left: 1531px;
+  object-fit: cover;
+}
+.mercado-data {
+  position: absolute;
+  width: 1660px; height: 886px;
+  top: 199px; left: 43px;
+}
+.mercado-data-overlap {
+  position: relative;
+  width: 1642px; height: 886px;
+  background-color: #fff;
+  border-radius: 40px;
+}
+.mercado-market-district {
+  position: absolute;
+  top: 642px; left: 170px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 40px; color: #000;
+  white-space: nowrap;
+}
+.mercado-stall-number {
+  position: absolute;
+  top: 739px; left: 175px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 40px; color: #000;
+}
+.mercado-client-name {
+  position: absolute;
+  top: 299px; left: 500px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 64px; color: #a01111;
+}
+.mercado-city {
+  position: absolute;
+  top: 457px; left: 176px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 40px; color: #000;
+}
+.mercado-district {
+  position: absolute;
+  top: 551px; left: 176px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 40px; color: #000;
+}
+.mercado-document-type {
+  position: absolute;
+  top: 454px; left: 491px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 40px; color: #000;
+}
+.mercado-document-number {
+  position: absolute;
+  top: 548px; left: 491px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 40px; color: #000;
+}
+.mercado-phone {
+  position: absolute;
+  top: 642px; left: 490px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-size: 40px; color: #000;
+}
+.mercado-btn-edit {
+  position: absolute;
+  top: 417px; left: 1055px;
+  width: 514px; height: 75px;
+}
+.mercado-btn-edit-group {
+  position: relative;
+  background-color: #298ce9;
+  border-radius: 40px; width: 512px; height: 75px;
+}
+.mercado-btn-edit-text {
+  position: absolute; top: 27px; left: 188px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 24px; color: #fff;
+}
+.mercado-btn-edit-icon {
+  position: absolute; top: 11px; left: 83px;
+  width: 55px; height: 55px; object-fit: cover;
+}
+.mercado-btn-delete {
+  position: absolute;
+  top: 530px; left: 1060px;
+  width: 514px; height: 75px;
+}
+.mercado-btn-delete-group {
+  position: relative;
+  background-color: #f00;
+  border-radius: 40px; width: 512px; height: 75px;
+}
+.mercado-btn-delete-text {
+  position: absolute; top: 27px; left: 182px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 24px; color: #fff;
+}
+.mercado-btn-delete-icon {
+  position: absolute; top: 10px; left: 78px;
+  width: 55px; height: 55px; object-fit: cover;
+}
+.mercado-btn-guide {
+  position: absolute;
+  top: 643px; left: 1060px;
+  width: 514px; height: 81px;
+}
+.mercado-btn-guide-group {
+  position: relative;
+  background-color: #229935b2;
+  border-radius: 40px; width: 512px; height: 81px;
+}
+.mercado-btn-guide-icon {
+  position: absolute; top: 1px; left: 66px;
+  width: 80px; height: 80px; object-fit: cover;
+}
+.mercado-btn-guide-text {
+  position: absolute; top: 24px; left: 183px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 24px; color: #fff;
+}
+
+
+
+/* MODAL BACKDROP */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MODAL CONTAINER */
+.modal-content {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* REUTILIZANDO TU CLASE ACTUAL COMO FORMULARIO */
+.formulario {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* TÍTULO ENCABEZADO VERDE */
+.titulo {
+  background-color: green;
+  color: white;
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* ANIMACIÓN */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ESTRUCTURA DE FILAS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* CAMPOS INDIVIDUALES */
+.campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* INPUTS Y SELECTS */
+input,
+.select-tipo-doc,
+select {
+  background-color: #c4e3cb;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  min-width: 150px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ACCIONES A LA DERECHA */
+.derecha {
+  justify-content: flex-end;
+}
+
+/* BOTONES */
+.btn-agregar {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* ERRORES DE VALIDACIÓN */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}

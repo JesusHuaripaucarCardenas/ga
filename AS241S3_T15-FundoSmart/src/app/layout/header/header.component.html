@@ -1,0 +1,130 @@
+<header class="header">
+  <!-- Logo que lleva a la home -->
+  <a href="home-client">
+    <img class="logo-header" src="assets/img/logo.png" alt="Logo" />
+  </a>
+
+  <!-- Carrito que lleva a la página de carrito -->
+  <a href="cart-client">
+    <img class="cart-icon" src="assets/img/cart.png" alt="Carrito" />
+  </a>
+
+  <!-- Perfil que lleva al perfil de usuario -->
+  <a href="profile.html">
+    <img class="header-profile-icon" src="assets/img/perfilblnck.png" alt="Perfil" />
+  </a>
+
+  <!-- Pedidos que lleva a la página de pedidos -->
+  <a href="historial">
+    <div class="header-orders-wrapper">
+      <div class="header-orders-inner">
+        <img class="header-orders-icon" src="assets/img/pedidoimg-2.png" alt="Pedidos" />
+        <div class="header-orders-text">PEDIDOS</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Resto del header -->
+  <div class="search-bar">
+    <img class="search-icon" src="assets/img/buscar.png" alt="Buscar" />
+  </div>
+  <div class="categories-wrapper">
+    <div class="categories-inner" (click)="toggleCategoriesPanel(); $event.stopPropagation()">
+      <div class="categories-text-header">Categorías</div>
+    </div>
+<div class="catego" *ngIf="showCategoriesPanel" (click)="$event.stopPropagation()">
+  <div class="contenedor-catego">
+    <div class="panel-lateral">
+
+        <div class="btn-todo">
+          <div class="grupo-todo">
+            <div class="texto-todo">Todo</div>
+            <img class="icono-todo" src="assets/img/deret.png" />
+          </div>
+        </div>
+
+      <a href="/citricos-cliente">
+        <div class="btn-citricos">
+          <div class="grupo-citricos">
+            <div class="texto-citricos">Citricos</div>
+            <img class="icono-citricos" src="assets/img/deret.png" />
+          </div>
+        </div>
+      </a>
+      <a href="/semillas-pequenas-cliente">
+        <div class="btn-semillas-pequenas">
+          <div class="grupo-semillas-pequenas">
+            <div class="texto-semillas-pequenas">Semillas pequeñas</div>
+            <img class="icono-semillas-pequenas" src="assets/img/deret.png" />
+          </div>
+        </div>
+      </a>
+      <a href="/semillas-grandes-cliente">
+        <div class="btn-semillas-grandes">
+          <div class="grupo-semillas-grandes">
+            <div class="texto-semillas-grandes">Semillas grandes</div>
+            <img class="icono-semillas-grandes" src="assets/img/deret.png" />
+          </div>
+        </div>
+      </a>
+      <a href="/frutillas-cliente">
+        <div class="btn-frutillas">
+          <div class="grupo-frutillas">
+            <div class="texto-frutillas">Frutillas</div>
+            <img class="icono-frutillas" src="assets/img/deret.png" />
+          </div>
+        </div>
+      </a>
+      <a href="/tropicales-cliente">
+        <div class="btn-tropicales">
+          <div class="grupo-tropicales">
+            <div class="texto-tropicales">Tropicales</div>
+            <img class="icono-tropicales" src="assets/img/deret.png" />
+          </div>
+        </div>
+      </a>
+      <a href="/refrescantes-cliente">
+        <div class="btn-refrescantes">
+          <div class="grupo-refrescantes">
+            <div class="texto-refrescantes">Refrescantes</div>
+            <img class="icono-refrescantes" src="assets/img/deret.png" />
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="panel-derecho">
+      <div class="titulo-citricos">Citricos</div>
+      <a href="#"><div class="item-naranja">Naranjas</div></a>
+      <a href="#"><div class="item-mandarina">Mandarina</div></a>
+      <a href="#"><div class="item-lima">Lima</div></a>
+
+      <div class="titulo-frutillas">Frutillas</div>
+      <a href="#"><div class="item-fresa">Fresas</div></a>
+      <a href="#"><div class="item-mora">Moras</div></a>
+      <a href="#"><div class="item-arandano">Arandanos</div></a>
+
+      <div class="titulo-tropicales">Tropicales</div>
+      <a href="#"><div class="item-pina">Piña</div></a>
+      <a href="#"><div class="item-platano">Platanos</div></a>
+      <a href="#"><div class="item-papaya">Papaya</div></a>
+
+      <div class="titulo-refrescantes">Refrescantes</div>
+      <a href="#"><div class="item-sandia">Sandía</div></a>
+      <a href="#"><div class="item-melon">Melón</div></a>
+
+      <div class="titulo-semillas-pequenas">Semillas pequeñas</div>
+      <a href="#"><div class="item-manzana">Manzana</div></a>
+      <a href="#"><div class="item-pera">Pera</div></a>
+      <a href="#"><div class="item-membrillo">Membrillo</div></a>
+
+      <div class="titulo-semillas-grandes">Semillas grandes</div>
+      <a href="#"><div class="item-durazno">Durazno</div></a>
+      <a href="#"><div class="item-mango">Mango</div></a>
+      <a href="#"><div class="item-palta">Palta</div></a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</header>

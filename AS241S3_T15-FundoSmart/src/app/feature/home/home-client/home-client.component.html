@@ -1,0 +1,94 @@
+<app-header></app-header>
+<div class="homepage">
+  <div class="homepage__wrapper">
+    <section class="section section--one">
+      <a href="/citricos-cliente" class="category-card-link">
+        <div class="category-card category-card--citrus">
+          <img src="assets/img/naranja.png" alt="Naranja" class="category-card__img category-card__img--one" />
+          <h3 class="category-card__title">Cítricos</h3>
+        </div>
+      </a>
+
+      <a href="/semillas-pequenas-cliente" class="category-card-link">
+        <div class="category-card category-card--small-seeds">
+          <img src="assets/img/pera.png" alt="Pera" class="category-card__img category-card__img--one" />
+          <h3 class="category-card__title">Semillas Pequeñas</h3>
+        </div>
+      </a>
+
+      <a href="/tropicales-cliente" class="category-card-link">
+        <div class="category-card category-card--tropicales">
+          <img src="assets/img/platano.png" alt="Plátano" class="category-card__img category-card__img--one" />
+          <h3 class="category-card__title">Tropicales</h3>
+        </div>
+      </a>
+
+      <a href="/refrescantes-cliente" class="category-card-link">
+        <div class="category-card category-card--refrescantes">
+          <img src="assets/img/melon.png" alt="Melón" class="category-card__img category-card__img--one" />
+          <h3 class="category-card__title">Refrescantes</h3>
+        </div>
+      </a>
+
+      <a href="/semillas-grandes-cliente" class="category-card-link">
+        <div class="category-card category-card--large-seeds">
+          <img src="assets/img/durazno.png" alt="Durazno" class="category-card__img category-card__img--one" />
+          <h3 class="category-card__title">Semillas Grandes</h3>
+        </div>
+      </a>
+
+      <a href="/frutillas-cliente.                                           " class="category-card-link">
+        <div class="category-card category-card--berries">
+          <img src="assets/img/arandano.png" alt="Arándano" class="category-card__img category-card__img--one" />
+          <h3 class="category-card__title">Frutillas</h3>
+        </div>
+      </a>
+    </section>
+
+    <!-- Cítricos -->
+    <h2 class="carousel-section__heading--fixed">Cítricos</h2>
+<section class="section section--two">
+  <div class="carousel-track" [style.animationDuration]="'300s'">
+    <ng-container *ngFor="let item of citricos.concat(citricos)">
+      <div class="carousel-item">
+        <h3 class="carousel-item__title">{{ item.name }}</h3>
+        <p class="carousel-item__price-sm">1 Kg - S/ {{ item.firstSelection }}</p>
+        <p class="carousel-item__price-lg">10 Kg - S/ {{ item.firstSelection * 10 | number:'1.2-2' }}</p>
+      </div>
+    </ng-container>
+  </div>
+</section>
+
+    <!-- Frutillas -->
+    <h2 class="carousel-section__heading--fixed">Frutillas</h2>
+<section class="section section--three">
+  <div class="carousel-track" [style.animationDuration]="'30s'">
+    <ng-container *ngFor="let item of frutillas.concat(frutillas)">
+      <div class="carousel-item">
+        <h3 class="carousel-item__title">{{ item.name }}</h3>
+        <p class="carousel-item__price-sm">1 Kg - S/ {{ item.firstSelection }}</p>
+        <p class="carousel-item__price-lg">10 Kg - S/ {{ item.firstSelection * 10 | number:'1.2-2' }}</p>
+      </div>
+    </ng-container>
+  </div>
+</section>
+
+    <!-- Refrescantes -->
+    <h2 class="carousel-section__heading--fixed">Refrescantes</h2>
+<section class="section section--four">
+  <div class="carousel-track" [style.animationDuration]="'10s'">
+    <ng-container *ngFor="let item of refrescantes.concat(refrescantes)">
+      <div class="carousel-item">
+        <h3 class="carousel-item__title">{{ item.name }}</h3>
+        <p class="carousel-item__price-sm">1 Kg - S/ {{ item.firstSelection }}</p>
+        <p class="carousel-item__price-lg">10 Kg - S/ {{ item.firstSelection * 10 | number:'1.2-2' }}</p>
+      </div>
+    </ng-container>
+  </div>
+</section>
+
+
+
+  </div>
+</div>
+<app-footer></app-footer>

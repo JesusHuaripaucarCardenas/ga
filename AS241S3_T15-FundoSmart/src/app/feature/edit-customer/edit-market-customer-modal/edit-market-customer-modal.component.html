@@ -1,0 +1,65 @@
+<div class="modal-backdrop">
+  <div class="modal-content fade-in formulario">
+
+    <h2 class="titulo">Editar Cliente</h2>
+
+    <form #form="ngForm" (ngSubmit)="guardarCambios()" novalidate>
+
+      <!-- Fila 1 -->
+      <div class="fila">
+        <div class="campo">
+          <label>Nombre:</label>
+          <input type="text" name="name" [(ngModel)]="cliente.name" required #name="ngModel" />
+          <div *ngIf="name.invalid && name.touched" class="error">Nombre es obligatorio</div>
+        </div>
+
+        <div class="campo">
+          <label>Apellido:</label>
+          <input type="text" name="lastname" [(ngModel)]="cliente.lastname" required #lastname="ngModel" />
+          <div *ngIf="lastname.invalid && lastname.touched" class="error">Apellido es obligatorio</div>
+        </div>
+
+        <div class="campo">
+          <label>Teléfono:</label>
+          <input type="tel" name="phone" [(ngModel)]="cliente.phone" required pattern="^[0-9]{7,15}$" #phone="ngModel" />
+          <div *ngIf="phone.invalid && phone.touched" class="error">Teléfono obligatorio (7 a 15 dígitos)</div>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="fila">
+        <div class="campo">
+          <label>Ciudad:</label>
+          <input type="text" name="city" [(ngModel)]="cliente.city" required #city="ngModel" />
+          <div *ngIf="city.invalid && city.touched" class="error">Ciudad es obligatoria</div>
+        </div>
+
+        <div class="campo">
+          <label>Distrito:</label>
+          <input type="text" name="district" [(ngModel)]="cliente.district" required #district="ngModel" />
+          <div *ngIf="district.invalid && district.touched" class="error">Distrito es obligatorio</div>
+        </div>
+
+        <div class="campo">
+          <label>Puesto:</label>
+          <input type="text" name="positionNumber" [(ngModel)]="cliente.positionNumber" />
+        </div>
+      </div>
+
+      <!-- Fila 3 -->
+      <div class="fila">
+        <div class="campo">
+          <label>N. de Documento:</label>
+          <input type="text" [value]="cliente.documentNumber" disabled />
+        </div>
+      </div>
+
+      <!-- Fila de acciones -->
+      <div class="fila derecha">
+        <button type="submit" [disabled]="form.invalid" class="btn-agregar">Guardar</button>
+        <button type="button" (click)="cerrar()" class="btn-agregar">Cancelar</button>
+      </div>
+    </form>
+
+  </div>
+</div>

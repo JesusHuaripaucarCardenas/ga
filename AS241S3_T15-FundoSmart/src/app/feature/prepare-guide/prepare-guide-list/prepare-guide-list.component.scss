@@ -1,0 +1,583 @@
+.guia {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.guia .div {
+  background-color: #e7e3e0;
+  width: 1728px;
+  height: 1609px;
+  position: relative;
+}
+
+.guia .arriba {
+  position: absolute;
+  width: 1728px;
+  height: 182px;
+  top: -4px;
+  left: 0;
+}
+
+.guia .overlap {
+  position: relative;
+  height: 178px;
+  top: 4px;
+}
+
+.guia .cabeza {
+  position: absolute;
+  width: 1728px;
+  height: 174px;
+  top: 0;
+  left: 0;
+  background-color: #229935;
+}
+
+.guia .notiimg {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 22px;
+  left: 1213px;
+  object-fit: cover;
+}
+
+.guia .logo {
+  position: absolute;
+  width: 173px;
+  height: 173px;
+  top: 1px;
+  left: 13px;
+  object-fit: cover;
+}
+
+.guia .buscador {
+  position: absolute;
+  width: 611px;
+  height: 68px;
+  top: 61px;
+  left: 507px;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.guia .buscar {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 9px;
+  left: 544px;
+  object-fit: cover;
+}
+
+.guia .catego {
+  position: absolute;
+  width: 223px;
+  height: 83px;
+  top: 46px;
+  left: 218px;
+}
+
+.guia .overlap-group {
+  position: relative;
+  width: 221px;
+  height: 83px;
+  background-color: #229935;
+  border-radius: 50px;
+  border: 2px solid;
+  border-color: #ffffff;
+}
+
+.guia .text-wrapper {
+  position: absolute;
+  width: 148px;
+  top: 20px;
+  left: 35px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .perfilimg {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 7px;
+  left: 1357px;
+  object-fit: cover;
+}
+
+.guia .menu {
+  position: absolute;
+  width: 182px;
+  height: 178px;
+  top: 0;
+  left: 1531px;
+  object-fit: cover;
+}
+
+.guia .overlap-2 {
+  position: absolute;
+  width: 1654px;
+  height: 1315px;
+  top: 218px;
+  left: 37px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.guia .text-wrapper-2 {
+  position: absolute;
+  width: 111px;
+  top: 566px;
+  left: 570px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .text-wrapper-3 {
+  position: absolute;
+  width: 69px;
+  top: 566px;
+  left: 716px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .flacantidad {
+  position: absolute;
+  width: 124px;
+  height: 299px;
+  top: 611px;
+  left: 547px;
+}
+
+.guia .div-2 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.guia .div-3 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 225px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.guia .div-4 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 150px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.guia .div-5 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 75px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.guia .ttal {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 929px;
+  left: 385px;
+}
+
+.guia .div-wrapper {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.guia .text-wrapper-4 {
+  position: absolute;
+  width: 71px;
+  top: 25px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .flapeso {
+  position: absolute;
+  width: 124px;
+  height: 299px;
+  top: 611px;
+  left: 683px;
+}
+
+.guia .canitdadtotal {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 929px;
+  left: 547px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.guia .pesototal {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 929px;
+  left: 683px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.guia .separador {
+  position: absolute;
+  width: 466px;
+  height: 2px;
+  top: 915px;
+  left: 366px;
+}
+
+.guia .prmra {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 611px;
+  left: 385px;
+}
+
+.guia .text-wrapper-5 {
+  position: absolute;
+  width: 52px;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .trcera {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 686px;
+  left: 385px;
+}
+
+.guia .text-wrapper-6 {
+  position: absolute;
+  width: 52px;
+  top: 24px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .qinta {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 761px;
+  left: 385px;
+}
+
+.guia .mdura {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 836px;
+  left: 385px;
+}
+
+.guia .text-wrapper-7 {
+  position: absolute;
+  width: 82px;
+  top: 26px;
+  left: 21px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .text-wrapper-8 {
+  position: absolute;
+  width: 129px;
+  top: 566px;
+  left: 406px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .rsptanombre {
+  position: absolute;
+  width: 320px;
+  height: 65px;
+  top: 483px;
+  left: 547px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.guia .name {
+  position: absolute;
+  width: 171px;
+  height: 65px;
+  top: 483px;
+  left: 366px;
+}
+
+.guia .overlap-3 {
+  position: relative;
+  width: 169px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.guia .text-wrapper-9 {
+  position: absolute;
+  width: 82px;
+  top: 20px;
+  left: 44px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .btnenviarguia {
+  position: absolute;
+  width: 514px;
+  height: 81px;
+  top: 1079px;
+  left: 366px;
+}
+
+.guia .overlap-4 {
+  position: relative;
+  width: 512px;
+  height: 81px;
+  background-color: #229935b2;
+  border-radius: 40px;
+}
+
+.guia .text-wrapper-10 {
+  position: absolute;
+  width: 220px;
+  top: 23px;
+  left: 221px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .paper-plane {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 1px;
+  left: 107px;
+  object-fit: cover;
+}
+
+.guia .ciudad {
+  position: absolute;
+  width: 303px;
+  height: 65px;
+  top: 237px;
+  left: 366px;
+}
+
+.guia .overlap-5 {
+  position: relative;
+  width: 301px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.guia .text-wrapper-11 {
+  position: absolute;
+  width: 129px;
+  top: 8px;
+  left: 86px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .nombre {
+  position: absolute;
+  width: 688px;
+  height: 65px;
+  top: 121px;
+  left: 366px;
+}
+
+.guia .overlap-6 {
+  position: relative;
+  width: 686px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.guia .text-wrapper-12 {
+  position: absolute;
+  width: 183px;
+  top: 14px;
+  left: 260px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .distrito {
+  position: absolute;
+  width: 303px;
+  height: 65px;
+  top: 329px;
+  left: 366px;
+}
+
+.guia .text-wrapper-13 {
+  position: absolute;
+  width: 162px;
+  top: 14px;
+  left: 86px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .RUC {
+  position: absolute;
+  width: 303px;
+  height: 65px;
+  top: 237px;
+  left: 751px;
+}
+
+.guia .text-wrapper-14 {
+  position: absolute;
+  width: 129px;
+  top: 8px;
+  left: 76px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.guia .telefono {
+  position: absolute;
+  width: 303px;
+  height: 65px;
+  top: 329px;
+  left: 751px;
+}
+
+.guia .text-wrapper-15 {
+  position: absolute;
+  width: 171px;
+  top: 14px;
+  left: 76px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

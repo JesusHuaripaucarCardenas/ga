@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+<div class="contacts-main-wrapper">
+  <!-- LISTA DE CLIENTES UNIFICADA -->
+  <div class="customers-section">
+    <h2 class="contacts-title">Clientes</h2>
+
+    <div class="unified-customer-grid">
+      <!-- Clientes de Mercado -->
+      <div class="unified-card fade-in" *ngFor="let customer of marketCustomers">
+        <h3>{{ customer.marketName }}</h3>
+        <p><strong>Ciudad:</strong> {{ customer.city }}</p>
+        <p><strong>Distrito:</strong> {{ customer.district }}</p>
+        <p><strong>Puesto:</strong> {{ customer.positionNumber }}</p>
+        <p><strong>Nombre:</strong> {{ customer.name }}</p>
+        <p><strong>Apellido:</strong> {{ customer.lastname }}</p>
+        <p><strong>Tipo Documento:</strong> {{ customer.documentType }}</p>
+        <p><strong>N° Documento:</strong> {{ customer.documentNumber }}</p>
+        <p><strong>Teléfono:</strong> {{ customer.phone }}</p>
+        <p><strong>Estado:</strong> {{ customer.state === 'I' ? 'Inactivo' : 'Activo' }}</p>
+
+        <div class="acciones">
+          <button *ngIf="customer.state === 'A'" (click)="editar(customer)">Editar</button>
+          <button *ngIf="customer.state === 'A'" (click)="eliminar(customer)">Eliminar</button>
+          <button *ngIf="customer.state === 'I'" (click)="recuperar(customer)">Recuperar</button>
+        </div>
+      </div>
+
+      <!-- Clientes de Supermercado -->
+      <div class="unified-card fade-in" *ngFor="let customer of supermarketCustomers">
+        <h3>{{ customer.supermarketName }}</h3>
+        <p><strong>Ciudad:</strong> {{ customer.city }}</p>
+        <p><strong>Distrito:</strong> {{ customer.district }}</p>
+        <p><strong>RUC:</strong> {{ customer.ruc }}</p>
+        <p><strong>Dirección:</strong> {{ customer.arrayAddress }}</p>
+        <p><strong>Teléfono:</strong> {{ customer.phone }}</p>
+        <p><strong>Estado:</strong> {{ customer.state === 'I' ? 'Inactivo' : 'Activo' }}</p>
+
+        <div class="acciones">
+          <button *ngIf="customer.state !== 'I'" (click)="onEdit(customer)">Editar</button>
+          <button *ngIf="customer.state !== 'I'" (click)="onDelete(customer)">Eliminar</button>
+          <button *ngIf="customer.state === 'I'" (click)="onRestore(customer)">Restaurar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modales -->
+    <app-edit-market-customer-modal *ngIf="mostrarModal && clienteSeleccionado"
+      [cliente]="clienteSeleccionado"
+      (actualizar)="actualizarCliente($event)"
+      (cerrarModal)="cerrarModal()">
+    </app-edit-market-customer-modal>
+
+    <app-edit-supermarket-customer-modal *ngIf="selectedCustomer"
+      [supermarketData]="selectedCustomer"
+      (close)="onCloseModal()"
+      (save)="onCustomerUpdated($event)">
+    </app-edit-supermarket-customer-modal>
+  </div>
+
+  <!-- PANEL DERECHO FIJO -->
+  <div class="contacts-container">
+    <div class="contacts-forms">
+      <div class="contacts-forms-overlap">
+        <div class="contacts-forms-title">Contacto Nuevo</div>
+
+        <!-- Botón agregar mercado -->
+        <div class="contacts-btn-add-market" (click)="mostrarModalMarketCustomer = true">
+          <div class="contacts-btn-add-market-group">
+            <div class="contacts-btn-add-market-text">+ Mercado</div>
+            <img class="contacts-btn-add-market-icon" src="img/savemercado.png" alt="+ Mercado" />
+          </div>
+        </div>
+
+        <!-- Botón agregar supermercado -->
+        <div class="contacts-btn-add-supermarket" (click)="mostrarModalSupermarketCustomer = true">
+          <div class="contacts-btn-add-supermarket-group">
+            <div class="contacts-btn-add-supermarket-text">+ Supermercado</div>
+            <img class="contacts-btn-add-supermarket-icon" src="img/savesupermercado.png" alt="+ Supermercado" />
+          </div>
+        </div>
+
+        <!-- Botón preparar guía -->
+        <a href="make-guide-form" class="contacts-btn-prepare-guide">
+          <div class="contacts-btn-prepare-guide-group">
+            <div class="contacts-btn-prepare-guide-text">Preparar Guía</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Modal Mercado -->
+      <div class="contacts-modal-market-dark" *ngIf="mostrarModalMarketCustomer">
+        <div class="contacts-modal-market-form">
+          <button class="contacts-modal-close" (click)="cerrarModalMarketCustomer()">✖</button>
+          <app-market-customer-form
+            (contactoGuardado)="agregarContacto($event); cerrarModalMarketCustomer()">
+          </app-market-customer-form>
+        </div>
+      </div>
+
+      <!-- Modal Supermercado -->
+      <div class="contacts-modal-super-dark" *ngIf="mostrarModalSupermarketCustomer">
+        <div class="contacts-modal-super-form">
+          <button class="contacts-modal-close" (click)="cerrarModalSupermarketCustomer()">✖</button>
+          <app-supermarket-customer-form
+            (saved)="agregarContacto($event); cerrarModalSupermarketCustomer()">
+          </app-supermarket-customer-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

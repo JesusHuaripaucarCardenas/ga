@@ -1,0 +1,137 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: white;
+  padding: 20px;
+}
+
+.formulario {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.modal-content {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.titulo {
+  background-color: green;
+  color: white;
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+.select-tipo-doc {
+  background-color: #c4e3cb;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  min-width: 150px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ancho-largo {
+  width: 250px;
+}
+
+.ancho-medio {
+  width: 150px;
+}
+
+.derecha {
+  justify-content: flex-end;
+}
+
+.btn-agregar {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Errores */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+
+.modal-backdrop {
+  z-index: 9999;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* <- Asegura que esté encima */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

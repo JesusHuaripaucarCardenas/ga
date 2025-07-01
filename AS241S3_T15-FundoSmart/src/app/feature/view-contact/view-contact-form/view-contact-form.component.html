@@ -1,0 +1,81 @@
+<div class="market-customer-list">
+  <h3>Lista de clientes de mercado</h3>
+
+  <div *ngIf="marketCustomers.length === 0">
+    No hay clientes registrados.
+  </div>
+
+  <div *ngFor="let cliente of marketCustomers" class="market-customer-card">
+    <p><strong>Ciudad:</strong> {{ cliente.city }}</p>
+    <p><strong>Distrito:</strong> {{ cliente.district }}</p>
+    <p><strong>Mercado:</strong> {{ cliente.marketName }}</p>
+    <p><strong>Puesto:</strong> {{ cliente.positionNumber }}</p>
+    <p><strong>Nombre:</strong> {{ cliente.name }} {{ cliente.lastname }}</p>
+    <p><strong>Tipo Doc.:</strong> {{ cliente.documentType }}</p>
+    <p><strong>N° Documento:</strong> {{ cliente.documentNumber }}</p>
+    <p><strong>Celular:</strong> {{ cliente.phone }}</p>
+    <p><strong>Estado:</strong> {{ cliente.state === 'I' ? 'Inactivo' : 'Activo' }}</p>
+    <div class="market-customer-actions">
+      <button (click)="abrirModal(cliente)">Editar</button>
+      <button (click)="eliminarCliente(cliente.id)">Eliminar</button>
+       <button (click)="eliminarCliente(cliente.id)">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" *ngIf="mostrarModal">
+  <div class="modal">
+    <h3>Editar Cliente de Mercado</h3>
+    <form (ngSubmit)="guardarCambios()" #editForm="ngForm">
+      <label>
+        Ciudad:
+        <input type="text" [(ngModel)]="clienteEditando.city" name="city" required />
+      </label>
+      <label>
+        Distrito:
+        <input type="text" [(ngModel)]="clienteEditando.district" name="district" required />
+      </label>
+      <label>
+        Mercado:
+        <input type="text" [(ngModel)]="clienteEditando.marketName" name="marketName" required />
+      </label>
+      <label>
+        Puesto:
+        <input type="text" [(ngModel)]="clienteEditando.positionNumber" name="positionNumber" required />
+      </label>
+      <label>
+        Nombre:
+        <input type="text" [(ngModel)]="clienteEditando.name" name="name" required />
+      </label>
+      <label>
+        Apellido:
+        <input type="text" [(ngModel)]="clienteEditando.lastname" name="lastname" required />
+      </label>
+      <label>
+        Tipo Documento:
+        <input type="text" [(ngModel)]="clienteEditando.documentType" name="documentType" required />
+      </label>
+      <label>
+        N° Documento:
+        <input type="text" [(ngModel)]="clienteEditando.documentNumber" name="documentNumber" required />
+      </label>
+      <label>
+        Celular:
+        <input type="text" [(ngModel)]="clienteEditando.phone" name="phone" required />
+      </label>
+      <label>
+        Estado:
+        <select [(ngModel)]="clienteEditando.state" name="state" required>
+          <option value="A">Activo</option>
+          <option value="I">Inactivo</option>
+        </select>
+      </label>
+
+      <div class="modal-buttons">
+        <button type="submit">Guardar</button>
+        <button type="button" (click)="cerrarModal()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

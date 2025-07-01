@@ -1,0 +1,78 @@
+.pedidos {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centra verticalmente */
+  min-height: 100vh; /* asegura altura de toda la ventana */
+  background-color: #eae6e3;
+  font-family: Arial, sans-serif;
+}
+
+.overlap-wrapper {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 40px;
+  width: 800px;
+}
+
+
+.overlap > div {
+  border-top: 1px solid #888;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.overlap > div:first-child {
+  border-top: none;
+}
+
+.overlap-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.naranjacarru {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.text-wrapper,
+.text-wrapper-7 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.text-wrapper-2,
+.text-wrapper-8 {
+  font-size: 12px;
+  color: #444;
+  margin-right: auto;
+}
+
+.div,
+.text-wrapper-3,
+.text-wrapper-4,
+.text-wrapper-5,
+.text-wrapper-6 {
+  font-size: 12px;
+  color: #333;
+  margin: 0 5px;
+}
+
+.text-wrapper-5 {
+  margin-left: auto;
+  font-weight: bold;
+  color: #111;
+}
+
+.text-wrapper-6 {
+  margin-left: 20px;
+  white-space: nowrap;
+  font-size: 11px;
+}

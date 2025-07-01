@@ -1,0 +1,58 @@
+<!-- src/app/layout/navbar/navbar.component.html -->
+<div class="arriba">
+  <div class="overlap-2">
+    <div class="cabeza"></div>
+    <img class="notiimg" src="assets/img/notiimg.png" alt="Notificaciones" />
+    <img class="logo" src="assets/img/logo.png" alt="Logo" />
+    <div class="buscador">
+      <img class="buscar" src="assets/img/buscar.png" alt="Buscar" />
+    </div>
+    <div class="catego">
+      <div class="overlap-group-2">
+        <div class="text-wrapper-5">Historial</div>
+      </div>
+    </div>
+    <img class="perfilimg" src="assets/img/perfilimg.png" alt="Perfil" />
+
+    <!-- Botón de menú -->
+    <img
+      class="menu-icon"
+      src="assets/img/menu.png"
+      alt="Abrir menú"
+      (click)="toggleMenu()"
+    />
+  
+  </div>
+</div>
+
+<!-- Menú desplegable -->
+<div *ngIf="showDropdown" class="menu-dropdown">
+  <div class="menu-container">
+    <img class="arrow" src="assets/img/arrow-2.svg" alt="Flecha apuntando al menú" />
+
+    <a href="/new-register-form" class="menu-item">
+      <img src="assets/img/line-10.svg" alt="" />
+      <span>Registro – productos</span>
+    </a>
+
+    <a href="/library-form" class="menu-item">
+      <img src="assets/img/line-12.svg" alt="" />
+      <span>Biblioteca</span>
+    </a>
+
+    <a href="/new-register-list" class="menu-item">
+      <img src="assets/img/line-13.svg" alt="" />
+      <span>Registros</span>
+    </a>
+
+    <a href="/sell-form" class="menu-item">
+      <img src="assets/img/line-15.svg" alt="" />
+      <span>Publicar</span>
+    </a>
+
+    <a href="/contacts-form" class="menu-item">
+      <img src="assets/img/line-14.svg" alt="" />
+      <span>Contactos</span>
+    </a>
+  </div>
+</div>

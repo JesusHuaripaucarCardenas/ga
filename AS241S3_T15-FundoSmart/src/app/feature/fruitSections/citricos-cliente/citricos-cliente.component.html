@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="section-frutilla">
+  <div class="frutilla-container">
+    <div class="frutilla-overlap">
+     <div class="section-other">
+  <div class="other-section-wrapper">
+    <div class="sort-label">Ordenar por:</div>
+    <div class="sort-button">
+      <div class="sort-button-inner">
+        <select [(ngModel)]="selectedSort" (change)="sortSales()">
+          <option value="recomendado">Recomendados</option>
+
+          <option value="az">Nombre: A-Z</option>
+          <option value="za">Nombre: Z-A</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="cards-container">
+        <div *ngFor="let sale of sales" class="carousel-mandarina">
+          <div class="mandarina-card">
+            <div class="mandarina-details" (click)="openDetails(sale)">
+              Ver detalles
+            </div>
+            <div class="mandarina-title">{{ sale.name }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

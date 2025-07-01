@@ -1,0 +1,114 @@
+/* 1) Card principal, centrado, overflow-hidden para el footer */
+.customer-card {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  border-radius: 24px;        /* más redondeado */
+  overflow: hidden;           /* recorta contenido sobrante */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+/* 2) Zona de datos, fondo blanco con su propio padding */
+.customer-content {
+  padding: 1.5rem;
+}
+
+/* Encabezado y info como antes */
+.customer-header {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.position,
+.customer-name {
+  font-size: 1.3rem;
+}
+
+/* 3) Footer con dos botones que ocupan cada uno el 50% */
+.customer-actions {
+  display: flex;
+  width: 100%;
+}
+
+/* Botones estilo “flat” */
+.customer-actions button {
+  flex: 1;
+  border: none;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* 4) Estilos individuales */
+.btn-view {
+  background-color: #3b97e8;
+  color: #fff;
+  /* sólo la esquina inferior izquierda redondeada */
+  border-radius: 0 0 0 24px;
+}
+.btn-view:hover {
+  background-color: #2e7acb;
+}
+
+.btn-prepare {
+  background-color: #4caf50;
+  color: #fff;
+  /* sólo la esquina inferior derecha redondeada */
+  border-radius: 0 0 24px 0;
+}
+.btn-prepare:hover {
+  background-color: #3b8b46;
+}
+
+/* Si hay estado inactivo */
+.customer-card.inactive {
+  opacity: 0.5;
+  filter: blur(1px);
+}
+
+/* footer: ya no es flex con 2 items, sino contenedor simple */
+.customer-actions {
+  width: 100%;
+}
+
+/* botón a todo el ancho de la tarjeta, con esquinas inferiores redondeadas */
+.btn-send-full {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 24px 24px; /* solo curva en la base */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-send-full img {
+  width: 1.2rem;
+  height: auto;
+}
+
+.btn-send-full:hover {
+  background-color: #3b8b46;
+}

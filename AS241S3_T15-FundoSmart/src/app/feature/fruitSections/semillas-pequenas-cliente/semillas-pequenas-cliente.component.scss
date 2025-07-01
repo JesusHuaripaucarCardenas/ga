@@ -1,0 +1,231 @@
+.section-frutilla {
+  background-color: #e7e3e0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh; /* Asegura que al menos ocupe el alto de la pantalla */
+}
+
+.frutilla-container {
+  background-color: #e7e3e0;
+  width: 1728px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.frutilla-overlap {
+  position: relative;
+  width: 100%;
+  
+  top: 183px;
+}
+
+
+/* Ordenar Por */
+.section-other {
+  position: absolute;
+  width: 500px;
+  height: 168px;
+  top: 10px;
+  left: 508px;
+}
+
+
+.other-section-wrapper {
+  position: relative;
+  width: 498px;
+  height: 168px;
+  background-color: #229935;
+  border-radius: 50px;
+}
+
+.sort-label {
+  position: absolute;
+  top: 18px;
+  left: 96px;
+  font-family: "Itim-Regular", Helvetica;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.sort-button {
+  position: absolute;
+  top: 81px;
+  left: 72px;
+  width: 343px;
+  height: 71px;
+}
+
+.sort-button-inner {
+  position: relative;
+  width: 341px;
+  height: 71px;
+  background-color: #229935;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+}
+
+.sort-button-text {
+  position: absolute;
+  top: 10px;
+  left: 23px;
+  font-family: "Itim-Regular", Helvetica;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.sort-arrow {
+  position: absolute;
+  top: 24px;
+  left: 276px;
+  width: 34px;
+  height: 25px;
+}
+
+/* Sidebar (Frutillas) */
+.all-frutilla {
+  position: fixed;
+  width: 1731px;
+  height: 1463px;
+  top: 200px;
+  left: 0;
+}
+
+.all-frutilla-wrapper {
+  position: relative;
+  width: 1728px;
+  height: 1463px;
+}
+
+.all-frutilla-background {
+  position: absolute;
+  width: 472px;
+  height: 1463px;
+  background-color: #229935;
+  border-radius: 100px;
+}
+
+.separator {
+  position: fixed;
+  width: 1727px;
+  height: 1px;
+  top: 402px;
+  left: 1px;
+  background-color: #000;
+  z-index: 9999;
+}
+
+.frutilla-type-label {
+  position: absolute;
+  top: 61px;
+  left: 108px;
+  font-family: "Itim-Regular", Helvetica;
+  font-size: 64px;
+  color: #ffffff;
+}
+
+.btn-frutilla,
+.btn-frambuesa,
+.btn-arandano,
+.btn-mora {
+  position: absolute;
+  left: 40px;
+  width: 394px;
+  height: 124px;
+}
+
+.btn-frutilla {
+  top: 203px;
+}
+
+.btn-frambuesa {
+  top: 327px;
+}
+
+.btn-arandano {
+  top: 451px;
+}
+
+.btn-mora {
+  top: 575px;
+}
+
+.btn-frutilla-wrapper,
+.btn-frambuesa-inner,
+.btn-arandano-inner,
+.btn-mora-inner {
+  position: relative;
+  width: 392px;
+  height: 124px;
+  background-color: #229935;
+  border-top: 1px solid #000000;
+}
+
+.btn-frutilla-wrapper {
+  border-top: none;
+}
+
+.btn-frutilla-text,
+.btn-frambuesa-text,
+.btn-arandano-text,
+.btn-mora-text {
+  position: absolute;
+  top: 30px;
+  left: 51px;
+  font-family: "Itim-Regular", Helvetica;
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-left: 500px; /* Espacio para el sidebar */
+  padding-top: 250px;
+  width: calc(100% - 500px);
+  padding-bottom: 400px; /* 👈 Espacio para el footer */
+}
+
+
+.carousel-mandarina {
+  width: 283px;
+  height: 403px;
+  position: relative;
+}
+
+.mandarina-card {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.mandarina-title {
+  position: absolute;
+  top: 38px;
+  left: 11px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 36px;
+  color: #000;
+}
+
+.mandarina-details {
+  position: absolute;
+  top: 368px;
+  left: 181px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Imagen frutilla opcional */
+.frutilla-image {
+  position: absolute;
+  width: 182px;
+  height: 133px;
+  top: 215px;
+  left: 53px;
+}

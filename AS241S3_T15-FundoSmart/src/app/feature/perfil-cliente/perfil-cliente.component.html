@@ -1,0 +1,24 @@
+<div class="perfil-container" *ngIf="cliente">
+  <h2>Perfil del Cliente</h2>
+
+  <div><strong>Tipo:</strong> {{ cliente.tipo }}</div>
+  <div><strong>Ciudad:</strong> {{ cliente.city }}</div>
+  <div><strong>Distrito:</strong> {{ cliente.district }}</div>
+
+  <div *ngIf="cliente.tipo === 'mercado'">
+    <div><strong>Nombre del mercado:</strong> {{ cliente.marketName }}</div>
+    <div><strong>N° del puesto:</strong> {{ cliente.positionNumber }}</div>
+    <div><strong>Nombre:</strong> {{ cliente.name }}</div>
+    <div><strong>Apellido:</strong> {{ cliente.lastname }}</div>
+    <div><strong>Tipo de documento:</strong> {{ cliente.documentType }}</div>
+    <div><strong>N° de documento:</strong> {{ cliente.documentNumber }}</div>
+  </div>
+
+  <div *ngIf="cliente.tipo === 'supermercado'">
+    <div><strong>Nombre de la tienda:</strong> {{ cliente.supermarketName }}</div>
+    <div><strong>RUC:</strong> {{ cliente.ruc }}</div>
+    <div><strong>Dirección matriz:</strong> {{ cliente.arrayAddress }}</div>
+  </div>
+
+  <div><strong>Celular:</strong> {{ cliente.phone }}</div>
+</div>

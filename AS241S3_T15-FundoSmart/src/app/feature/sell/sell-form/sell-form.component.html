@@ -1,0 +1,171 @@
+<div class="vender-container">
+  <div class="vender-content">
+    <app-navbar></app-navbar>
+    <div class="vender-overlap">
+      <div class="cantidad-label">Cantidad</div>
+      <div class="peso-label">Peso</div>
+      <div class="cantidad-section">
+        <div>
+          <input class="cantidad-box-1" type="number" [(ngModel)]="cantidad[0]" (input)="updatePeso(0)" name="cant0"
+            min="0" />
+        </div>
+        <div>
+          <input class="cantidad-box-2" type="number" [(ngModel)]="cantidad[1]" (input)="updatePeso(1)" name="cant1"
+            min="0" />
+        </div>
+        <div>
+          <input class="cantidad-box-3" type="number" [(ngModel)]="cantidad[2]" (input)="updatePeso(2)" name="cant2"
+            min="0" />
+        </div>
+        <div>
+          <input class="cantidad-box-4" type="number" [(ngModel)]="cantidad[3]" (input)="updatePeso(3)" name="cant3"
+            min="0" />
+        </div>
+      </div>
+
+      <div class="peso-section">
+        <div class="peso-box-1">
+          {{ peso[0] }} kg
+        </div>
+        <div class="peso-box-4">
+          {{ peso[1] }} kg
+        </div>
+        <div class="peso-box-3">
+          {{ peso[2] }} kg
+        </div>
+        <div class="peso-box-2">
+          {{ peso[3] }} kg
+        </div>
+      </div>
+      <div class="peso-texto">Coloca el kilo por <br>caja de tu producto</div>
+      <!-- Peso por caja -->
+      <input type="number" [(ngModel)]="pesoKilo" class="peso-kilo-box" />
+
+
+
+      <img class="separador-img" src="img/separador.svg" />
+      <div class="ra-primer">
+        <div class="ra-wrapper">
+          <div class="ra-label">1º ra</div>
+        </div>
+      </div>
+      <div class="ra-tercer">
+        <div class="ra-wrapper">
+          <div class="ra-label">3º ra</div>
+        </div>
+      </div>
+      <div class="ra-quinto">
+        <div class="ra-wrapper">
+          <div class="ra-label">5º ta</div>
+        </div>
+      </div>
+      <div class="ra-madura">
+        <div class="ra-wrapper">
+          <div class="ra-labell">Madura</div>
+        </div>
+      </div>
+      <div class="seleccion-label">Seleccion</div>
+      <div class="product-name">
+        <select class="nombre-response" [(ngModel)]="selectedRecordId" (change)="onSelectRecord()" name="selectedRecord"
+          required>
+          <option [ngValue]="null" disabled selected>Selecciona un producto</option>
+          <option *ngFor="let rec of inventoryRecords" [ngValue]="rec.id">
+            {{ rec.nombre }}
+          </option>
+        </select>
+      </div>
+      <div class="product-name">
+        <div class="name-wrapper">
+          <div class="name-label">Nombre</div>
+        </div>
+      </div>
+
+
+      <select class="nombre-responsee" [(ngModel)]="selectedCategory" name="categoria" required>
+        <option [ngValue]="null" disabled selected>Selecciona una opción</option>
+        <option value="citricos">Cítricos</option>
+        <option value="semillas-pequenas">Semillas pequeñas</option>
+        <option value="tropicales">Tropicales</option>
+        <option value="refrescantes">Refrescantes</option>
+        <option value="semillas-grandes">Semillas Grandes</option>
+        <option value="frutillas">Frutillas</option>
+      </select>
+
+
+      <div class="product-namee">
+        <div class="name-wrappeer">
+          <div class="name-labeel">Clase</div>
+        </div>
+      </div>
+
+
+      <label for="fileInput" class="product-img">
+        <input type="file" id="fileInput" accept="image/*" (change)="onFileSelected($event)" hidden />
+
+        <!-- Cuando NO haya preview -->
+        <ng-container *ngIf="!imagePreview">
+          <span class="btn-select-image">Selecciona una imagen</span>
+        </ng-container>
+
+        <!-- Cuando SÍ haya preview -->
+        <ng-container *ngIf="imagePreview">
+          <div class="image-preview">
+            <img [src]="imagePreview" alt="Vista previa" class="preview-img" />
+          </div>
+        </ng-container>
+      </label>
+
+
+      <div class="btn-publicar" (click)="publish()">
+
+
+        <div class="publicar-wrapper">
+          <div class="publicar-label">Publicar</div>
+          <img class="paper-plane-img" src="img/paper-plane-2-1.png" />
+        </div>
+      </div>
+
+      <table class="seleccion-table">
+        <thead>
+          <tr>
+            <th>Selección</th>
+            <th>Precio</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1º ra</td>
+            <td><input type="number" class="precio-input" [(ngModel)]="precios[0]" (input)="updatePeso(0)" /></td>
+            <td><input type="number" class="total-input" [value]="totales[0]" readonly /></td>
+          </tr>
+          <tr>
+            <td>3º ra</td>
+            <td><input type="number" class="precio-input" [(ngModel)]="precios[3]" (input)="updatePeso(1)" /></td>
+            <td><input type="number" class="total-input" [value]="totales[3]" readonly /></td>
+          </tr>
+          <tr>
+            <td>5º ta</td>
+            <td><input type="number" class="precio-input" [(ngModel)]="precios[2]" (input)="updatePeso(2)" /></td>
+            <td><input type="number" class="total-input" [value]="totales[2]" readonly /></td>
+          </tr>
+          <tr>
+            <td>Madura</td>
+            <td><input type="number" class="precio-input" [(ngModel)]="precios[1]" (input)="updatePeso(3)" /></td>
+            <td><input type="number" class="total-input" [value]="totales[1]" readonly /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="showErrorModal" class="error-modal-overlay">
+        <div class="error-modal">
+          <h3>Errores en el formulario</h3>
+          <ul>
+            <li *ngFor="let msg of errorMessages">{{ msg }}</li>
+          </ul>
+          <button (click)="closeErrorModal()">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

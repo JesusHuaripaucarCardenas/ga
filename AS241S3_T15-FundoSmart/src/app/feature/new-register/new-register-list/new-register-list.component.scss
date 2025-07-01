@@ -1,0 +1,288 @@
+.cosechas-container {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  background-color: #e7e3e0;
+  padding: 300px 0;
+  overflow-x: auto;
+  min-height: 100vh; /* ✅ Esto asegura que el fondo cubra toda la pantalla */
+  box-sizing: border-box; /* Asegura que el padding se considere en la altura */
+}
+
+
+/* Opcional: esconder la barra vertical si no la necesitas */
+.cosechas-rows {
+  overflow-x: inherit;
+  overflow-y: auto;
+}
+
+
+/* GRID: ahora 12 columnas */
+.cosechas-header,
+.cosecha-row {
+  display: grid;
+
+  /* ej. fecha y nombre fijos, resto escala y reparte el espacio */
+  grid-template-columns:
+    150px                                /* Fecha */
+    200px                                /* Nombre */
+    repeat(4, minmax(80px, 1fr))         /* 1ª–M Cantidad */
+    repeat(4, minmax(80px, 1fr))         /* 1ª–M Peso */
+    minmax(100px, 1.5fr)                 /* Total Cant. */
+    minmax(100px, 1.5fr)                 /* Total Peso */
+    repeat(3, minmax(80px, 1fr));        /* Editar, Eliminar, Confirmar */
+
+  align-items: center;
+  column-gap: 10px;                      /* reduces un poco el gap */
+}
+
+
+/* --- Encabezados verdes --- */
+.cosechas-header {
+  margin-bottom: 20px;
+}
+
+.cosecha-header-item {
+  background-color: rgba(34,153,54,0.4);
+  border-radius: 90px;
+  padding: 5px 10px;
+  text-align: center;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 16px;
+  color: #383737;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+/* --- Filas blancas --- */
+.cosechas-rows {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 10px;
+  max-height: none;
+  overflow: visible;
+}
+
+
+.cosecha-row {
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 8px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- Celdas internas --- */
+.cosecha-cell {
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 14px;
+  color: #383737;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Si quieres superíndices en Totales, añade esto */
+.cosecha-cell sup {
+  font-size: 0.75em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* Botón editar: azul */
+.btn-edit {
+  background-color: #007bff; /* azul */
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  opacity: 0.9;
+}
+
+/* Botón eliminar: rojo */
+.btn-delete {
+  background-color: #dc3545; /* rojo */
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  opacity: 0.9;
+}
+
+/* Botón confirmar: verde */
+.btn-confirm {
+  background-color: #28a745; /* verde */
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-confirm:hover {
+  opacity: 0.9;
+}
+
+.cosecha-cell.confirmed {
+  font-weight: bold;
+  font-size: 14px;
+  color: #28a745;      /* verde */
+  text-align: center;
+}
+
+/* edit-cosecha-modal.component.css */
+
+/* Fondo modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que esté encima */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 106, 106, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor interno */
+.modal-content {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 15px rgb(39, 211, 0);
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+/* Alternativa de clase para animación */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Formulario */
+.formulario {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Título */
+.titulo {
+  background-color: green;
+  color: white;
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Estructura de filas y campos */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas e inputs */
+label {
+  font-weight: bold;
+}
+
+input,
+.select-tipo-doc {
+  background-color: #c4e3cb;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  min-width: 150px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Anchos específicos */
+.ancho-largo {
+  width: 250px;
+}
+
+.ancho-medio {
+  width: 150px;
+}
+
+/* Alineación de botones */
+.derecha {
+  justify-content: flex-end;
+}
+
+/* Botones */
+.btn-agregar {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Mensajes de error */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.listado {
+  position: absolute;
+  width: 341px;
+  top: 196px;
+  left: 117px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}

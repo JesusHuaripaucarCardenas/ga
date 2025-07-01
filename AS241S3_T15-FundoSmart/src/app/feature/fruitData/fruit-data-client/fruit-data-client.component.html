@@ -1,0 +1,186 @@
+<app-header></app-header>
+<div class="datos-productos" *ngIf="sale as s">
+  <div class="div">
+    <div class="overlap">
+      <div class="overlap-group"></div>
+
+      <!-- Producto -->
+      <div class="producto">
+        <div class="overlap-5">
+          <div class="text-wrapper-7">{{ s.name }}</div>
+        </div>
+      </div>
+
+      <!-- Selección primera -->
+      <div class="primera">
+        <div class="overlap-6">
+          <div class="solid"></div>
+          <div class="text-wrapper-8">Selección primera</div>
+          <div class="btnmenos">
+            <div class="overlap-group-3" (click)="decrementPeso(0)">
+              <div class="menos"></div>
+              <div class="text-wrapper-9">-</div>
+            </div>
+          </div>
+          <div class="text-wrapper-10">{{ pesos[0] }} - kg</div>
+          <div class="btnmas">
+            <div class="overlap-group-4" (click)="incrementPeso(0)">
+              <div class="mas"></div>
+              <div class="text-wrapper-11">+</div>
+            </div>
+          </div>
+          <div class="text-wrapper-12">{{ pesos[0] }} Kg - S/{{ (pesos[0] * preciosPorKg[0]).toFixed(2) }}</div>
+
+
+        </div>
+      </div>
+
+      <!-- Selección tercera -->
+      <div class="tercera">
+        <div class="overlap-7">
+          <div class="text-wrapper-14">Selección tercera</div>
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group-5" (click)="decrementPeso(1)">
+              <div class="menos-2"></div>
+              <div class="text-wrapper-9">-</div>
+            </div>
+          </div>
+          <div class="text-wrapper-15">{{ pesos[1] }} - kg</div>
+          <div class="overlap-wrapper">
+            <div class="overlap-8" (click)="incrementPeso(1)">
+              <div class="mas-2"></div>
+              <div class="text-wrapper-11">+</div>
+            </div>
+          </div>
+          <div class="overlap-9">
+            <div class="text-wrapper-16">{{ pesos[1] }} Kg - S/{{ (pesos[1] * preciosPorKg[1]).toFixed(2) }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selección madura -->
+      <div class="madura">
+        <div class="overlap-7">
+          <div class="text-wrapper-18">Selección madura</div>
+          <div class="btnmenos">
+            <div class="overlap-group-5" (click)="decrementPeso(3)">
+              <div class="menos-2"></div>
+              <div class="text-wrapper-9">-</div>
+            </div>
+          </div>
+          <div class="text-wrapper-15">{{ pesos[3] }} - kg</div>
+          <div class="btnmas">
+            <div class="overlap-group-4" (click)="incrementPeso(3)">
+              <div class="mas-3"></div>
+              <div class="text-wrapper-11">+</div>
+            </div>
+          </div>
+          <div class="overlap-10">
+            <div class="text-wrapper-16">{{ pesos[3] }} Kg - S/{{ (pesos[3] * preciosPorKg[3]).toFixed(2) }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selección quinta -->
+      <div class="quinta">
+        <div class="overlap-7">
+          <div class="text-wrapper-19">Selección quinta</div>
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group-5" (click)="decrementPeso(2)">
+              <div class="menos-2"></div>
+              <div class="text-wrapper-9">-</div>
+            </div>
+          </div>
+          <div class="text-wrapper-15">{{ pesos[2] }} - kg</div>
+          <div class="btnmas">
+            <div class="overlap-group-4" (click)="incrementPeso(2)">
+              <div class="mas-3"></div>
+              <div class="text-wrapper-11">+</div>
+            </div>
+          </div>
+          <div class="overlap-11">
+            <div class="text-wrapper-16">{{ pesos[2] }} Kg - S/{{ (pesos[2] * preciosPorKg[2]).toFixed(2) }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total kilos y precio -->
+      <div class="colltotal">
+        <div class="overlap-13">
+          <div class="kilototal">
+            <div class="overlap-group-6">
+              <div class="text-wrapper-21">Kilos total</div>
+              <div class="text-wrapper-22">({{ totalKilos }} kg)</div>
+            </div>
+          </div>
+          <div class="totalprecio">
+            <div class="overlap-14">
+              <div class="precio"></div>
+              <div class="text-wrapper-23">( S/{{ totalPrecio.toFixed(2) }} )</div>
+              <div class="text-wrapper-24">Precio total</div>
+            </div>
+          </div>
+        </div>
+        <div class="deleteimg-wrapper">
+          <img class="deleteimg" src="img/deleteimg.png" />
+        </div>
+      </div>
+
+      <!-- Sección cajas -->
+      <!-- En lugar de s.firstSelection, usa los nuevos getters -->
+      <div class="cajatotal">
+        <div class="overlap-15">
+          <div class="text-wrapper-25">Cantidad de cajas:</div>
+
+          <div class="cajaprimera">
+            <div class="overlap-group-7">
+              <div class="text-wrapper-26">Selección primera</div>
+              <div class="text-wrapper-27">({{ cajasPrimera }})</div>
+            </div>
+          </div>
+
+          <div class="cajatercera">
+            <div class="overlap-16">
+              <div class="text-wrapper-28">Selección tercera</div>
+              <div class="text-wrapper-29">({{ cajasTercera }})</div>
+            </div>
+          </div>
+
+          <div class="cajaquinta">
+            <div class="overlap-17">
+              <div class="text-wrapper-30">Selección quinta</div>
+              <div class="text-wrapper-31">({{ cajasQuinta }})</div>
+            </div>
+          </div>
+
+          <div class="cajamadura">
+            <div class="overlap-16">
+              <div class="text-wrapper-32">Selección madura</div>
+              <div class="text-wrapper-33">({{ cajasMadura }})</div>
+            </div>
+          </div>
+
+          <div class="totalcaja">
+            <div class="overlap-16">
+              <div class="text-wrapper-32">Total</div>
+              <div class="text-wrapper-34">
+                ({{ cajasPrimera + cajasTercera + cajasQuinta + cajasMadura }})
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showStockModal" class="stock-modal-overlay">
+    <div class="stock-modal">
+      <h3>Stock insuficiente</h3>
+      <p>{{ stockMessage }}</p>
+      <button (click)="closeStockModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <div class="toast-alert" *ngIf="showToast" [ngClass]="{'show': showToast}">
+    {{ toastMessage }}
+  </div>
+</div>

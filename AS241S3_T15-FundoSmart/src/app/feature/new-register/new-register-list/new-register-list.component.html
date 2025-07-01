@@ -1,0 +1,169 @@
+
+<div class="cosechas-container">
+  <!-- Encabezado -->
+   <app-navbar></app-navbar>
+   <div class="listado">Listado de Productos</div>
+  <div class="cosechas-header">
+    <div class="cosecha-header-item">Fecha</div>
+    <div class="cosecha-header-item">Nombre</div>
+    <div class="cosecha-header-item">1ª Cant.</div>
+    <div class="cosecha-header-item">3ª Cant.</div>
+    <div class="cosecha-header-item">5ª Cant.</div>
+    <div class="cosecha-header-item">M Cant.</div>
+    <div class="cosecha-header-item">1ª Peso</div>
+    <div class="cosecha-header-item">3ª Peso</div>
+    <div class="cosecha-header-item">5ª Peso</div>
+    <div class="cosecha-header-item">M Peso</div>
+    <div class="cosecha-header-item">Total Cant.</div>
+    <div class="cosecha-header-item">Total Peso</div>
+  </div>
+
+  <!-- Filas -->
+  <div class="cosechas-rows">
+    <div class="cosecha-row" *ngFor="let rec of records">
+      <div class="cosecha-cell">{{ rec.fecha | date:'mediumDate' }}</div>
+      <div class="cosecha-cell">{{ rec.nombre }}</div>
+
+      <div class="cosecha-cell">{{ rec.totalesCantidad[0] }}</div>
+      <div class="cosecha-cell">{{ rec.totalesCantidad[1] }}</div>
+      <div class="cosecha-cell">{{ rec.totalesCantidad[2] }}</div>
+      <div class="cosecha-cell">{{ rec.totalesCantidad[3] }}</div>
+
+      <div class="cosecha-cell">{{ rec.totalesPeso[0] }}</div>
+      <div class="cosecha-cell">{{ rec.totalesPeso[1] }}</div>
+      <div class="cosecha-cell">{{ rec.totalesPeso[2] }}</div>
+      <div class="cosecha-cell">{{ rec.totalesPeso[3] }}</div>
+
+      <div class="cosecha-cell">
+        {{ rec.totalesCantidad[0] + rec.totalesCantidad[1] + rec.totalesCantidad[2] + rec.totalesCantidad[3] }}
+      </div>
+      <div class="cosecha-cell">
+        {{ rec.totalesPeso[0] + rec.totalesPeso[1] + rec.totalesPeso[2] + rec.totalesPeso[3] }}
+      </div>
+      <ng-container *ngIf="!rec.confirmed">
+        <div class="cosecha-cell">
+          <button class="btn-edit" (click)="onEdit(rec)">Editar</button>
+        </div>
+        <div class="cosecha-cell">
+          <button class="btn-delete" (click)="onDelete(rec)">Eliminar</button>
+        </div>
+        <div class="cosecha-cell">
+          <button class="btn-confirm" (click)="onConfirm(rec)">Confirmar</button>
+        </div>
+      </ng-container>
+
+      <!-- MENSAJE “Confirmado” (después de confirmar) -->
+      <div class="cosecha-cell confirmed" *ngIf="rec.confirmed" style="grid-column: span 3; justify-self: center;">
+        Confirmado
+      </div>
+      <ng-container *ngIf="modalVisible">
+        <div class="modal-backdrop">
+          <div class="modal-content fade-in formulario">
+
+            <h2 class="titulo">Editar Cosecha</h2>
+
+            <form #form="ngForm" (ngSubmit)="guardarCambios()" novalidate>
+
+              <!-- Fila 1: Fecha y Nombre -->
+              <div class="fila">
+                <div class="campo ancho-medio">
+                  <label>Fecha:</label>
+                  <input type="date" name="fecha" [(ngModel)]="cosecha.fecha" required #fecha="ngModel" />
+                  <div *ngIf="fecha.invalid && fecha.touched" class="error">
+                    Fecha es obligatoria
+                  </div>
+                </div>
+
+                <div class="campo ancho-largo">
+                  <label>Nombre:</label>
+                  <input type="text" name="nombre" [(ngModel)]="cosecha.nombre" required #nombre="ngModel" />
+                  <div *ngIf="nombre.invalid && nombre.touched" class="error">
+                    Nombre es obligatorio
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fila 2: Selecciones -->
+              <div class="fila">
+                <div class="campo">
+                  <label>1ª Selección:</label>
+                  <input type="number" name="sel1" [(ngModel)]="cosecha.sel1" min="0" required #sel1="ngModel" />
+                  <div *ngIf="sel1.invalid && sel1.touched" class="error">
+                    Valor ≥ 0
+                  </div>
+                </div>
+
+                <div class="campo">
+                  <label>3ª Selección:</label>
+                  <input type="number" name="sel3" [(ngModel)]="cosecha.sel3" min="0" />
+                </div>
+
+                <div class="campo">
+                  <label>5ª Selección:</label>
+                  <input type="number" name="sel5" [(ngModel)]="cosecha.sel5" min="0" />
+                </div>
+
+                <div class="campo">
+                  <label>M Selección:</label>
+                  <input type="number" name="selM" [(ngModel)]="cosecha.selM" min="0" />
+                </div>
+              </div>
+
+              <!-- Fila 3: Pesos -->
+              <div class="fila">
+                <div class="campo">
+                  <label>1ª Peso:</label>
+                  <input type="number" name="peso1" [(ngModel)]="cosecha.peso1" step="0.01" required #peso1="ngModel" />
+                  <div *ngIf="peso1.invalid && peso1.touched" class="error">
+                    Peso válido es obligatorio
+                  </div>
+                </div>
+
+                <div class="campo">
+                  <label>3ª Peso:</label>
+                  <input type="number" name="peso3" [(ngModel)]="cosecha.peso3" step="0.01" />
+                </div>
+
+                <div class="campo">
+                  <label>5ª Peso:</label>
+                  <input type="number" name="peso5" [(ngModel)]="cosecha.peso5" step="0.01" />
+                </div>
+
+                <div class="campo">
+                  <label>M Peso:</label>
+                  <input type="number" name="pesoM" [(ngModel)]="cosecha.pesoM" step="0.01" />
+                </div>
+              </div>
+
+              <!-- Fila 4: Totales -->
+              <div class="fila">
+                <div class="campo">
+                  <label>Total Selección:</label>
+                  <input type="number" [value]="totalSeleccion()" disabled class="ancho-medio" />
+                </div>
+                <div class="campo">
+                  <label>Total Peso:</label>
+                  <input type="number" [value]="totalPeso()" disabled class="ancho-medio" />
+                </div>
+              </div>
+
+              <!-- Fila de acciones -->
+              <div class="fila derecha">
+                <button type="submit" [disabled]="form.invalid" class="btn-agregar">
+                  Guardar
+                </button>
+                <button type="button" (click)="cerrar()" class="btn-agregar">
+                  Cancelar
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </ng-container>
+
+    </div>
+  </div>
+</div>

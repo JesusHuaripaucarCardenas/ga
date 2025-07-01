@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="pago-metodo">
+  <div class="pago">
+    <div class="text-wrapper">Forma de pago</div>
+    <button (click)="selectPayment('tarjeta')">
+      <img src="assets/img/cardimg.png" alt="Tarjeta" /> Tarjeta
+    </button>
+    <button (click)="selectPayment('efectivo')">
+      <img src="assets/img/efectivoimg.png" alt="Efectivo" /> Efectivo
+    </button>
+    <button (click)="selectPayment('yape')">
+      <img src="assets/img/yapeimg.png" alt="Yape" /> Yape
+    </button>
+    <div class="btncontinuar" (click)="onContinue()">Continuar</div>
+  </div>
+</div>

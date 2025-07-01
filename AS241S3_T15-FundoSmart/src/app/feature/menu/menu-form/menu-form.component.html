@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+<div class="page-root">
+    
+    <div class="main-container">
+        
+        <div class="header-title">Fundo Smart</div>
+
+        <section class="news-section" *ngIf="!loading">
+            <div *ngFor="let article of articles" class="news-content">
+                <p class="news-heading">{{ article.title }}</p>
+                <p class="news-paragraph">{{ article.description }}</p>
+                <div class="news-images" *ngIf="article.urlToImage">
+                    <img class="news-image-bg" [src]="article.urlToImage" alt="Imagen noticia" />
+                </div>
+            </div>
+            <div class="section-header-bg1">
+                <div class="news-header-title">Noticias de Perú</div>
+            </div>
+        </section>
+
+
+
+
+        <section class="tip-section" *ngIf="thematicArticles.length > 0">
+            <div *ngFor="let tip of thematicArticles | slice:0:1" class="tip-content">
+                <p class="tip-heading">{{ tip.title }}</p>
+                <p class="tip-paragraph">{{ tip.description }}</p>
+                <img class="tip-image" [src]="tip.urlToImage || 'img/consejoimg.png'" alt="Imagen consejo" />
+            </div>
+            <div class="section-header-bg2">
+                <div class="tip-header-title">Consejos</div>
+            </div>
+        </section>
+
+
+        <section class="market-value-section" *ngIf="marketArticles.length > 0">
+            <div *ngFor="let market of marketArticles | slice:0:1" class="market-value-content">
+                <p class="market-value-heading">{{ market.title }}</p>
+                <p class="market-value-paragraph">{{ market.description }}</p>
+                <div *ngIf="market.urlToImage">
+                    <img class="market-image" [src]="market.urlToImage" alt="Imagen de noticia de mercado" />
+                </div>
+            </div>
+            <div class="section-header-bg3">
+                <div class="market-value-header-title">Valor del mercado</div>
+            </div>
+        </section>
+
+
+        <section class="weather-section">
+            <!-- …tu sección de noticias… -->
+
+            <!-- Aquí integramos el widget -->
+            <div id="widget" [ngClass]="phase">
+                <div id="sun"></div>
+
+                <div id="info">
+                    <div id="time">{{ time }}</div>
+                    <div id="separator"></div>
+                    <div id="weather">{{ weather }}</div>
+                </div>
+
+                <div id="clouds">
+                    <div class="cloud"></div>
+                    <div class="cloud"></div>
+                    <div class="cloud"></div>
+                    <div class="cloud"></div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>

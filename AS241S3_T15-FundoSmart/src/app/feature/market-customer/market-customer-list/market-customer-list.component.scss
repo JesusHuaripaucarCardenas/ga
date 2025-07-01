@@ -1,0 +1,939 @@
+.clientes {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.clientes .div {
+  background-color: #e7e3e0;
+  overflow: hidden;
+  width: 1720px;
+  height: 1117px;
+  position: relative;
+}
+
+.clientes .gapellido {
+  position: absolute;
+  width: 140px;
+  height: 30px;
+  top: 321px;
+  left: 838px;
+}
+
+.clientes .overlap-group {
+  position: relative;
+  width: 138px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .apellido {
+  position: absolute;
+  width: 66px;
+  top: 5px;
+  left: 36px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .gnombre {
+  position: absolute;
+  width: 116px;
+  height: 30px;
+  top: 321px;
+  left: 694px;
+}
+
+.clientes .overlap {
+  position: relative;
+  width: 114px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .nombre {
+  width: 62px;
+  top: 5px;
+  left: 26px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  position: absolute;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .gciudad {
+  width: 87px;
+  left: 579px;
+  position: absolute;
+  height: 30px;
+  top: 321px;
+}
+
+.clientes .puesto-wrapper {
+  position: relative;
+  width: 85px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .puesto {
+  position: absolute;
+  width: 54px;
+  top: 5px;
+  left: 16px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .gestado {
+  position: absolute;
+  width: 118px;
+  height: 30px;
+  top: 321px;
+  left: 1566px;
+}
+
+.clientes .estado-wrapper {
+  position: relative;
+  width: 116px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .estado {
+  position: absolute;
+  width: 59px;
+  top: 3px;
+  left: 28px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .gtelefono {
+  position: absolute;
+  width: 172px;
+  height: 30px;
+  top: 321px;
+  left: 1366px;
+}
+
+.clientes .telefono-wrapper {
+  position: relative;
+  width: 170px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .telefono {
+  position: absolute;
+  width: 76px;
+  top: 3px;
+  left: 47px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .gtipdocumento {
+  width: 140px;
+  left: 1006px;
+  position: absolute;
+  height: 30px;
+  top: 321px;
+}
+
+.clientes .tipodedocumento {
+  position: absolute;
+  width: 121px;
+  top: 3px;
+  left: 8px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .gdistrito {
+  position: absolute;
+  width: 244px;
+  height: 30px;
+  top: 321px;
+  left: 307px;
+}
+
+.clientes .distrito-wrapper {
+  position: relative;
+  width: 242px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .distrito {
+  position: absolute;
+  width: 61px;
+  top: 5px;
+  left: 90px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .overlap-wrapper {
+  width: 153px;
+  left: 126px;
+  position: absolute;
+  height: 30px;
+  top: 321px;
+}
+
+.clientes .ciudad-wrapper {
+  position: relative;
+  width: 151px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .ciudad {
+  position: absolute;
+  width: 55px;
+  top: 5px;
+  left: 48px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .idd {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: 321px;
+  left: 38px;
+}
+
+.clientes .id-wrapper {
+  position: relative;
+  width: 58px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .id {
+  position: absolute;
+  width: 17px;
+  top: 5px;
+  left: 20px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .listado {
+  position: absolute;
+  width: 341px;
+  top: 196px;
+  left: 117px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.clientes .busqueda {
+  position: absolute;
+  width: 242px;
+  height: 30px;
+  top: 216px;
+  left: 1326px;
+}
+
+.clientes .buscar-wrapper {
+  position: relative;
+  width: 240px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .buscar {
+  position: absolute;
+  width: 62px;
+  top: 4px;
+  left: 25px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #9b9595;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .arriba {
+  position: absolute;
+  width: 1728px;
+  height: 182px;
+  top: -4px;
+  left: 0;
+}
+
+.clientes .overlap-2 {
+  position: relative;
+  height: 178px;
+  top: 4px;
+}
+
+.clientes .cabeza {
+  position: absolute;
+  width: 1728px;
+  height: 174px;
+  top: 0;
+  left: 0;
+  background-color: #229935;
+}
+
+.clientes .notiimg {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 22px;
+  left: 1213px;
+  object-fit: cover;
+}
+
+.clientes .logo {
+  position: absolute;
+  width: 173px;
+  height: 173px;
+  top: 1px;
+  left: 13px;
+  object-fit: cover;
+}
+
+.clientes .buscador {
+  position: absolute;
+  width: 611px;
+  height: 68px;
+  top: 61px;
+  left: 507px;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.clientes .img {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 9px;
+  left: 544px;
+  object-fit: cover;
+}
+
+.clientes .catego {
+  position: absolute;
+  width: 223px;
+  height: 83px;
+  top: 46px;
+  left: 218px;
+}
+
+.clientes .div-wrapper {
+  width: 221px;
+  height: 83px;
+  background-color: #229935;
+  border-radius: 50px;
+  border-color: #ffffff;
+  position: relative;
+  border: 2px solid;
+}
+
+.clientes .text-wrapper {
+  position: absolute;
+  width: 148px;
+  top: 20px;
+  left: 35px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .perfilimg {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 7px;
+  left: 1357px;
+  object-fit: cover;
+}
+
+.clientes .menu {
+  position: absolute;
+  width: 182px;
+  height: 178px;
+  top: 0;
+  left: 1531px;
+  object-fit: cover;
+}
+
+.clientes .overlap-group-wrapper {
+  width: 164px;
+  left: 1174px;
+  position: absolute;
+  height: 30px;
+  top: 321px;
+}
+
+.clientes .numerodedocumento-wrapper {
+  position: relative;
+  width: 162px;
+  height: 30px;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .numerodedocumento {
+  position: absolute;
+  width: 136px;
+  top: 5px;
+  left: 13px;
+  opacity: 0.8;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+
+
+.clientes .navbar {
+  position: relative;
+  width: 1658px;
+  height: 36px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.clientes .ejmtipdocumento {
+  width: 138px;
+  left: 975px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmnumdocumento {
+  width: 138px;
+  left: 1143px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmtelefono {
+  width: 71px;
+  left: 1384px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmapellido {
+  width: 137px;
+  left: 807px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmnombre {
+  width: 114px;
+  left: 663px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmdistrito {
+  width: 242px;
+  left: 276px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmciudad {
+  width: 154px;
+  left: 95px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmid {
+  width: 58px;
+  left: 18px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmpuesto {
+  width: 58px;
+  left: 562px;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .ejmestado {
+  width: 50px;
+  left: 1566px;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #383737;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .filtro {
+  position: absolute;
+  width: 196px;
+  height: 41px;
+  top: 210px;
+  left: 1107px;
+}
+
+.clientes .overlap-3 {
+  position: relative;
+  width: 194px;
+  height: 41px;
+}
+
+.clientes .filtrarr {
+  position: absolute;
+  width: 194px;
+  height: 30px;
+  top: 6px;
+  left: 0;
+  background-color: #22993566;
+  border-radius: 90px;
+}
+
+.clientes .filter {
+  position: absolute;
+  width: 57px;
+  top: 10px;
+  left: 31px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #9b9595;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .menu-filter {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  top: 0;
+  left: 138px;
+  object-fit: cover;
+}
+
+.clientes .ffilltro {
+  position: absolute;
+  width: 200px;
+  height: 238px;
+  top: 490px;
+  left: 1330px;
+}
+
+.clientes .filternombreaz {
+  position: absolute;
+  width: 202px;
+  height: 34px;
+  top: 0;
+  left: 0;
+}
+
+.clientes .nombreaz-wrapper {
+  width: 200px;
+  height: 34px;
+  background-color: #ffffff;
+  border-radius: 40px 40px 0px 0px;
+  border-color: #22993580;
+  position: relative;
+  border: 2px solid;
+}
+
+.clientes .text-wrapper-2 {
+  width: 122px;
+  top: 6px;
+  left: 37px;
+  font-family: "Karla-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  position: absolute;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .filternombreza {
+  position: absolute;
+  width: 202px;
+  height: 34px;
+  top: 34px;
+  left: 0;
+}
+
+.clientes .overlap-4 {
+  width: 200px;
+  height: 34px;
+  background-color: #ffffff;
+  border-color: #22993580;
+  position: relative;
+  border: 2px solid;
+}
+
+.clientes .filterapellidoaz {
+  position: absolute;
+  width: 202px;
+  height: 34px;
+  top: 68px;
+  left: 0;
+}
+
+.clientes .apellidoaz {
+  position: absolute;
+  width: 127px;
+  top: 6px;
+  left: 37px;
+  font-family: "Karla-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .filterapellidoaza {
+  position: absolute;
+  width: 202px;
+  height: 34px;
+  top: 102px;
+  left: 0;
+}
+
+.clientes .apellidoza {
+  position: absolute;
+  width: 127px;
+  top: 6px;
+  left: 34px;
+  font-family: "Karla-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .filterdni {
+  position: absolute;
+  width: 202px;
+  height: 34px;
+  top: 136px;
+  left: 0;
+}
+
+.clientes .dni {
+  position: absolute;
+  width: 36px;
+  top: 7px;
+  left: 80px;
+  font-family: "Karla-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .filtercarnet {
+  position: absolute;
+  width: 202px;
+  height: 34px;
+  top: 170px;
+  left: 0;
+}
+
+.clientes .carnetdeextranjeria {
+  position: absolute;
+  width: 177px;
+  top: 6px;
+  left: 15px;
+  font-family: "Karla-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.clientes .filterpasaporte {
+  position: absolute;
+  width: 202px;
+  height: 34px;
+  top: 204px;
+  left: 0;
+}
+
+.clientes .pasaporte-wrapper {
+  position: relative;
+  width: 200px;
+  height: 34px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 40px 40px;
+  border: 2px solid;
+  border-color: #22993580;
+}
+
+.clientes .pasaporte {
+  position: absolute;
+  width: 90px;
+  top: 6px;
+  left: 53px;
+  font-family: "Karla-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lista-clientes {
+  position: absolute;
+  top: 400px; /* debajo de los headers */
+  left: 31px;
+  width: 1678px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* espacio entre filas */
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.ejemplo {
+  width: 100%;
+  height: 36px;
+  position: relative; /* ya no absolute */
+}
+
+.acciones {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  padding: 2px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #229935;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #1b7b2b;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* <- Asegura que esté encima */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

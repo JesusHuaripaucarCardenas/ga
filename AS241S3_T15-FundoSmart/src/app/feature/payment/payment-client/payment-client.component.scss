@@ -1,0 +1,174 @@
+.pago-metodo {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.pago-metodo .div {
+  background-color: #e7e3e0;
+  width: 1728px;
+  height: 1117px;
+  position: relative;
+}
+
+.pago-metodo .logo {
+  position: absolute;
+  width: 289px;
+  height: 289px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.pago-metodo .pago {
+  position: absolute;
+  width: 1011px;
+  height: 516px;
+  top: 289px;
+  left: 362px;
+}
+
+.pago-metodo .overlap {
+  position: relative;
+  width: 1003px;
+  height: 516px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.pago-metodo .text-wrapper {
+  position: absolute;
+  width: 361px;
+  top: 42px;
+  left: 321px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.overlap-group {
+  position: relative;
+  width: 377px;
+  height: 54px;
+  background-color: #e7e3e0;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.overlap-grou {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: #1966bf;
+  border-radius: 30px;
+  border: 1px solid;
+  border-color: #1476c1;
+  top: 280px;
+  left: 250px;
+}
+
+.pago-metodo .cardimg {
+  position: absolute;
+  width: 63px;
+  height: 50px;
+  top: 10px;
+  left: 5px;
+  z-index: 999;
+}
+
+.btncontinuar {
+  position: absolute;
+  width: 379px;
+  height: 54px;
+  top: 430px;
+  left: 313px;
+}
+
+.pago-metodo .div-wrapper {
+  position: relative;
+  width: 377px;
+  height: 54px;
+  background-color: #e7e3e0;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.text-wrapper-2 {
+  position: absolute;
+  width: 119px;
+  top: 14px;
+  left: 128px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pago-metodo .efectivoimg {
+  position: absolute;
+  width: 86px;
+  height: 87px;
+  top: 267px;
+  left: 685px;
+}
+
+.pago-metodo .yapeimg {
+  position: absolute;
+  width: 91px;
+  height: 94px;
+  top: 265px;
+  left: 470px;
+}
+
+.pago-metodo .tarjeta {
+  position: absolute;
+  width: 51px;
+  top: 238px;
+  left: 262px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pago-metodo .efectivo {
+  position: absolute;
+  width: 61px;
+  top: 238px;
+  left: 698px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pago-metodo .yape {
+  position: absolute;
+  width: 38px;
+  top: 238px;
+  left: 497px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

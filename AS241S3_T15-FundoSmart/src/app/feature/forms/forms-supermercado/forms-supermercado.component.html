@@ -1,0 +1,33 @@
+<div class="market-container">
+  <div class="market-logo">
+    <img src="assets/logo-supermercado.png" alt="Logo Supermercado" />
+  </div>
+  <div class="market-content">
+    <button type="button" class="market-title">Supermercado</button>
+    <form (ngSubmit)="submitForm()" #form="ngForm" class="market-form">
+      <div class="market__row">
+        <label>Ciudad:</label>
+        <input type="text" [(ngModel)]="customer.city" name="city" class="input-medium" required />
+        <label>Distrito:</label>
+        <input type="text" [(ngModel)]="customer.district" name="district" class="input-medium" required />
+      </div>
+      <div class="market__row">
+        <label>Nombre de la tienda:</label>
+        <input type="text" [(ngModel)]="customer.supermarketName" name="supermarketName" class="input-large" required />
+      </div>
+      <div class="market__row">
+        <label>RUC:</label>
+        <input type="text" [(ngModel)]="customer.ruc" name="ruc" class="input-small" required />
+        <label>N° de celular:</label>
+        <input type="text" [(ngModel)]="customer.phone" name="phone" class="input-small" required />
+      </div>
+      <div class="market__row">
+        <label>Dirección matriz:</label>
+        <input type="text" [(ngModel)]="customer.arrayAddress" name="arrayAddress" class="input-large" required />
+      </div>
+      <div class="market__actions">
+        <button type="submit" class="market__button">CONTINUAR</button>
+      </div>
+    </form>
+  </div>
+</div>

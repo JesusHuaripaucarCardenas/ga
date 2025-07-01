@@ -1,0 +1,95 @@
+/* Contenedor */
+.market-form-wrapper,
+.supermarket-form-container {
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Courier New', Courier, monospace;
+  background: white;
+  padding: 20px;
+}
+
+/* Título */
+.market-form-title,
+.supermarket-form-title {
+  background-color: green;
+  color: white;
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Formulario (flex columna) */
+.market-form,
+.supermarket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Filas (flex row) */
+.market-form-row,
+.supermarket-form-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Labels en negrita */
+.market-field label,
+.market-field-wide label,
+.supermarket-field label,
+.supermarket-field-large label {
+  font-weight: bold;
+}
+
+/* Inputs y select */
+.market-field input,
+.market-field-wide input,
+.market-field select,
+.supermarket-field input,
+.supermarket-field-large input {
+  background-color: #c4e3cb;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-family: 'Courier New', Courier, monospace;
+  min-width: 150px;
+}
+/* Anchos específicos */
+.market-field-wide,
+.supermarket-field-large {
+  width: 250px;
+}
+
+/* Mensajes de error */
+.market-error,
+.supermarket-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Botones */
+.market-submit-btn,
+.supermarket-submit-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Errores de backend */
+.market-backend-error,
+.supermarket-backend-error {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 8px;
+}

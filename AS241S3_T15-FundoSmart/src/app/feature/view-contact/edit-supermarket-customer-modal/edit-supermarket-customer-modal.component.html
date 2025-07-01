@@ -1,0 +1,58 @@
+<div class="modal-backdrop">
+  <div class="modal-content fade-in formulario">
+    <button class="btn-cerrar" (click)="onCancel()">✖</button>
+    <h2 class="titulo">Editar Supermercado</h2>
+
+    <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Fila 1 -->
+      <div class="fila">
+        <div class="campo" [class.error]="hasError('city')">
+          <label>Ciudad:</label>
+          <input formControlName="city" />
+          <small *ngIf="hasError('city')">Campo requerido</small>
+        </div>
+        <div class="campo" [class.error]="hasError('district')">
+          <label>Distrito:</label>
+          <input formControlName="district" />
+          <small *ngIf="hasError('district')">Campo requerido</small>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="fila">
+        <div class="campo" [class.error]="hasError('supermarketName')">
+          <label>Tienda:</label>
+          <input formControlName="supermarketName" />
+          <small *ngIf="hasError('supermarketName')">Campo requerido</small>
+        </div>
+        <div class="campo" [class.error]="hasError('ruc')">
+          <label>RUC:</label>
+          <input formControlName="ruc" maxlength="11" />
+          <small *ngIf="hasError('ruc')">Campo requerido y máximo 11 caracteres</small>
+        </div>
+      </div>
+
+      <!-- Fila 3 -->
+      <div class="fila">
+        <div class="campo" [class.error]="hasError('arrayAddress')">
+          <label>Dirección:</label>
+          <input formControlName="arrayAddress" />
+          <small *ngIf="hasError('arrayAddress')">Campo requerido</small>
+        </div>
+        <div class="campo" [class.error]="hasError('phone')">
+          <label>Teléfono:</label>
+          <input formControlName="phone" maxlength="15" />
+          <small *ngIf="hasError('phone')">Campo requerido y máximo 15 caracteres</small>
+        </div>
+      </div>
+
+      <!-- Acciones -->
+      <div class="fila derecha">
+        <button type="submit" class="btn-agregar">Guardar</button>
+        <button type="button" class="btn-agregar" (click)="onCancel()">Cancelar</button>
+      </div>
+
+      <p class="error-backend error"></p>
+    </form>
+  </div>
+</div>

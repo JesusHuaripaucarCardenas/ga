@@ -1,0 +1,695 @@
+.preguiamerca {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.preguiamerca .div {
+  background-color: #e7e3e0;
+  width: 1728px;
+  height: 1918px;
+  position: relative;
+}
+
+.preguiamerca .arriba {
+  position: absolute;
+  width: 1728px;
+  height: 182px;
+  top: -4px;
+  left: 0;
+}
+
+.preguiamerca .overlap {
+  position: relative;
+  height: 178px;
+  top: 4px;
+}
+
+.preguiamerca .cabeza {
+  position: absolute;
+  width: 1728px;
+  height: 174px;
+  top: 0;
+  left: 0;
+  background-color: #229935;
+}
+
+.preguiamerca .notiimg {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 22px;
+  left: 1213px;
+  object-fit: cover;
+}
+
+.preguiamerca .logo {
+  position: absolute;
+  width: 173px;
+  height: 173px;
+  top: 1px;
+  left: 13px;
+  object-fit: cover;
+}
+
+.preguiamerca .buscador {
+  position: absolute;
+  width: 611px;
+  height: 68px;
+  top: 61px;
+  left: 507px;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.preguiamerca .buscar {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 9px;
+  left: 544px;
+  object-fit: cover;
+}
+
+.preguiamerca .catego {
+  position: absolute;
+  width: 223px;
+  height: 83px;
+  top: 46px;
+  left: 218px;
+}
+
+.preguiamerca .overlap-group {
+  position: relative;
+  width: 221px;
+  height: 83px;
+  background-color: #229935;
+  border-radius: 50px;
+  border: 2px solid;
+  border-color: #ffffff;
+}
+
+.preguiamerca .text-wrapper {
+  position: absolute;
+  width: 148px;
+  top: 20px;
+  left: 35px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .perfilimg {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 7px;
+  left: 1357px;
+  object-fit: cover;
+}
+
+.preguiamerca .menu {
+  position: absolute;
+  width: 182px;
+  height: 178px;
+  top: 0;
+  left: 1531px;
+  object-fit: cover;
+}
+
+.preguiamerca .overlap-2 {
+  position: absolute;
+  width: 1654px;
+  height: 1564px;
+  top: 218px;
+  left: 37px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.preguiamerca .text-wrapper-2 {
+  position: absolute;
+  width: 111px;
+  top: 855px;
+  left: 580px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .text-wrapper-3 {
+  position: absolute;
+  width: 69px;
+  top: 855px;
+  left: 726px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .flacantidad {
+  position: absolute;
+  width: 124px;
+  height: 299px;
+  top: 900px;
+  left: 557px;
+}
+
+.preguiamerca .div-2 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.preguiamerca .div-3 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 225px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.preguiamerca .div-4 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 150px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.preguiamerca .div-5 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 75px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.preguiamerca .ttal {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 1218px;
+  left: 395px;
+}
+
+.preguiamerca .div-wrapper {
+  position: relative;
+  width: 124px;
+  height: 74px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.preguiamerca .text-wrapper-4 {
+  position: absolute;
+  width: 71px;
+  top: 25px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .flapeso {
+  position: absolute;
+  width: 124px;
+  height: 299px;
+  top: 900px;
+  left: 693px;
+}
+
+.preguiamerca .canitdadtotal {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 1218px;
+  left: 557px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.preguiamerca .pesototal {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  top: 1218px;
+  left: 693px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.preguiamerca .separador {
+  position: absolute;
+  width: 466px;
+  height: 2px;
+  top: 1204px;
+  left: 376px;
+}
+
+.preguiamerca .prmra {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 900px;
+  left: 395px;
+}
+
+.preguiamerca .text-wrapper-5 {
+  position: absolute;
+  width: 52px;
+  top: 26px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .trcera {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 975px;
+  left: 395px;
+}
+
+.preguiamerca .text-wrapper-6 {
+  position: absolute;
+  width: 52px;
+  top: 24px;
+  left: 36px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .qinta {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 1050px;
+  left: 395px;
+}
+
+.preguiamerca .mdura {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  top: 1125px;
+  left: 395px;
+}
+
+.preguiamerca .text-wrapper-7 {
+  position: absolute;
+  width: 82px;
+  top: 26px;
+  left: 21px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .text-wrapper-8 {
+  position: absolute;
+  width: 129px;
+  top: 855px;
+  left: 416px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .rsptanombre {
+  position: absolute;
+  width: 320px;
+  height: 65px;
+  top: 772px;
+  left: 557px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #229935;
+}
+
+.preguiamerca .name {
+  position: absolute;
+  width: 171px;
+  height: 65px;
+  top: 772px;
+  left: 376px;
+}
+
+.preguiamerca .nmbreproduct-wrapper {
+  position: relative;
+  width: 169px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.preguiamerca .nmbreproduct {
+  position: absolute;
+  width: 82px;
+  top: 20px;
+  left: 44px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .btnenviarguia {
+  position: absolute;
+  width: 514px;
+  height: 81px;
+  top: 1368px;
+  left: 376px;
+}
+
+.preguiamerca .overlap-3 {
+  position: relative;
+  width: 512px;
+  height: 81px;
+  background-color: #229935b2;
+  border-radius: 40px;
+}
+
+.preguiamerca .text-wrapper-9 {
+  position: absolute;
+  width: 220px;
+  top: 23px;
+  left: 221px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .paper-plane {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 1px;
+  left: 107px;
+  object-fit: cover;
+}
+
+.preguiamerca .ciudad {
+  position: absolute;
+  width: 381px;
+  height: 65px;
+  top: 318px;
+  left: 261px;
+}
+
+.preguiamerca .overlap-4 {
+  position: relative;
+  width: 379px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.preguiamerca .ciudad-2 {
+  position: absolute;
+  width: 129px;
+  top: 8px;
+  left: 86px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .nombre {
+  position: absolute;
+  width: 919px;
+  height: 65px;
+  top: 195px;
+  left: 261px;
+}
+
+.preguiamerca .overlap-5 {
+  position: relative;
+  width: 915px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.preguiamerca .nombre-2 {
+  position: absolute;
+  width: 244px;
+  top: 14px;
+  left: 135px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .apellido {
+  position: absolute;
+  width: 244px;
+  top: 14px;
+  left: 531px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .distrito {
+  position: absolute;
+  width: 381px;
+  height: 65px;
+  top: 410px;
+  left: 261px;
+}
+
+.preguiamerca .distrito-2 {
+  position: absolute;
+  width: 162px;
+  top: 14px;
+  left: 86px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .overlap-wrapper {
+  position: absolute;
+  width: 379px;
+  height: 65px;
+  top: 511px;
+  left: 263px;
+}
+
+.preguiamerca .overlap-6 {
+  position: relative;
+  width: 377px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.preguiamerca .mercado {
+  position: absolute;
+  width: 162px;
+  top: 8px;
+  left: 86px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .overlap-group-wrapper {
+  position: absolute;
+  width: 379px;
+  height: 65px;
+  top: 603px;
+  left: 263px;
+}
+
+.preguiamerca .puesto {
+  position: absolute;
+  width: 162px;
+  top: 14px;
+  left: 70px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .RUC {
+  position: absolute;
+  width: 429px;
+  height: 65px;
+  top: 318px;
+  left: 749px;
+}
+
+.preguiamerca .overlap-7 {
+  position: relative;
+  width: 427px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.preguiamerca .tipdocumento {
+  position: absolute;
+  width: 351px;
+  top: 8px;
+  left: 58px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .telefono {
+  position: absolute;
+  width: 439px;
+  height: 65px;
+  top: 410px;
+  left: 749px;
+}
+
+.preguiamerca .overlap-8 {
+  position: relative;
+  width: 437px;
+  height: 65px;
+}
+
+.preguiamerca .conttelefono {
+  position: absolute;
+  width: 427px;
+  height: 65px;
+  top: 0;
+  left: 0;
+  background-color: #22993580;
+  border-radius: 40px;
+}
+
+.preguiamerca .nmerodocumento {
+  position: absolute;
+  width: 410px;
+  top: 14px;
+  left: 27px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.preguiamerca .telefono-2 {
+  position: absolute;
+  width: 429px;
+  height: 65px;
+  top: 511px;
+  left: 749px;
+}
+
+.preguiamerca .telefono-3 {
+  position: absolute;
+  width: 171px;
+  top: 14px;
+  left: 76px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

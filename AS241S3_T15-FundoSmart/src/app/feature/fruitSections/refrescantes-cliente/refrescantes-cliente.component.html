@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="section-frutilla">
+  <div class="frutilla-container">
+    <div class="frutilla-overlap">
+
+      <!-- Ordenar Por -->
+      <div class="section-other">
+        <div class="other-section-wrapper">
+          <div class="sort-label">Ordenar por:</div>
+          <div class="sort-button">
+            <div class="sort-button-inner">
+              <div class="sort-button-text">Recomendados</div>
+              <img class="sort-arrow" src="img/flechbajo.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- Cards Frutilla -->
+      <div class="cards-container">
+        <div *ngFor="let sale of sales" class="carousel-mandarina">
+          <div class="mandarina-card">
+            <div class="mandarina-details" (click)="openDetails(sale)">
+              Ver detalles
+            </div>
+            <div class="mandarina-title">{{ sale.name }}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

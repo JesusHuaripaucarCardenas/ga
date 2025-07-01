@@ -1,0 +1,1208 @@
+
+.datos-productos {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.datos-productos .div {
+  background-color: #e7e3e0;
+  overflow: hidden;
+  width: 1728px;
+  height: 1489px;
+  position: relative;
+}
+
+.datos-productos .overlap {
+  position: absolute;
+  width: 1728px;
+  height: 1315px;
+  top: 183px;
+  left: -1px;
+}
+
+.datos-productos .overlap-group {
+  position: absolute;
+  width: 1728px;
+  height: 1315px;
+  top: 0;
+  left: 0;
+}
+
+.datos-productos .allcitric {
+  position: absolute;
+  width: 474px;
+  height: 1315px;
+  top: 0;
+  left: 1px;
+}
+
+.datos-productos .overlap-2 {
+  position: relative;
+  width: 472px;
+  height: 1315px;
+  background-color: #229935;
+  border-radius: 100px;
+}
+
+.datos-productos .tipcitricos {
+  position: absolute;
+  width: 260px;
+  top: 61px;
+  left: 108px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .botnaranjas {
+  position: absolute;
+  width: 394px;
+  height: 124px;
+  top: 204px;
+  left: 40px;
+}
+
+.datos-productos .div-wrapper {
+  position: relative;
+  width: 392px;
+  height: 124px;
+  background-color: #229935;
+}
+
+.datos-productos .text-wrapper {
+  position: absolute;
+  width: 192px;
+  top: 31px;
+  left: 52px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .botmandarina {
+  position: absolute;
+  width: 394px;
+  height: 124px;
+  top: 328px;
+  left: 40px;
+}
+
+.datos-productos .overlap-3 {
+  position: relative;
+  width: 392px;
+  height: 124px;
+  background-color: #229935;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: #000000;
+}
+
+.datos-productos .text-wrapper-2 {
+  position: absolute;
+  width: 232px;
+  top: 30px;
+  left: 51px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .botlimon {
+  position: absolute;
+  width: 394px;
+  height: 124px;
+  top: 453px;
+  left: 40px;
+}
+
+.datos-productos .text-wrapper-3 {
+  left: 51px;
+  position: absolute;
+  width: 192px;
+  top: 30px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .botlima {
+  position: absolute;
+  width: 394px;
+  height: 124px;
+  top: 577px;
+  left: 40px;
+}
+
+.datos-productos .text-wrapper-4 {
+  left: 55px;
+  position: absolute;
+  width: 192px;
+  top: 30px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .abajo {
+  position: absolute;
+  width: 1728px;
+  height: 359px;
+  top: 947px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.datos-productos .wasap {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  top: 113px;
+  left: 756px;
+  object-fit: cover;
+}
+
+.datos-productos .logo {
+  width: 323px;
+  height: 323px;
+  top: 0;
+  left: 82px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.datos-productos .carroneimg {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: 108px;
+  left: 1200px;
+  object-fit: cover;
+}
+
+.datos-productos .perfilimg {
+  width: 115px;
+  height: 115px;
+  top: 103px;
+  left: 1397px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.datos-productos .regpedido {
+  position: absolute;
+  width: 185px;
+  height: 103px;
+  top: 120px;
+  left: 929px;
+}
+
+.datos-productos .overlap-group-2 {
+  position: relative;
+  width: 183px;
+  height: 103px;
+}
+
+.datos-productos .pedidoimg {
+  width: 97px;
+  height: 97px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.datos-productos .text-wrapper-5 {
+  width: 143px;
+  top: 71px;
+  left: 40px;
+  color: #000000;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .catego {
+  height: 59px;
+  top: 135px;
+  left: 436px;
+  position: absolute;
+  width: 223px;
+}
+
+.datos-productos .overlap-4 {
+  position: relative;
+  width: 221px;
+  height: 59px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 2px solid;
+  border-color: #000000;
+}
+
+.datos-productos .text-wrapper-6 {
+  top: 12px;
+  color: #000000;
+  white-space: nowrap;
+  position: absolute;
+  width: 175px;
+  left: 21px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .producto {
+  position: absolute;
+  width: 585px;
+  height: 551px;
+  top: 24px;
+  left: 517px;
+}
+
+.datos-productos .overlap-5 {
+  position: relative;
+  width: 583px;
+  height: 551px;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.datos-productos .naranjacarru {
+  position: absolute;
+  width: 412px;
+  height: 301px;
+  top: 184px;
+  left: 52px;
+}
+
+.datos-productos .text-wrapper-7 {
+  position: absolute;
+  width: 498px;
+  top: 60px;
+  left: 52px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: 50px;
+}
+
+.datos-productos .primera {
+  position: absolute;
+  width: 573px;
+  height: 57px;
+  top: 87px;
+  left: 1119px;
+}
+
+.datos-productos .overlap-6 {
+  position: relative;
+  width: 565px;
+  height: 57px;
+}
+
+.datos-productos .solid {
+  position: absolute;
+  width: 565px;
+  height: 56px;
+  top: 1px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.datos-productos .text-wrapper-8 {
+  width: 171px;
+  top: 18px;
+  left: 28px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 18px;
+  position: absolute;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .btnmenos {
+  height: 39px;
+  top: 4px;
+  position: absolute;
+  width: 29px;
+  left: 390px;
+}
+
+.datos-productos .overlap-group-3 {
+  position: relative;
+  width: 27px;
+  height: 39px;
+}
+
+.datos-productos .menos {
+  top: 11px;
+  position: absolute;
+  width: 27px;
+  height: 28px;
+  left: 0;
+  background-color: #317cc3;
+  border-radius: 10px;
+}
+
+.datos-productos .text-wrapper-9 {
+  width: 18px;
+  top: 0;
+  left: 5px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .text-wrapper-10 {
+  position: absolute;
+  width: 65px;
+  top: 20px;
+  left: 432px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .btnmas {
+  height: 42px;
+  top: 0;
+  position: absolute;
+  width: 29px;
+  left: 509px;
+}
+
+.datos-productos .overlap-group-4 {
+  position: relative;
+  width: 27px;
+  height: 42px;
+}
+
+.datos-productos .mas {
+  height: 27px;
+  top: 15px;
+  position: absolute;
+  width: 27px;
+  left: 0;
+  background-color: #317cc3;
+  border-radius: 10px;
+}
+
+.datos-productos .text-wrapper-11 {
+  width: 25px;
+  top: 0;
+  left: 1px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .text-wrapper-12 {
+  top: 10px;
+  left: 215px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 12px;
+  position: absolute;
+  width: 145px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .text-wrapper-13 {
+  top: 28px;
+  left: 215px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  font-size: 10px;
+  position: absolute;
+  width: 145px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .tercera {
+  position: absolute;
+  width: 573px;
+  height: 56px;
+  top: 151px;
+  left: 1119px;
+}
+
+.datos-productos .overlap-7 {
+  position: relative;
+  width: 565px;
+  height: 56px;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.datos-productos .text-wrapper-14 {
+  width: 181px;
+  top: 18px;
+  left: 28px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 18px;
+  position: absolute;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .overlap-group-wrapper {
+  height: 40px;
+  top: 2px;
+  position: absolute;
+  width: 29px;
+  left: 390px;
+}
+
+.datos-productos .overlap-group-5 {
+  position: relative;
+  width: 27px;
+  height: 40px;
+}
+
+.datos-productos .menos-2 {
+  top: 12px;
+  position: absolute;
+  width: 27px;
+  height: 28px;
+  left: 0;
+  background-color: #317cc3;
+  border-radius: 10px;
+}
+
+.datos-productos .text-wrapper-15 {
+  position: absolute;
+  width: 73px;
+  top: 19px;
+  left: 432px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .overlap-wrapper {
+  height: 41px;
+  top: 1px;
+  position: absolute;
+  width: 29px;
+  left: 509px;
+}
+
+.datos-productos .overlap-8 {
+  position: relative;
+  width: 27px;
+  height: 41px;
+}
+
+.datos-productos .mas-2 {
+  height: 28px;
+  top: 13px;
+  position: absolute;
+  width: 27px;
+  left: 0;
+  background-color: #317cc3;
+  border-radius: 10px;
+}
+
+.datos-productos .overlap-9 {
+  position: absolute;
+  width: 145px;
+  height: 37px;
+  top: 13px;
+  left: 215px;
+}
+
+.datos-productos .text-wrapper-16 {
+  top: 0;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 12px;
+  position: absolute;
+  width: 145px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .text-wrapper-17 {
+  top: 18px;
+  left: 0;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  font-size: 10px;
+  position: absolute;
+  width: 145px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .madura {
+  position: absolute;
+  width: 573px;
+  height: 56px;
+  top: 277px;
+  left: 1119px;
+}
+
+.datos-productos .text-wrapper-18 {
+  width: 171px;
+  top: 18px;
+  left: 30px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 18px;
+  position: absolute;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .mas-3 {
+  height: 28px;
+  top: 14px;
+  position: absolute;
+  width: 27px;
+  left: 0;
+  background-color: #317cc3;
+  border-radius: 10px;
+}
+
+.datos-productos .overlap-10 {
+  position: absolute;
+  width: 145px;
+  height: 37px;
+  top: 9px;
+  left: 215px;
+}
+
+.datos-productos .quinta {
+  position: absolute;
+  width: 573px;
+  height: 56px;
+  top: 214px;
+  left: 1119px;
+}
+
+.datos-productos .text-wrapper-19 {
+  width: 171px;
+  top: 19px;
+  left: 28px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 18px;
+  position: absolute;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .overlap-11 {
+  position: absolute;
+  width: 145px;
+  height: 37px;
+  top: 10px;
+  left: 215px;
+}
+
+.datos-productos .overlap-12 {
+  position: absolute;
+  width: 565px;
+  height: 56px;
+  top: 24px;
+  left: 1119px;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.datos-productos .text-wrapper-20 {
+  width: 101px;
+  top: 18px;
+  left: 232px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.datos-productos .colltotal {
+  position: absolute;
+  width: 283px;
+  height: 233px;
+  top: 342px;
+  left: 1413px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.datos-productos .overlap-13 {
+  position: absolute;
+  width: 237px;
+  height: 78px;
+  top: 48px;
+  left: 25px;
+}
+
+.datos-productos .kilototal {
+  position: absolute;
+  width: 237px;
+  height: 39px;
+  top: 0;
+  left: 0;
+}
+
+.datos-productos .overlap-group-6 {
+  position: relative;
+  width: 233px;
+  height: 39px;
+  background-color: #ffffff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #000000;
+}
+
+.datos-productos .text-wrapper-21 {
+  position: absolute;
+  width: 103px;
+  top: -1px;
+  left: 13px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.datos-productos .text-wrapper-22 {
+  width: 52px;
+  top: -1px;
+  left: 156px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  line-height: 50px;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .totalprecio {
+  position: absolute;
+  width: 237px;
+  height: 40px;
+  top: 38px;
+  left: 0;
+}
+
+.datos-productos .overlap-14 {
+  position: relative;
+  width: 233px;
+  height: 40px;
+}
+
+.datos-productos .precio {
+  position: absolute;
+  width: 233px;
+  height: 39px;
+  top: 1px;
+  left: 0;
+  background-color: #ffffff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #000000;
+}
+
+.datos-productos .text-wrapper-23 {
+  position: absolute;
+  width: 75px;
+  top: 0;
+  left: 145px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.datos-productos .text-wrapper-24 {
+  position: absolute;
+  width: 108px;
+  top: 0;
+  left: 12px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.datos-productos .deleteimg-wrapper {
+  position: absolute;
+  width: 283px;
+  height: 55px;
+  top: 178px;
+  left: 0;
+  background-color: #ff0000;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.datos-productos .deleteimg {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  top: 1px;
+  left: 115px;
+  object-fit: cover;
+}
+
+.datos-productos .cajatotal {
+  position: absolute;
+  width: 285px;
+  height: 233px;
+  top: 342px;
+  left: 1119px;
+}
+
+.datos-productos .overlap-15 {
+  position: relative;
+  width: 283px;
+  height: 233px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.datos-productos .text-wrapper-25 {
+  position: absolute;
+  top: 14px;
+  left: 31px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .cajaprimera {
+  position: absolute;
+  width: 228px;
+  height: 27px;
+  top: 52px;
+  left: 30px;
+}
+
+.datos-productos .overlap-group-7 {
+  position: relative;
+  width: 224px;
+  height: 27px;
+  background-color: #ffffff;
+}
+
+.datos-productos .text-wrapper-26 {
+  position: absolute;
+  width: 171px;
+  top: 5px;
+  left: 7px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .text-wrapper-27 {
+  width: 37px;
+  top: 8px;
+  left: 178px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .cajatercera {
+  position: absolute;
+  width: 228px;
+  height: 27px;
+  top: 79px;
+  left: 30px;
+}
+
+.datos-productos .overlap-16 {
+  position: relative;
+  width: 224px;
+  height: 27px;
+  background-color: #ffffff;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: #000000;
+}
+
+.datos-productos .text-wrapper-28 {
+  position: absolute;
+  width: 181px;
+  top: 5px;
+  left: 6px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .text-wrapper-29 {
+  width: 37px;
+  top: 8px;
+  left: 177px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .cajaquinta {
+  position: absolute;
+  width: 228px;
+  height: 25px;
+  top: 106px;
+  left: 30px;
+}
+
+.datos-productos .overlap-17 {
+  position: relative;
+  width: 224px;
+  height: 25px;
+  background-color: #ffffff;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: #000000;
+}
+
+.datos-productos .text-wrapper-30 {
+  position: absolute;
+  width: 171px;
+  top: 2px;
+  left: 6px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .text-wrapper-31 {
+  width: 37px;
+  top: 5px;
+  left: 177px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .cajamadura {
+  position: absolute;
+  width: 228px;
+  height: 27px;
+  top: 131px;
+  left: 30px;
+}
+
+.datos-productos .text-wrapper-32 {
+  position: absolute;
+  width: 171px;
+  top: 3px;
+  left: 6px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .text-wrapper-33 {
+  width: 37px;
+  top: 3px;
+  left: 177px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .totalcaja {
+  position: absolute;
+  width: 228px;
+  height: 27px;
+  top: 158px;
+  left: 30px;
+}
+
+.datos-productos .text-wrapper-34 {
+  width: 37px;
+  top: 1px;
+  left: 177px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.datos-productos .arriba {
+  position: absolute;
+  width: 1728px;
+  height: 174px;
+  top: 0;
+  left: 0;
+  background-color: #229935;
+}
+
+.datos-productos .img {
+  width: 173px;
+  height: 173px;
+  top: 1px;
+  left: 13px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.datos-productos .carritoimg {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 24px;
+  left: 1381px;
+  object-fit: cover;
+}
+
+.datos-productos .perfilimg-2 {
+  width: 136px;
+  height: 136px;
+  top: 19px;
+  left: 1559px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.datos-productos .regpedido-2 {
+  position: absolute;
+  width: 189px;
+  height: 151px;
+  top: 11px;
+  left: 1146px;
+}
+
+.datos-productos .overlap-group-8 {
+  position: relative;
+  width: 187px;
+  height: 151px;
+}
+
+.datos-productos .pedidoimg-2 {
+  width: 115px;
+  height: 115px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.datos-productos .text-wrapper-35 {
+  width: 144px;
+  top: 107px;
+  left: 43px;
+  color: #ffffff;
+  position: absolute;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.datos-productos .buscador {
+  position: absolute;
+  width: 611px;
+  height: 68px;
+  top: 61px;
+  left: 507px;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.datos-productos .buscar {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 9px;
+  left: 544px;
+  object-fit: cover;
+}
+
+.datos-productos .catego-2 {
+  height: 83px;
+  top: 46px;
+  left: 218px;
+  position: absolute;
+  width: 223px;
+}
+
+.datos-productos .overlap-18 {
+  position: relative;
+  width: 221px;
+  height: 83px;
+  background-color: #229935;
+  border-radius: 50px;
+  border: 2px solid;
+  border-color: #ffffff;
+}
+
+.datos-productos .text-wrapper-36 {
+  top: 17px;
+  color: #ffffff;
+  position: absolute;
+  width: 175px;
+  left: 21px;
+  font-family: "Itim-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.stock-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.stock-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.toast-alert {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background-color: #229935;
+  color: #ffffff;
+  padding: 16px 32px;           // más espacio interno
+  min-width: 300px;             // ancho mínimo
+  max-width: 80%;               // no exceda el 80% de la pantalla
+  font-size: 18px;              // letra más grande
+  font-weight: 600;
+  border-radius: 12px;          // esquinas un poco más redondas
+  text-align: center;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+
+  &.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}

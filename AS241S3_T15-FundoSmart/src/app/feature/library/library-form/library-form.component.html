@@ -1,0 +1,38 @@
+  <app-navbar></app-navbar>
+<div class="biblioteca">
+
+  <ng-container *ngFor="let fs of selections">
+    <div class="fechauno">
+      <p class="element-actual">
+        {{ fs.exitDate | date:'dd / MM / yyyy' }}
+        ({{ isToday(fs.exitDate) ? 'actual' : 'pasado' }})
+      </p>
+      <img class="line" src="img/line-16.svg" />
+      <img class="img" src="img/line-17.svg" />
+    </div>
+    <div class="overlap-2">
+      <div class="regiistro" [ngClass]="{ 'regiistrouno': isToday(fs.exitDate), 'regiistrodos': !isToday(fs.exitDate) }">
+        <div class="text-wrapper-3">Cantidad</div>
+        <div class="text-wrapper-4">Peso</div>
+        <div class="text-wrapper-5">Total</div>
+        <div class="text-wrapper-6">Cliente</div>
+        <div class="text-wrapper-7">Fecha de salida</div>
+        <div class="text-wrapper-8">1º ra</div>
+        <div class="text-wrapper-9">3º ra</div>
+        <div class="text-wrapper">5º ta</div>
+        <div class="text-wrapper-10">Madura</div>
+        <div class="text-wrapper-11">Seleccion</div>
+        <div class="text-wrapper-12">Nombre</div>
+        <div class="cantidadtotal">{{ fs.firstSelection }}</div>
+        <div class="pesototal">{{ fs.total }}</div>
+        <div class="rsptanombre">{{ fs.client }}</div>
+        <div class="salida">{{ fs.exitDate | date:'dd / MM / yyyy' }}</div>
+        <div class="prmra">{{ fs.firstSelection }}</div>
+        <div class="trcera">{{ fs.thirdSelection }}</div>
+        <div class="qinta">{{ fs.fifthSelection }}</div>
+        <div class="mdura">{{ fs.ripeSelection }}</div>
+        <div class="name">{{ fs.name }}</div>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,364 @@
+
+.registro-contenedor-general {
+  background-color: #e7e3e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.registro-cuerpo {
+  background-color: #e7e3e0;
+  width: 1728px;
+  height: 2585px;
+  position: relative;
+}
+
+.registro-uno-overlap {
+  position: absolute;
+  width: 1660px;
+  height: 931px;
+  top: 422px;
+  left: 37px;
+}
+
+.registro-contenedor-uno {
+  position: absolute;
+  width: 1660px;
+  height: 931px;
+  top: 0;
+  left: 0;
+}
+
+.registro-uno-fondo {
+  position: absolute;
+  width: 1654px;
+  height: 844px;
+  top: 87px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.registro-uno-cantidad-label,
+.registro-uno-peso-label,
+.registro-dos-cantidad-label,
+.registro-dos-peso-label,
+.registro-uno-seleccion-label,
+.registro-dos-seleccion-label {
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.registro-uno-cantidad-label {
+  top: 210px;
+  left: 570px;
+  width: 111px;
+}
+
+.registro-uno-peso-label {
+  top: 210px;
+  left: 716px;
+  width: 69px;
+}
+
+.registro-uno-cantidad-box,
+.registro-uno-peso-box,
+.registro-dos-cantidad-box,
+.registro-dos-peso-box {
+  position: absolute;
+  width: 124px;
+  height: 299px;
+}
+
+.registro-uno-cantidad-box {
+  top: 290px;
+  left: 547px;
+}
+
+.registro-uno-peso-box {
+  top: 290px;
+  left: 683px;
+}
+
+.registro-uno-celda-1,
+.registro-uno-celda-2,
+.registro-uno-celda-3,
+.registro-uno-celda-4,
+.registro-uno-peso-celda-1,
+.registro-uno-peso-celda-2,
+.registro-uno-peso-celda-3,
+.registro-uno-peso-celda-4,
+.registro-dos-celda-1,
+.registro-dos-celda-2,
+.registro-dos-celda-3,
+.registro-dos-celda-4,
+.registro-dos-peso-celda-1,
+.registro-dos-peso-celda-2,
+.registro-dos-peso-celda-3,
+.registro-dos-peso-celda-4 {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.registro-dos-celda-1 { top: 0; left: 0; }
+.registro-dos-celda-4 { top: 80px; left: 0; }
+.registro-dos-celda-3 { top: 160px; left: 0; }
+.registro-dos-celda-2 { top: 240px; left: 0; }
+
+.registro-dos-peso-celda-1 { top: 0; left: 0; }
+.registro-dos-peso-celda-4 { top: 80px; left: 0; }
+.registro-dos-peso-celda-3 { top: 160px; left: 0; }
+.registro-dos-peso-celda-2 { top: 240px; left: 0; }
+
+.registro-uno-celda-1 { top: 0; left: 0; }
+.registro-uno-celda-4 { top: 80px; left: 0; }
+.registro-uno-celda-3 { top: 160px; left: 0; }
+.registro-uno-celda-2 { top: 240px; left: 0; }
+
+.registro-uno-peso-celda-1 { top: 0; left: 0; }
+.registro-uno-peso-celda-4 { top: 80px; left: 0; }
+.registro-uno-peso-celda-3 { top: 160px; left: 0; }
+.registro-uno-peso-celda-2 { top: 240px; left: 0; }
+
+.registro-uno-total-label,
+.registro-uno-primera,
+.registro-uno-tercera,
+.registro-uno-quinta,
+.registro-uno-madura,
+.registro-dos-total-label,
+.registro-dos-primera,
+.registro-dos-tercera,
+.registro-dos-quinta,
+.registro-dos-madura {
+  position: absolute;
+  width: 126px;
+  height: 74px;
+  left: 385px;
+}
+
+.registro-dos-total-label { top: 572px; }
+.registro-dos-primera { top: 290px; }
+.registro-dos-tercera { top: 375px; }
+.registro-dos-quinta { top: 455px; }
+.registro-dos-madura { top: 40px; }
+
+
+.registro-uno-total-label { top: 620px; }
+.registro-uno-primera { top: 290px; }
+.registro-uno-tercera { top: 370px; }
+.registro-uno-quinta { top: 450px; }
+
+.registro-celda-total {
+  width: 124px;
+  height: 74px;
+  background-color: #22993580;
+  border-radius: 40px;
+  position: relative;
+}
+
+.registro-texto-total,
+.registro-texto-primera,
+.registro-texto-tercera,
+.registro-texto-quinta,
+.registro-texto-madura,
+.registro-texto-nombre {
+  position: absolute;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.registro-texto-total { top: 20px; left: 36px; font-size: 25px; }
+.registro-texto-primera { top: 26px; left: 36px; }
+.registro-texto-tercera { top: 24px; left: 36px; }
+.registro-texto-quinta { top: 26px; left: 36px; }
+.registro-texto-madura { top: 26px; left: 21px; width: 82px; }
+
+.registro-uno-seleccion-label { top: 210px; left: 406px; width: 129px; }
+
+.registro-uno-respuesta-nombre,
+.registro-dos-respuesta-nombre {
+  position: absolute;
+  width: 320px;
+  height: 65px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.registro-uno-respuesta-nombre { top: 126px; left: 547px; }
+
+.registro-uno-nombre,
+.registro-dos-nombre {
+  position: absolute;
+  width: 171px;
+  height: 65px;
+  left: 366px;
+}
+
+.registro-uno-nombre { top: 115px; }
+.registro-uno-madura { top: 530px; }
+
+.registro-nombre-fondo {
+  width: 169px;
+  height: 65px;
+  background-color: #22993580;
+  border-radius: 40px;
+  position: relative;
+}
+
+.registro-texto-nombre {
+  top: 20px;
+  left: 44px;
+  font-size: 24px;
+}
+
+.registro-uno-fecha,
+.registro-dos-fecha {
+  position: absolute;
+  height: 32px;
+  top: 0;
+}
+
+.registro-uno-fecha { width: 863px; left: 0; }
+
+.registro-fecha-actual,
+.registro-fecha-pasado {
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.registro-fecha-actual { top: 0; left: 256px; width: 379px; }
+.registro-fecha-pasado { top: 0; left: 261px; width: 362px; }
+
+.registro-linea-izquierda,
+.registro-linea-derecha {
+  position: absolute;
+  width: 226px;
+  height: 3px;
+  top: 17px;
+}
+
+.registro-linea-izquierda { left: 0; }
+.registro-linea-derecha { left: 635px; }
+
+.registro-boton-editar,
+.registro-boton-eliminar {
+  position: absolute;
+  width: 291px;
+  height: 47px;
+}
+
+.registro-boton-editar { top: 341px; left: 1111px; }
+.registro-boton-eliminar { top: 431px; left: 1111px; }
+
+.registro-boton-editar-fondo,
+.registro-boton-eliminar-fondo {
+  width: 289px;
+  height: 47px;
+  border-radius: 40px;
+  position: relative;
+}
+
+.registro-boton-editar-fondo { background-color: #298ce9; }
+.registro-boton-eliminar-fondo { background-color: #dc3446; }
+
+.registro-boton-editar-texto,
+.registro-boton-eliminar-texto {
+  position: absolute;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: 20px;
+  white-space: nowrap;
+  top: 11px;
+  left: 104px;
+  color: #ffffff;
+}
+
+.registro-boton-editar-texto { top: 9px; width: 82px; }
+.registro-boton-eliminar-texto { width: 122px; }
+
+.registro-titulo {
+  position: absolute;
+  width: 265px;
+  top: 251px;
+  left: 731px;
+  font-family: "Kay Pho Du-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 45px;
+  white-space: nowrap;
+}
+
+.registro-contenedor-dos {
+  position: absolute;
+  width: 1660px;
+  height: 937px;
+  top: 1394px;
+  left: 37px;
+}
+
+.registro-dos-fondo {
+  position: absolute;
+  width: 1654px;
+  height: 844px;
+  top: 93px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.registro-dos-cantidad-label { top: 245px; left: 570px; width: 111px; }
+.registro-dos-peso-label { top: 245px; left: 716px; width: 69px; }
+.registro-dos-seleccion-label { top: 245px; left: 406px; width: 129px; }
+
+.registro-dos-cantidad-box { top: 289px; left: 547px; }
+.registro-dos-peso-box { top: 289px; left: 683px; }
+
+.registro-dos-respuesta-nombre { top: 161px; left: 547px; }
+.registro-dos-nombre { top: 161px; }
+.registro-dos-madura { top: 535px; }
+.registro-dos-total-label { top: 627px; }
+
+.registro-dos-cantidad-total,
+.registro-dos-peso-total,
+.registro-uno-cantidad-total,
+.registro-uno-peso-total {
+  position: absolute;
+  width: 124px;
+  height: 74px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #229935;
+}
+
+.registro-uno-cantidad-total { top: 615px; left: 547px; }
+.registro-uno-peso-total { top: 615px; left: 683px; }
+.registro-dos-cantidad-total { top: 627px; left: 547px; }
+.registro-dos-peso-total { top: 627px; left: 683px; }
+
+.registro-uno-separador,
+.registro-dos-separador {
+  position: absolute;
+  width: 466px;
+  height: 2px;
+  left: 366px;
+}
+
+.registro-uno-separador { top: 558px; }
+.registro-dos-separador { top: 593px; }

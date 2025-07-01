@@ -1,0 +1,15 @@
+server:
+  port: 8085
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:14033;databaseName=fundosmart;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: MyPassword2023
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true

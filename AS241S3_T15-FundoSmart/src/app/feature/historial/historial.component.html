@@ -1,0 +1,47 @@
+<!-- historial.component.html -->
+<app-header></app-header>
+<div class="pedidos" *ngIf="fruits.length">
+  <div class="overlap-wrapper" *ngFor="let f of fruits">
+    <div class="overlap">
+      <!-- Primera -->
+      <div *ngIf="f.can_pri > 0" class="rgisteruno">
+        <div class="overlap-group">
+          <img class="naranjacarru" src="img/naranjacarru-2.png" />
+          <div class="text-wrapper">{{ f.nom_frut }}</div>
+          <div class="div">Kg - {{ f.kil_pri }}</div>
+          <div class="text-wrapper-2">Selección primera</div>
+          <div class="text-wrapper-3">/</div>
+          <div class="text-wrapper-4">{{ f.can_pri }} cajas</div>
+          <div class="text-wrapper-5">S/{{ (f.kil_pri * f.pre_pri).toFixed(2) }}</div>
+          <div class="text-wrapper-6">{{ f.fecha | date:'dd/MM/yyyy' }}</div>
+        </div>
+      </div>
+      <!-- Tercera -->
+      <div *ngIf="f.can_ter > 0" class="rgisterdos">
+        <div class="overlap-group">
+          <img class="naranjacarru" src="img/naranjacarru.png" />
+          <div class="overlap-group-2">
+            <div class="text-wrapper-7">{{ f.nom_frut }}</div>
+            <div class="text-wrapper-8">Selección tercera</div>
+          </div>
+          <div class="div">Kg - {{ f.kil_ter }}</div>
+          <div class="text-wrapper-4">{{ f.can_ter }} cajas</div>
+          <div class="text-wrapper-5">S/{{ (f.kil_ter * f.pre_ter).toFixed(2) }}</div>
+          <div class="text-wrapper-6">{{ f.fecha | date:'dd/MM/yyyy' }}</div>
+        </div>
+      </div>
+      <!-- Quinta -->
+      <div *ngIf="f.can_qui > 0" class="rgistertres">
+        <div class="overlap-group">
+          <img class="naranjacarru" src="img/image.png" />
+          <div class="text-wrapper">{{ f.nom_frut }}</div>
+          <div class="div">Kg - {{ f.kil_qui }}</div>
+          <div class="text-wrapper-2">Selección quinta</div>
+          <div class="text-wrapper-4">{{ f.can_qui }} cajas</div>
+          <div class="text-wrapper-5">S/{{ (f.kil_qui * f.pre_qui).toFixed(2) }}</div>
+          <div class="text-wrapper-6">{{ f.fecha | date:'dd/MM/yyyy' }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

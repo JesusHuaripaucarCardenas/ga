@@ -1,0 +1,74 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: white;
+  padding: 20px;
+}
+
+.supermarket-form-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.supermarket-form-title {
+  background-color: green;
+  color: white;
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.supermarket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.supermarket-form-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.supermarket-field label,
+.supermarket-field-large label {
+  font-weight: bold;
+}
+
+.supermarket-field input,
+.supermarket-field-large input {
+  background-color: #c4e3cb;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  min-width: 150px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.supermarket-field-large input {
+  width: 250px;
+}
+
+.supermarket-error {
+  color: red;
+  font-size: 12px;
+}
+
+.supermarket-submit-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.supermarket-backend-error {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}

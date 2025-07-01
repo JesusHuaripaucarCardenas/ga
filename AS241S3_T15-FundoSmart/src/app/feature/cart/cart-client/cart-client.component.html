@@ -1,0 +1,48 @@
+<app-header></app-header>
+<h2 class="cart-title">Carrito</h2>
+<div class="cart-container" *ngIf="items.length > 0; else emptyCart">
+  <div class="cart-main">
+    <div class="cart-items-wrapper">
+      <div class="cart-item" *ngFor="let item of items">
+        <img src="https://i.imgur.com/L6K1FgF.png" alt="Naranja" class="cart-item-image" />
+        <div class="cart-item-details">
+          <div class="cart-item-name">{{ item.nombre }}</div>
+          <div class="cart-item-weight">{{ item.peso }} Kg - S/ {{ (item.peso * item.precioPorKg).toFixed(2) }}</div>
+          <div class="cart-item-grade">{{ item.seleccion }}</div>
+        </div>
+        <div class="cart-item-controls">
+          <!-- Dentro de cart-item-controls -->
+          <button class="qty-btn" (click)="disminuirPeso(item)">-</button>
+          <span>Kg - {{ item.peso }}</span>
+          <button class="qty-btn" (click)="incrementarPeso(item)">+</button>
+
+
+
+          <button class="delete-btn" (click)="quitarItem(item)">🗑</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-summary">
+    <div class="summary-box">
+      <div class="summary-header">
+        <div class="summary-products">Productos ({{ items.length }})</div>
+        <div class="summary-total">S/{{ totalPrecio.toFixed(2) }}</div>
+      </div>
+      <a href="/continuar" class="summary-continue-btn">Continuar compra</a>
+    </div>
+    <div class="summary-box">
+      <div class="summary-footer">
+        <div class="summary-boxes">Cajas ({{ totalCajas }})</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <div class="box-contenedor">
+    <img class="icono-imagen" src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Carrito vacío" />
+    <div class="mensaje-texto">Tu carrito está vacío</div>
+  </div>
+</ng-template>

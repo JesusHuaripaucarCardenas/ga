@@ -1,0 +1,20 @@
+<div *ngFor="let cust of customers" class="customer-card">
+  <div class="customer-content">
+    <div class="customer-header">
+      {{ cust.marketName }} – {{ cust.district }}
+    </div>
+    <div class="customer-info">
+      <span class="position">Puesto #{{ cust.positionNumber }}</span>
+      <span class="customer-name">{{ cust.name }}</span>
+    </div>
+  </div>
+
+  <div class="customer-actions">
+    <!-- Añadimos (click) para invocar sendGuide(cust) -->
+<button class="btn-send-full" (click)="sendGuide(cust)">
+  <img src="assets/icons/send-guide.svg" alt="Enviar guía" />
+  Enviar guía
+</button>
+
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<app-navbar></app-navbar>
+
+<div class="vendor-list">
+  <div class="vendor-list__container">
+
+    <!-- CABECERA -->
+    <div class="vendor-list__header">
+      <div class="header-item header-item--id">Id</div>
+      <div class="header-item header-item--dni">DNI</div>
+      <div class="header-item header-item--lastName">Apellido</div>
+      <div class="header-item header-item--firstName">Nombre</div>
+      <div class="header-item header-item--phone">Teléfono</div>
+      <div class="header-item header-item--email">Email</div>
+      <div class="header-item header-item--status">Estado</div>
+      <div class="header-item header-item--actions">
+        Acciones
+        <div class="filter-toggle filter-toggle--in-header">
+          <button class="btn btn--filter" (click)="toggleFiltros()" aria-label="Filtrar vendedores">
+            Filtrar <img src="img/menu-filter-1.png" alt="icono de filtro" />
+          </button>
+          <div class="filter-menu" *ngIf="mostrarFiltros">
+            <button class="filter-menu__item" (click)="sort('nameAsc')">Nombre: A - Z</button>
+            <button class="filter-menu__item" (click)="sort('nameDesc')">Nombre: Z - A</button>
+            <button class="filter-menu__item" (click)="sort('lastNameAsc')">Apellido: A - Z</button>
+            <button class="filter-menu__item" (click)="sort('lastNameDesc')">Apellido: Z - A</button>
+            <hr />
+            <button class="filter-menu__item" (click)="filterStatus('A')">Activos</button>
+            <button class="filter-menu__item" (click)="filterStatus('I')">Inactivos</button>
+            <button class="filter-menu__item" (click)="filterStatus('')">Todos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILAS -->
+    <div class="vendor-list__rows">
+      <div class="vendor-row" *ngFor="let seller of displayedSellers">
+        <div class="vendor-cell vendor-cell--id">{{ seller.id }}</div>
+        <div class="vendor-cell vendor-cell--dni">{{ seller.dni }}</div>
+        <div class="vendor-cell vendor-cell--lastName">{{ seller.lastName }}</div>
+        <div class="vendor-cell vendor-cell--firstName">{{ seller.name }}</div>
+        <div class="vendor-cell vendor-cell--phone">{{ seller.phone }}</div>
+        <div class="vendor-cell vendor-cell--email">{{ seller.email }}</div>
+        <div class="vendor-cell vendor-cell--status">{{ seller.state || 'A' }}</div>
+        <div class="vendor-cell vendor-cell--actions">
+          <button *ngIf="seller.state !== 'I'" class="btn btn--delete" (click)="deleteSeller(seller)">Eliminar</button>
+          <button *ngIf="seller.state === 'I'" class="btn btn--restore"
+            (click)="restoreSeller(seller)">Recuperar</button>
+          <button class="btn btn--edit" (click)="openEditModal(seller)">Editar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" *ngIf="mostrarModalEdit">
+      <div class="modal">
+        <h2>Editar Vendedor</h2>
+        <form (ngSubmit)="saveEdit()" #editForm="ngForm" novalidate>
+
+          <label for="dni">DNI:
+            <input [(ngModel)]="selectedSeller.dni" name="dni" id="dni" required pattern="^[0-9]{8}$" #dni="ngModel" />
+            <div class="error" *ngIf="editForm.submitted && dni.invalid">
+              <span *ngIf="dni.errors?.['required']">El DNI es obligatorio.</span>
+              <span *ngIf="dni.errors?.['pattern']">Debe tener 8 dígitos numéricos.</span>
+            </div>
+          </label>
+
+          <label for="lastName">Apellido:
+            <input [(ngModel)]="selectedSeller.lastName" name="lastName" id="lastName" required
+              pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" #lastName="ngModel" />
+            <div class="error" *ngIf="editForm.submitted && lastName.invalid">
+              <span *ngIf="lastName.errors?.['required']">El apellido es obligatorio.</span>
+              <span *ngIf="lastName.errors?.['pattern']">Solo letras y espacios.</span>
+            </div>
+          </label>
+
+          <label for="name">Nombre:
+            <input [(ngModel)]="selectedSeller.name" name="name" id="name" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+              #name="ngModel" />
+            <div class="error" *ngIf="editForm.submitted && name.invalid">
+              <span *ngIf="name.errors?.['required']">El nombre es obligatorio.</span>
+              <span *ngIf="name.errors?.['pattern']">Solo letras y espacios.</span>
+            </div>
+          </label>
+
+          <label for="phone">Teléfono:
+            <input [(ngModel)]="selectedSeller.phone" name="phone" id="phone" pattern="^[0-9]{7,}$" #phone="ngModel" />
+            <div class="error" *ngIf="editForm.submitted && phone.invalid">
+              <span *ngIf="phone.errors?.['pattern']">Mínimo 7 dígitos numéricos.</span>
+            </div>
+          </label>
+
+          <label for="email">Email:
+            <input [(ngModel)]="selectedSeller.email" name="email" id="email" email #email="ngModel" />
+            <div class="error" *ngIf="editForm.submitted && email.invalid">
+              <span *ngIf="email.errors?.['email']">Formato de email inválido.</span>
+            </div>
+          </label>
+
+          <label for="state">Estado:
+            <select [(ngModel)]="selectedSeller.state" name="state" id="state" required>
+              <option value="A">Activo</option>
+              <option value="I">Inactivo</option>
+            </select>
+          </label>
+
+          <div class="modal-actions">
+            <button type="submit" class="btn btn--primary">Guardar</button>
+            <button type="button" class="btn btn--secondary" (click)="closeEditModal()">Cancelar</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

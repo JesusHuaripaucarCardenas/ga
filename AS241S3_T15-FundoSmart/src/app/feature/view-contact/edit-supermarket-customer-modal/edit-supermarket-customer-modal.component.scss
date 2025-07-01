@@ -1,0 +1,125 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px; /* separa más del borde de la pantalla */
+}
+
+.modal-content {
+  background-color: #f8f8f8;
+  padding: 40px; /* más padding interno */
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.titulo {
+  background-color: green;
+  color: white;
+  display: inline-block;
+  padding: 10px 30px; /* más padding */
+  border-radius: 15px;
+  font-size: 18px;
+  margin-bottom: 30px; /* más separación */
+}
+
+.formulario {
+  position: relative;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  z-index: 10;
+}
+
+.fila {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px; /* mayor separación entre campos */
+  margin-bottom: 25px; /* espacio entre filas */
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  background-color: #c4e3cb;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  min-width: 200px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+.campo {
+  flex: 1;
+  min-width: 220px;
+}
+
+.campo.error input {
+  border: 2px solid red;
+}
+
+.campo small {
+  color: red;
+  font-size: 13px;
+  margin-top: 6px;
+  display: block;
+}
+
+.btn-cerrar {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.btn-agregar {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 6px;
+}
